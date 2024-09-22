@@ -1,4 +1,4 @@
-# Modelos para Dados de Contagem
+# WIP: Modelos para Dados de Contagem
 
 **lambda**: Valor previsto de ocorrências, taxa de eventos ou contagem de eventos para dada exposição. Numero de navios em um porto, conversão de clientes em um site, numero de vendas em um dia, numero de acidentes em uma rodovia, etc.
 
@@ -30,3 +30,12 @@ Não tem stepwise para ZIP mas tem para Logit. Quem sobrar será responsavel vai
 :::
 
 ### ZINB (Zero Inflated Negative Binomial):
+Os modelos de ZINB apresentam duas componentes: uma componente binomial que modela a probabilidade de zero (chamados zeros estruturais) e uma componente binomial negativa que modela a contagem de eventos (zeros amostrais).
+
+## Escolha do Modelo
+
+| Verificação | Poisson | Binomial Negativo | Poisson Inflacionado de Zeros (ZIP) | Binomial Negativo Inflacionado de Zeros (ZINB) |
+| --- | --- | --- | --- | --- |
+| Superdispersão de dados na variável dependente | Não | Sim | Não | Sim |
+| Quantidade excessiva de zeros na variável dependente | Não | Não | Sim | Sim |
+
