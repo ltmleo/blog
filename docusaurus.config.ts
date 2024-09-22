@@ -41,7 +41,7 @@ const config: Config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          routeBasePath: 'blog/blog',
+          routeBasePath: 'blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -79,7 +79,7 @@ const config: Config = {
           position: 'left',
           label: 'Learning',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
