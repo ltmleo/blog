@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Meu Blog',
+  title: '@ltmleo',
   tagline: 'Algumas coisas legais que gostaria de compartilhar',
   favicon: 'img/favicon.ico',
 
@@ -41,6 +41,7 @@ const config: Config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          routeBasePath: 'blog/blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -66,7 +67,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Meu Blog',
+      title: 'Home',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -76,7 +77,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Learning',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {

@@ -1,0 +1,9 @@
+ltmleo:
+  name: Leonardo Montero
+  title: Autor do Blog
+  url: https://github.com/ltmleo
+  image_url: https://github.com/ltmleo.png
+  page: true
+  socials:
+    github: ltmleo
+
