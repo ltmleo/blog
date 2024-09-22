@@ -90,11 +90,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learning',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Coisas que estou aprendendo',
+              to: '/learning/intro',
             },
           ],
         },
