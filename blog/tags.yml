@@ -2,3 +2,18 @@ announcements:
   label: 'Announcements'
   description: 'Anúncios'
 
+devops:
+  label: 'DevOps'
+  description: 'Cultura e práticas DevOps'
+
+sre:
+  label: 'SRE'
+  description: 'Site Reliability Engineering'
+
+antifragil:
+  label: 'Antifragilidade'
+  description: 'Antifragilidade'
+
+chaos:
+  label: 'Chaos Engineering'
+  description: 'Chaos Engineering'
