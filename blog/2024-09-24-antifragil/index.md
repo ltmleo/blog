@@ -36,34 +36,67 @@ Outro conceito interessante é o de que sistemas complexos enfraquecem e até me
 
 ## Indentificando a fragildidade
 
-Agora que definimos o conceito da antifragilidade, podemos explorar alguns outros conceitos que Taleb apresenta em seu livro, como a identificação da fragildade. Nas proximas sessões, serão apresentados alguns conceitos que podem ser utilizados para identificar a fragildade.
+Agora que definimos o conceito da antifragilidade, podemos explorar alguns outros conceitos que Taleb apresenta em seu livro, como a identificação da fragildade. Nas próximas sessões, serão apresentados alguns conceitos que podem ser utilizados para identificar a fragildade.
 
 ### Eventos Cisnes Negros
-Esse conceito foi introduzido por Taleb no livro “A Lógica do Cisne Negro” publicado em 2007, onde ele destaca que apensar das analises de projeções, sistemas complexos estão sujeitos a reviravoltas imprevisiveis.
+Esse conceito foi introduzido por Taleb no livro "A Lógica do Cisne Negro" publicado em 2007, onde ele destaca que apensar das analises de projeções, sistemas complexos estão sujeitos a reviravoltas imprevisíveis.
 
 O nome Cisne negros vem pelo fato de que no passado na Europa, tinha-se a crença de que só existiam cisnes brancos, mas com o descobrimento de cisnes negros na Australia, todo essa crença foi por água a baixo. 
 
-Taleb descreve os eventos cisne negros como eventos altamente impactantes, raros e imprevisiveis. Muitas vezes esses eventos, retrospectivamente são atribuidos a explicações convenientes. Em resumo, são events díficies de prever mas que precisamos estar sempre preparados. 
+Taleb descreve os eventos cisne negros como eventos altamente impactantes, raros e imprevisíveis. Muitas vezes esses eventos, retrospectivamente são atribuídos a explicações convenientes. Em resumo, são events difíceis de prever mas que precisamos estar sempre preparados. 
 
 ### O Peru de Natal
-Outr
-
+Outro conceito introduzido por Taleb é o Peru de Natal, que é uma metafora visual para ilustrar a fragilidade. O peru é alimentado todos os dias, bem tratado e protegido, até que chega o dia de Natal, onde ele é morto e servido como jantar. O peru não tem como prever o que acontecerá no dia de Natal, pois todos os dias anteriores foram de prosperidade e bem-estar. Essa metáfora mostra que a "Ausencia da evidência não é evidência da ausência", ou seja, precisamos buscar outros pontos de vista e considerar outras possibilidades além das que já conhecemos, pois o que não sabemos pode ser mais importante do que o que sabemos.
 
 ### O Problema de Lucrecio
+O Problema de Lucrecio é uma analogia que Taleb faz com o poeta romano Lucrecio. Resumidamente, "O tolo acredita que a montanha mais alta do mundo é a montanha que ele viu". O problema de Lucrecio é a crença de que o que não vemos não existe, ou seja, acreditar que o que não conhecemos não é importante. Taleb usa essa analogia para ilustrar que muitas vezes não consideramos o que não conhecemos, e isso pode ser um grande erro, pois o que não conhecemos pode ser mais importante do que o que conhecemos.
+
+Fukushima é um exemplo, pois foi projetada para aguentar o maior terremoto já registrado no Japão, até que um terremoto maior aconteceu e a usina não aguentou. Precisamos estar preparados para o inesperado, pois o inesperado é o que mais nos impacta.
 
 ## Técnicas antifrágeis
 
+Nessa sessão, serão apresentadas algumas técnicas que o Taleb propõem para aumentar a  antifragilidade de sistemas.
+
 ### Exposição controlada (Mitridatização)
-### Opções assimétricas (Estrategia de Barbell)
+Mithridatização é o processo de tornar-se resistente a um veneno, ingerindo pequenas doses do veneno ao longo do tempo. O nome vem de Mithridates VI, um rei Turco, que paranoico pela morte de seu pai por envenenamento, começou a ingerir pequenas doses de veneno para se tornar resistente a ele. Algum tempo depois, Mithridates foi capturado por seus inimigos e tentou se matar tomando veneno, mas não conseguiu, pois seu corpo estava resistente a ele.
+
+Taleb propõe que a exposição controlada a eventos adversos é uma forma de aumentar a antifragilidade de um sistema, assim como o corpo humano, que se torna mais forte quando exposto a pequenos níveis de estresse.
+
+Podemos ver com essa técnica que o antifragil é um conceito muito antigo que somente não tinha um nome para o descrever.
+
+
+### Opções assimétricas (Estrategia de Barbell)
+A estratégia de barbell é uma técnica quue consiste em dividir as opções em dois extremos, um extremo extremamente seguros e o outro extremamente arriscados, evitando o moderado ou que está no centro. Taleb propõe que essa técnica é uma forma de aumentar a antifragilidade de um sistema, pois se um dos extremos falhar, o outro compensará.
+
+A ideia é sempre fazer uma análise do risco associado, tolerando perdas limitadas e tendo aversão a perdas excisavas. Trabalhar de uma forma a potencializar o ganho, e a longo prazo, assim, quando um lado estiver exposto a um evento cisne negro o outro compensa e ganha com essa exposição. 
+
+Aqui sempre precisamos experimentar e inovar, pois enquanto de um lado temos a segurança, do outro precisamos dessa exposição.
+
 ### Descentralização e Diversidade
+Se pensarmos em um individuo, ele é Antifrágil, pois como vimos, seu corpo se beneficia de pequenos estresses, como por exemplo ir a academia, porém esse individuo ainda é frágil, pois se ele morrer tudo relaciona a ele se vai também. Em contra partida o conjunto de individuo, como uma sociedade, é antifragil, pois se um individuo morrer, a sociedade continua, e se um individuo se beneficia de um estresse, a sociedade como um todo se beneficia.
+
+Um ótimo exemplo de Descentralização e Diversidade é a vida, pois é adaptada aos mais diversos ambientes. E mesmo grandes eventos cisne negros como cinco extinções em massa, a vida ainda prospera. A máxima "Sistemas complexos enfraquecem e morrem na ausência de estressores" ilustra bem o que acontece na vida, pois, sem eventos estressores como a seleção natural, a vida deixa de evoluir e se adaptar, tornando-a mais suscetível a impactos.
+
 ### Redundância planejada
+Como vimos, ter redundância é uma ótima abordagem para que sistemas resistam a choques e estresse, porém, somente a redundância não é suficiente para beneficiar um sistema em caso de falha, precisamos planejar a redundância, para que em determinados choques, o sistema possa se recuperar de forma rápida e eficiente e melhorar com isso.
+
+Em alguns pontos do sistema preciso ter diversos níveis de redundância, porém em outros talvez não precise, precisamos sempre planejar de uma forma a otimizar os custos envolvidos, a segurança necessária e a capacidade de experimentar e inovar, como vimos nas opções assimétricas. 
+
 ### Aprendizado Continuo
+Talvez um dos pontos mais importantes quando tratamos de antifragilide seja a capacidade de aprender com os eventos passados.
+Conforme viemos em quase todas as técnicas apresentadas, precisamos sempre experimentar e inovar, e para isso precisamos aprender com os erros e acertos. A ideia é sempre melhorar e evoluir, e para isso precisamos aprender com o que aconteceu.
+
+Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", que ilustram bem o que precisamos fazer para melhorar e evoluir. A ideia é sempre aprender com o que aconteceu, e melhorar a cada dia, e para isso precisamos sempre estar aprendendo.
+
+Um exemplo de sucesso é a industria aérea, que a cada incidente aprende com os erros e acertos, e melhora todos os sistemas, tornando-se a cada dia mais segura e eficiente.
 
 ## Software Antifgragil
+Nesta sessão, utilizaremos os conceitos introduzidos por Taleb para explorar como podemos aplicar a antifragilidade em sistemas de software.
+
 ### Postmortem
 ### Blameless Culture
 ### Game Day
-### Continuous integration / Continuous Delivery  (CI/CD)
+### Continuous integration / Continuous Delivery  (CI/CD)
 ### Disaster Recovery
 ### Arquitetura desacoplada
 ### Segurança Ofensiva
