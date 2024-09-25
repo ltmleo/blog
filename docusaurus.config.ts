@@ -35,20 +35,19 @@ const config: Config = {
         id: 'projects',
         routeBasePath: 'projects',
         path: './projects',
-        sidebarPath: './sidebars.ts',
+        sidebarPath: require.resolve('./sidebars.ts'),
+        editUrl: 'https://github.com/ltmleo/blog/edit/main/'
       },
     ],
   ],
-
-
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          path: './learning',
+          routeBasePath: 'learning',
           editUrl:
             'https://github.com/ltmleo/blog/edit/main/',
         },
@@ -85,10 +84,15 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/blog/projects', label: 'Projects', position: 'left'},
+        {
+          to: '/blog/projects/intro', 
+          label: 'Projects', 
+          position: 'left',
+          sidebarId: 'projectsSidebar',
+        },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'learningSidebar',
           position: 'left',
           label: 'Learning',
         },
@@ -109,7 +113,7 @@ const config: Config = {
           items: [
             {
               label: 'Coisas que estou aprendendo',
-              to: 'docs/intro',
+              to: 'learning/intro',
             },
             {
               label: 'Projetos que estou desenvolvendo',

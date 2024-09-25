@@ -1,4 +1,4 @@
-# Como Criar um blog no zero com Docussaurus
+# Como Criar um blog do zero com Docussaurus
 
 [Docussaurus](https://docusaurus.io/pt-BR/) é uma ferramenta de código aberto do Facebook para construir sites estáticos usando React. Ele foi criado para ser fácil de usar e configurar, permitindo que você crie rapidamente um site estático com uma aparência profissional e trabalhe ele segundo princípios de documentação como código.
 
