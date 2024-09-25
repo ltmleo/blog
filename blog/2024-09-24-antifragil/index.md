@@ -155,7 +155,37 @@ Como vimos pelas definições e quase como na Mitridatização, onde tomamos **p
 
 ### Disaster Recovery
 
+Disaster Recovery (DR) é um conjunto de políticas, ferramentas e procedimentos que permitem a uma organização restaurar seus sistemas e dados críticos após um evento catastrófico, como incêndios, desastres naturais, falhas de hardware ou ciberataques. O objetivo principal da RD é minimizar o tempo de inatividade e a perda de dados, garantindo a continuidade dos negócios.
+
+O Disaster Recovery Plan (PRD) é um documento que descreve as estratégias e procedimentos que uma organização deve seguir para recuperar seus sistemas e dados após um desastre. O DRP deve ser elaborado com base em uma análise de riscos e deve ser testado regularmente para garantir sua eficácia.
+
+O PRD deve ser parte do Business Continuity Plan (BCP), que é um plano abrangente que descreve como uma organização manterá suas operações em caso de interrupções. O BCP inclui não apenas o DRP, mas também planos para lidar com outras situações de emergência, como interrupções de energia, greves de funcionários e pandemias.
+
+O disaster recovery utiliza principalmente técnica de **redundância planejada**, uma vez que não basta eu ter redundância, é preciso que ela seja planejada. Abaixo um breve resumo do principais tipos de DR:
+
+- **Backup e restauração**: consiste em fazer cópias de segurança dos dados críticos e restaurá-los em caso de perda.
+- **Pilot Light**: consiste em manter uma infraestrutura mínima em funcionamento na nuvem e expandi-la rapidamente em caso de desastre.
+- **Warm Standby**: consiste em manter uma infraestrutura parcialmente funcional em standby e ativá-la rapidamente em caso de desastre.
+- **Hot Standby**: consiste em manter uma infraestrutura totalmente funcional em standby e ativá-la rapidamente em caso de desastre.
+- **Multi-Site**: consiste em manter infraestruturas redundantes em locais geograficamente distintos e ativá-las em caso de desastre.
+  
+Note que a escolha do tipo de DR depende do nível de criticidade dos sistemas e dados da organização, bem como do orçamento disponível para implementar as soluções de recuperação. 
+
+Lembre-se que a melhor forma de lidar com um desastre é estar preparado para ele, portanto realize constantemente gamedays e estresse seus sistemas para garantir que eles estejam prontos para qualquer eventualidade.
+
 ### Arquitetura desacoplada
+Pensando na técnica de **Descentralização e Diversidade**, pensamos em uma arquitetura desacoplada, onde cada serviço é independente e pode ser substituído sem afetar o restante do sistema. Isso permite que cada serviço seja desenvolvido em uma linguagem de programação diferente, com diferentes tecnologias e até mesmo em diferentes servidores. Isso permite que o sistema seja mais robusto e tolerante a falhas, pois se um serviço falhar, o restante do sistema continua funcionando normalmente.
+
+Além disso, podemos experimentar e inovar mais facilmente, pois podemos substituir um serviço por outro sem afetar o restante do sistema. Isso permite que possamos testar novas tecnologias e abordagens sem medo de quebrar o sistema.
+
+Por fim, uma arquitetura desacoplada permite que o sistema seja mais escalável, pois podemos adicionar novos serviços conforme necessário, sem afetar o restante do sistema. Isso permite que o sistema cresça de forma orgânica e sustentável, acompanhando o crescimento da demanda e das necessidades dos usuários.
+
+Quando falamos em arquitetura desacoplada, microsserviços é uma das abordagens mais comuns. Os microsserviços são serviços independentes, que se comunicam entre si por meio de APIs. Cada microsserviço é responsável por uma parte específica do sistema, e pode ser desenvolvido, implantado e escalado de forma independente. Isso permite que o sistema seja mais flexível, escalável e tolerante a falhas.
+
+Com uma arquitetura bem planejada e desacoplada fica mais fácil pensar e implementar planos de disaster recovery, pois podemos isolar e proteger cada serviço de forma independente. Isso permite que o sistema seja mais resiliente e tolerante a falhas, garantindo que ele continue funcionando mesmo em situações adversas.
+
+Além de ser mais fácil gerenciar o código fonte e testar a aplicação de forma mais consistente, pois cada serviço pode ser desenvolvido, testado e implantado de forma independente. Isso permite que o sistema seja mais estável e confiável, garantindo que ele funcione conforme esperado.
+
 ### Segurança Ofensiva
 ### Teste de estresse
 ### Teste de mutação
