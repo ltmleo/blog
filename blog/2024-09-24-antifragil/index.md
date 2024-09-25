@@ -55,7 +55,7 @@ Fukushima é um exemplo, pois foi projetada para aguentar o maior terremoto já 
 
 ## Técnicas antifrágeis
 
-Nessa sessão, serão apresentadas algumas técnicas que o Taleb propõem para aumentar a  antifragilidade de sistemas.
+Nessa seção, serão apresentadas algumas técnicas que o Taleb propõem para aumentar a  antifragilidade de sistemas.
 
 ### Exposição controlada (Mitridatização)
 Mithridatização é o processo de tornar-se resistente a um veneno, ingerindo pequenas doses do veneno ao longo do tempo. O nome vem de Mithridates VI, um rei Turco, que paranoico pela morte de seu pai por envenenamento, começou a ingerir pequenas doses de veneno para se tornar resistente a ele. Algum tempo depois, Mithridates foi capturado por seus inimigos e tentou se matar tomando veneno, mas não conseguiu, pois seu corpo estava resistente a ele.
@@ -91,9 +91,31 @@ Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", 
 Um exemplo de sucesso é a industria aérea, que a cada incidente aprende com os erros e acertos, e melhora todos os sistemas, tornando-se a cada dia mais segura e eficiente.
 
 ## Software Antifgragil
-Nesta sessão, utilizaremos os conceitos introduzidos por Taleb para explorar como podemos aplicar a antifragilidade em sistemas de software.
+Nesta seção, utilizaremos os conceitos introduzidos por Taleb para explorar como podemos aplicar a antifragilidade em sistemas de software.
 
-### Postmortem
+## Postmortem
+Talvez um dos pontos mais importantes quando falamos de **aprendizado continuo** sejam os postmortems, pois neles conseguimos compartilhar todo o background de um problema, como ele foi resolvido e o que foi aprendido com ele. A ideia é que não somente os envolvidos possam aprender com o problema, mas também as gerações futuras.
+
+Um postmortem deve contemplar principalmente os seguintes pontos:
+- **cabeçalho**: data, título, autor, versão, revisor, status, tipo, dono, data de revisão, data de aprovação, data de publicação e outras informações relevantes;
+- **Sumário executivo**: resumo do problema, impacto, ações tomadas, lições aprendidas e ações futuras;
+- **Sumario do problema**: descrição do problema, impacto, cronologia, resolução e ações futuras;
+- **Itens de ação**: ações tomadas, ações futuras, responsáveis, prazos e status;
+- **Cronologia**: detalhamento do problema, desde o início até a resolução;
+- **Lições aprendidas**: o que foi aprendido com o problema;
+
+Claro que não precisa se limitar somente a isso, mas é um bom ponto de partida, o livro do SRE do Google tem um [capítulo](https://sre.google/workbook/postmortem-culture/) inteiro dedicado a isso, vale a pena a leitura.
+
+O postmortem deve ser feito logo após a resolução do problema, para que todos os envolvidos ainda tenham o problema fresco na memória, e deve ser revisado periodicamente para garantir que as ações futuras estão sendo tomadas.
+
+Além disso, é importante que o postmortem seja compartilhado com todos, para que todos possam aprender com o problema, até mesmo as gerações futuras podem se beneficiar e encontrar soluções para problemas parecido.
+
+:::tip
+Em um projeto que participei utilizamos o [docussaurus](/porjects/blog/how-to) para criar uma documentação de postmortem, onde todos podiam contribuir com o que aprenderam e o que poderia ter sido feito de forma diferente. Por ser uma ferramenta de documentação como código, conseguimos versionar e revisar os postmortems de forma mais fácil. Além de trabalhar com tags e mecanismos de busca para facilitar a busca de postmortems antigos.
+:::
+
+Um ponto importante é deixar claro que o postmortem não é uma ferramenta de punição, mas sim de aprendizado, fazendo uso do blameless postmortem, ponto chave da blameless culture, que exploramos melhor na proxima seção.
+
 ### Blameless Culture
 ### Game Day
 ### Continuous integration / Continuous Delivery  (CI/CD)

@@ -28,6 +28,18 @@ const config: Config = {
     defaultLocale: 'pt-br',
     locales: ['pt-br'],
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'projects',
+        routeBasePath: 'projects',
+        path: './projects',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+  ],
+
 
   presets: [
     [
@@ -38,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ltmleo/blog/edit/main/',
         },
         blog: {
           routeBasePath: 'blog',
@@ -50,7 +62,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ltmleo/blog/edit/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -73,6 +85,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {to: '/blog/projects', label: 'Projects', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -80,6 +93,7 @@ const config: Config = {
           label: 'Learning',
         },
         {to: '/blog/blog', label: 'Blog', position: 'left'},
+
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -91,11 +105,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Learning',
+          title: 'Content',
           items: [
             {
               label: 'Coisas que estou aprendendo',
               to: 'docs/intro',
+            },
+            {
+              label: 'Projetos que estou desenvolvendo',
+              to: 'projects/intro',
             },
           ],
         },
