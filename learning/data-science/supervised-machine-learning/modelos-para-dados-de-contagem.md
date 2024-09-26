@@ -2,7 +2,6 @@
 
 **lambda**: Valor previsto de ocorrências, taxa de eventos ou contagem de eventos para dada exposição. Numero de navios em um porto, conversão de clientes em um site, numero de vendas em um dia, numero de acidentes em uma rodovia, etc.
 
-
 **Diferença distribuição Poisson ou Possion gamma**: superdispersão (calda longa) media não estatisticamente da variança -> distribuição Poisson, variança estatisticamente  superior a media, comportamento de superdispersão -> Poisson gamma (binomial negativa)
 
 **teste de Cameron e Trivedi**: Teste para verificar se existe superdispersão nos dados de contagem (Calda Longa).
@@ -30,7 +29,7 @@ Não tem stepwise para ZIP mas tem para Logit. Quem sobrar será responsavel vai
 :::
 
 ### ZINB (Zero Inflated Negative Binomial):
-Os modelos de ZINB apresentam duas componentes: uma componente binomial que modela a probabilidade de zero (chamados zeros estruturais) e uma componente binomial negativa que modela a contagem de eventos (zeros amostrais).
+Os modelos de ZINB apresentam duas componentes: uma componente binomial negativo que modela a probabilidade de zero (chamados zeros estruturais) e uma componente binaria (logit) que modela a contagem de eventos (zeros amostrais).
 
 ## Escolha do Modelo
 

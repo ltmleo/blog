@@ -28,17 +28,28 @@ const config: Config = {
     defaultLocale: 'pt-br',
     locales: ['pt-br'],
   },
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'projects',
+        routeBasePath: 'projects',
+        path: './projects',
+        sidebarPath: require.resolve('./sidebars.ts'),
+        editUrl: 'https://github.com/ltmleo/blog/edit/main/'
+      },
+    ],
+  ],
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          path: './learning',
+          routeBasePath: 'learning',
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ltmleo/blog/edit/main/',
         },
         blog: {
           routeBasePath: 'blog',
@@ -50,7 +61,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ltmleo/blog/edit/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -74,12 +85,19 @@ const config: Config = {
       },
       items: [
         {
+          to: '/blog/projects/intro', 
+          label: 'Projects', 
+          position: 'left',
+          sidebarId: 'projectsSidebar',
+        },
+        {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'learningSidebar',
           position: 'left',
           label: 'Learning',
         },
         {to: '/blog/blog', label: 'Blog', position: 'left'},
+
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -91,11 +109,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Learning',
+          title: 'Content',
           items: [
             {
               label: 'Coisas que estou aprendendo',
-              to: 'docs/intro',
+              to: 'learning/intro',
+            },
+            {
+              label: 'Projetos que estou desenvolvendo',
+              to: 'projects/intro',
             },
           ],
         },
