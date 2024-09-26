@@ -20,7 +20,7 @@ Para entender como podemos ir além da resiliência, é importante primeiro ente
 - Os que são inertes: são sistemas resilientes, que conseguem se recuperar de falhas e continuar funcionando, mas não aprendem com os erros e não melhoram sua capacidade de lidar com falhas no futuro.
 - Os que se beneficiam: são sistemas antifrágeis, que não apenas se recuperam de falhas, mas também aprendem com elas e melhoram sua capacidade de lidar com falhas no futuro.
 
-![Ganho vs Estresse](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40bhbenam%2Fantifragile-or-safe-a-new-perspective-on-system-design-8fb5d99badb5&psig=AOvVaw3khSIzLJZw4MpRN6uNi3BF&ust=1727177387658000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiHt6z72IgDFQAAAAAdAAAAABAU)
+![Ganho vs Estresse](https://developers.redhat.com/blog/wp-content/uploads/2016/06/fragile-vs-antifragile.png)
 
 Podemos notar que um novo termo surgiu "Antifrágil", nas próximas sessões esse termo será melhor explorado.
 
@@ -64,7 +64,6 @@ Taleb propõe que a exposição controlada a eventos adversos é uma forma de au
 
 Podemos ver com essa técnica que o antifrágil é um conceito muito antigo que somente não tinha um nome para o descrever.
 
-
 ### Opções assimétricas (Estrategia de Barbell)
 A estratégia de barbell é uma técnica que consiste em dividir as opções em dois extremos, um extremo extremamente seguros e o outro extremamente arriscados, evitando o moderado ou que está no centro. Taleb propõe que essa técnica é uma forma de aumentar a antifragilidade de um sistema, pois se um dos extremos falhar, o outro compensará.
 
@@ -72,10 +71,14 @@ A ideia é sempre fazer uma análise do risco associado, tolerando perdas limita
 
 Aqui sempre precisamos experimentar e inovar, pois enquanto de um lado temos a segurança, do outro precisamos dessa exposição.
 
+![Barbell Strategy](https://www.hmmrmedia.com/wp-content/uploads/2022/10/Barbell-Strategy.jpeg)
+
 ### Descentralização e Diversidade
-Se pensarmos em um individuo, ele é Antifrágil, pois como vimos, seu corpo se beneficia de pequenos estresses, como por exemplo ir a academia, porém esse individuo ainda é frágil, pois se ele morrer tudo relaciona a ele se vai também. Em contra partida o conjunto de individuo, como uma sociedade, é antifragil, pois se um individuo morrer, a sociedade continua, e se um individuo se beneficia de um estresse, a sociedade como um todo se beneficia.
+Se pensarmos em um individuo, ele é Antifrágil, pois como vimos, seu corpo se beneficia de pequenos estresses, como por exemplo ir a academia, porém esse individuo ainda é frágil, pois se ele morrer tudo relaciona a ele se vai também. Em contra partida o conjunto de individuo, como uma sociedade, é antifrágil, pois se um individuo morrer, a sociedade continua, e se um individuo se beneficia de um estresse, a sociedade como um todo se beneficia.
 
 Um ótimo exemplo de Descentralização e Diversidade é a vida, pois é adaptada aos mais diversos ambientes. E mesmo grandes eventos cisne negros como cinco extinções em massa, a vida ainda prospera. A máxima "Sistemas complexos enfraquecem e morrem na ausência de estressores" ilustra bem o que acontece na vida, pois, sem eventos estressores como a seleção natural, a vida deixa de evoluir e se adaptar, tornando-a mais suscetível a impactos.
+
+![descentralizacao_e_diversidade](./images/descentralizacao_e_diversidade.png)
 
 ### Redundância planejada
 Como vimos, ter redundância é uma ótima abordagem para que sistemas resistam a choques e estresse, porém, somente a redundância não é suficiente para beneficiar um sistema em caso de falha, precisamos planejar a redundância, para que em determinados choques, o sistema possa se recuperar de forma rápida e eficiente e melhorar com isso.
@@ -90,12 +93,14 @@ Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", 
 
 Um exemplo de sucesso é a industria aérea, que a cada incidente aprende com os erros e acertos, e melhora todos os sistemas, tornando-se a cada dia mais segura e eficiente.
 
-## Software Antifgragil
+![Acidentes Aéreos](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/12/29/1419840642471/66aa0efc-9a1c-4eaf-b6cb-486b44c95fc0-1020x612.png?width=620&dpr=1&s=none)
+
+## Software Antifrágil
 Nesta seção, utilizaremos os conceitos introduzidos por Taleb para explorar como podemos aplicar a antifragilidade em sistemas de software.
 
 
-## Postmortem
-Talvez um dos pontos mais importantes quando falamos de **aprendizado continuo** sejam os postmortems, pois neles conseguimos compartilhar todo o background de um problema, como ele foi resolvido e o que foi aprendido com ele. A ideia é que não somente os envolvidos possam aprender com o problema, mas também as gerações futuras.
+### Postmortem
+Talvez um dos pontos mais importantes quando falamos de **[aprendizado continuo](#aprendizado-continuo)** sejam os postmortems, pois neles conseguimos compartilhar todo o background de um problema, como ele foi resolvido e o que foi aprendido com ele. A ideia é que não somente os envolvidos possam aprender com o problema, mas também as gerações futuras.
 
 Um postmortem deve contemplar principalmente os seguintes pontos:
 - **cabeçalho**: data, título, autor, versão, revisor, status, tipo, dono, data de revisão, data de aprovação, data de publicação e outras informações relevantes;
@@ -118,7 +123,7 @@ Em um projeto que participei utilizamos o [docussaurus](/projects/blog/how-to) p
 Um ponto importante é deixar claro que o postmortem não é uma ferramenta de punição, mas sim de aprendizado, fazendo uso do blameless postmortem, ponto chave da blameless culture, que exploramos melhor na proxima seção.
 
 ### Blameless Culture
-Como vimos na seção anterior, um dos pontos principais de construir um bom post-mortem é a blameless culture, ou seja, cultura sem culpa. Também relacionado com a técnica de **aprendizado continuo**, a blameless culture é um dos pilares para a construção de um ambiente seguro e saudável para a equipe, para que todos possam verdadeiramente aprender com os erros e melhorar continuamente.
+Como vimos na seção anterior, um dos pontos principais de construir um bom post-mortem é a blameless culture, ou seja, cultura sem culpa. Também relacionado com a técnica de **[aprendizado continuo](#aprendizado-continuo)**, a blameless culture é um dos pilares para a construção de um ambiente seguro e saudável para a equipe, para que todos possam verdadeiramente aprender com os erros e melhorar continuamente.
 
 Cultura Blameless é uma abordagem organizacional que busca criar um ambiente onde os erros são vistos como oportunidades de aprendizado e melhoria contínua, em vez de motivos para culpar indivíduos. Ao invés de procurar um culpado, o foco está em entender as causas raiz dos problemas e implementar soluções para evitá-los no futuro.
 
@@ -145,13 +150,15 @@ O gameday é muito importante principalmente para validar planos de disaster rec
 O gameday é uma oportunidade de aprender com as falhas antes que elas de fato aconteçam, e de melhorar o sistema e a equipe continuamente.
 
 ### Continuous integration / Continuous Delivery  (CI/CD)
-Um dos pilares da cultura DevOps, o CI/CD muitas vezes é confundido com somente automatizar a entrega de software ou com ferramentas, mas na verdade é muito mais do que isso e tem relação com a técnica de **exposição controlada**.
+Um dos pilares da cultura DevOps, o CI/CD muitas vezes é confundido com somente automatizar a entrega de software ou com ferramentas, mas na verdade é muito mais do que isso e tem relação com a técnica de **[exposição controlada](#exposição-controlada-mitridatização)**.
 
 O CI (Continuous integration) é uma prática de desenvolvimento de software onde cada desenvolvedor mescla suas alterações em uma base de código junto com as alterações de seus colegas **pelo menos diariamente**. Cada uma dessas integrações é verificada por uma construção automatizada (incluindo teste) para detectar erros de integração o mais rápido possível. As equipes descobrem que essa abordagem reduz o risco de atrasos na entrega, reduz o esforço de integração e permite práticas que promovem uma base de código saudável para aprimoramento rápido com novos recursos [ref](https://martinfowler.com/articles/continuousIntegration.html).
 
 O CD (Continuous Delivery) é uma abordagem de desenvolvimento de software na qual as equipes produzem software em ciclos curtos, garantindo que o software possa ser lançado a qualquer momento. Isso é feito garantindo que o código esteja sempre em um estado de lançamento, ou seja, qualquer commit que entra na base de código principal é automaticamente implantado em um ambiente de teste e, em seguida, em produção. O objetivo é criar um processo de implantação confiável e repetível, permitindo que as equipes construam, testem e implantem software com mais frequência e confiança [ref](https://martinfowler.com/bliki/ContinuousDelivery.html).
 
 Como vimos pelas definições e quase como na Mitridatização, onde tomamos **pequenas** doses de venenos diariamente, do que uma grande quantidade eventualmente. Então, além de termos menos código para revisar, menos conflito, mais fácil encontrar bugs, ainda conseguimos entregar valor continuamente para o negocio, podendo mudar o escopo sem gerar grandes custos, conforme o manifesto ágil.
+
+![CI/CD](./images/cicd.png)
 
 ### Disaster Recovery
 
@@ -161,7 +168,7 @@ O Disaster Recovery Plan (PRD) é um documento que descreve as estratégias e pr
 
 O PRD deve ser parte do Business Continuity Plan (BCP), que é um plano abrangente que descreve como uma organização manterá suas operações em caso de interrupções. O BCP inclui não apenas o DRP, mas também planos para lidar com outras situações de emergência, como interrupções de energia, greves de funcionários e pandemias.
 
-O disaster recovery utiliza principalmente técnica de **redundância planejada**, uma vez que não basta eu ter redundância, é preciso que ela seja planejada. Abaixo um breve resumo do principais tipos de DR:
+O disaster recovery utiliza principalmente técnica de **[redundância planejada](#redundância-planejada)**, uma vez que não basta eu ter redundância, é preciso que ela seja planejada. Abaixo um breve resumo do principais tipos de DR:
 
 - **Backup e restauração**: consiste em fazer cópias de segurança dos dados críticos e restaurá-los em caso de perda.
 - **Pilot Light**: consiste em manter uma infraestrutura mínima em funcionamento na nuvem e expandi-la rapidamente em caso de desastre.
@@ -174,7 +181,7 @@ Note que a escolha do tipo de DR depende do nível de criticidade dos sistemas e
 Lembre-se que a melhor forma de lidar com um desastre é estar preparado para ele, portanto realize constantemente gamedays e estresse seus sistemas para garantir que eles estejam prontos para qualquer eventualidade.
 
 ### Arquitetura desacoplada
-Pensando na técnica de **Descentralização e Diversidade**, pensamos em uma arquitetura desacoplada, onde cada serviço é independente e pode ser substituído sem afetar o restante do sistema. Isso permite que cada serviço seja desenvolvido em uma linguagem de programação diferente, com diferentes tecnologias e até mesmo em diferentes servidores. Isso permite que o sistema seja mais robusto e tolerante a falhas, pois se um serviço falhar, o restante do sistema continua funcionando normalmente.
+Pensando na técnica de **[Descentralização e Diversidade](#descentralização-e-diversidade)**, pensamos em uma arquitetura desacoplada, onde cada serviço é independente e pode ser substituído sem afetar o restante do sistema. Isso permite que cada serviço seja desenvolvido em uma linguagem de programação diferente, com diferentes tecnologias e até mesmo em diferentes servidores. Isso permite que o sistema seja mais robusto e tolerante a falhas, pois se um serviço falhar, o restante do sistema continua funcionando normalmente.
 
 Além disso, podemos experimentar e inovar mais facilmente, pois podemos substituir um serviço por outro sem afetar o restante do sistema. Isso permite que possamos testar novas tecnologias e abordagens sem medo de quebrar o sistema.
 
@@ -187,13 +194,95 @@ Com uma arquitetura bem planejada e desacoplada fica mais fácil pensar e implem
 Além de ser mais fácil gerenciar o código fonte e testar a aplicação de forma mais consistente, pois cada serviço pode ser desenvolvido, testado e implantado de forma independente. Isso permite que o sistema seja mais estável e confiável, garantindo que ele funcione conforme esperado.
 
 ### Segurança Ofensiva
+A segurança ofensiva utiliza a técnica de **[exposição controlada](#exposição-controlada-mitridatização)**. uma vez que consiste em expor o sistema a ataques controlados, com o objetivo de identificar vulnerabilidades e corrigi-las antes que sejam exploradas por atacantes maliciosos. A segurança ofensiva é uma abordagem proativa para a segurança da informação, que visa identificar e corrigir falhas de segurança antes que sejam exploradas por atacantes maliciosos.
+
+Uma das abordagens é simular de ataques, onde especialistas em segurança utilizam as mesmas técnicas e ferramentas que os hackers para testar a segurança de sistemas e redes, para fazer a identificação de vulnerabilidades, onde através de testes de penetração, varreduras de vulnerabilidades e outras técnicas, são encontradas as fraquezas nos sistemas.
+
+Após a identificação, as vulnerabilidades são corrigidas para evitar que sejam exploradas por atacantes reais garantindo a melhoria contínua, pois as ameaças evoluem constantemente. É necessário realizar testes regulares para garantir que a segurança esteja sempre atualizada.
+
+Mais uma vez podemos notar a presença de se expor constantemente a pequenos riscos, a fim de se preparar para riscos maiores, ou seja, a segurança ofensiva é uma técnica antifrágil, pois se beneficia da exposição controlada a riscos para se fortalecer e se adaptar a novas ameaças.
+
 ### Teste de estresse
+Ainda com relação a técnica de **[exposição controlada](#exposição-controlada-mitridatização)** temos o teste de estresse. O teste de estresse é uma técnica que consiste em submeter o sistema a condições extremas, como alta carga de trabalho, picos de tráfego ou falhas de hardware, para avaliar sua capacidade de lidar com situações adversas.
+
+O teste de estresse é uma forma de identificar vulnerabilidades e gargalos no sistema, que podem causar falhas ou degradação de desempenho em situações reais. Ao submeter o sistema a condições extremas, podemos identificar os pontos fracos e corrigi-los antes que impactem em uma situação real ou sejam explorados por atacantes maliciosos.
+
+A ideia é testar além dos limites normais do sistema, para garantir que ele seja capaz de lidar com situações extremas sem falhar, para evitar o [problema de Lucrecio](#o-problema-de-lucrecio), onde dimensionamos o sistema com base no que conhecemos, e não no que não conhecemos, e acabamos sendo surpreendidos por eventos inesperados.
+
+No teste de esteses expomos o sistema controladamente a situações extremas, para identificar vulnerabilidades e gargalos, e corrigi-los e garantirmos a melhoria do sistema.
+
 ### Teste de mutação
+O teste de mutação seria uma forma de **[redundância planejada](#redundância-planejada)**, pois é um teste para os testes. A ideia é introduzir pequenas mutações no código fonte, para verificar se os testes conseguem identificar essas mutações e falhas no código.
+
+Primeiro criam-se mutantes do código original, que é modificado de forma controlada, gerando versões levemente alteradas chamadas de mutantes. Essas alterações podem incluir a troca de operadores, a remoção de linhas de código ou a alteração de valores. Então, Os testes unitários são executados sobre cada mutante e se um teste não falha, o mutante é considerado "vivo" e indica uma possível lacuna na cobertura dos testes.
+
+O teste de mutação ajuda a melhorar a qualidade do software literalmente introduzindo mais aleatoriedade e falhas no código, onde podemos corrigir e melhorar a qualidade dos testes, onde esses por sua vez, garantem e aumentam a qualidade do software.
+
 ### Canary Deployment
+Canary Deployment ou Canary Release é está relacionada com a técnica das **[Opções Assimétricas](#opções-assimétricas-estrategia-de-barbell)**. A ideia é que você libere uma nova versão do seu software para um pequeno subconjunto de usuários, e então vá aumentando gradativamente a quantidade de usuários que estão utilizando a nova versão. Isso permite que você possa testar a nova versão em produção, mas sem expor todos os usuários a possíveis problemas.
+
+No canary uma porcentagem do tráfego total é direcionada para a nova versão, enquanto o restante continua utilizando a versão antiga. A nova versão é monitorada de perto para identificar quaisquer problemas de desempenho, erros ou outros comportamentos inesperados. Se a nova versão se mostrar estável, a porcentagem de tráfego direcionada para ela é gradualmente aumentada e caso sejam identificados problemas graves, o tráfego é direcionado de volta para a versão antiga.
+
+Como vimos anteriormente, as opções assimétricas possuem uma tolerância a perdas limitadas enquanto tem uma aversão a perdas significativas, enquanto buscamos o máximo de ganhos possíveis. No caso do Canary Deployment, a ideia é que você possa testar a nova versão em produção, mas expondo somente uma pequena parcela de usuários a possíveis problemas. Isso é uma forma de limitar as perdas, enquanto você busca o ganho, principalmente um [lead time](https://dora.dev/guides/dora-metrics-four-keys/) menor, ou seja, entregar valor para o cliente final de uma forma mais rápida, assim podendo inovar e experimentar de uma forma mais segura e barata.
+
 ### Chaos Engineering
+A engenharia do Chaos utiliza diversas ténicas, principamente podemos listar, **[exposição controlada](#exposição-controlada-mitridatização)**, **[aprendizado contínuo](#aprendizado-continuo)**, **[redundância planejada](#redundância-planejada)** e **[decentralização e diversidade](#descentralização-e-diversidade)**.
+
+Chaos engineering é uma abordagem de teste de software que visa avaliar a resiliência de um sistema a falhas inesperadas. A ideia é introduzir intencionalmente falhas e perturbações no sistema para identificar pontos fracos e garantir que ele seja capaz de se recuperar de forma adequada.
+
+O conceito foi muito popularizado pela Netflix, que desenvolveu uma ferramenta chamada Chaos Monkey, e também sua evolução o Simian Army, para introduzir falhas aleatórias em seus sistemas de produção. A ideia é que, ao expor o sistema a falhas controladas, é possível identificar e corrigir problemas antes que eles se tornem críticos.
+
+O simian army é um conjunto de ferramentas que a Netflix desenvolveu para testar a resiliência de seus sistemas. Ele inclui:
+- **Chaos Monkey**: Simula falhas aleatórias em instâncias;
+- **Chaotic Gorilla**: Simula falhas em zonas de disponibilidade inteiras;
+- **Chaos Kong**: Simula falhas em uma região inteira;
+- **Latency Monkey**: Introduz atrasos na comunicação entre componentes para avaliar a tolerância a latência.
+- **Conformity Monkey**: Verifica se os recursos da nuvem estão configurados corretamente de acordo com as políticas de segurança.
+- **Janitor Monkey**: Identifica e exclui recursos não utilizados na nuvem para reduzir custos.
+- **Doctor Monkey**: Monitora a saúde dos sistemas e aplicações e reinicia instâncias que estão com problemas.
+- **security Monkey**: Verifica se as configurações de segurança estão de acordo com as políticas da empresa.
+
+Esses macacos oferecem um verdadeiro caos controlado, permitindo que o sistema evolua com as próprias falhas. Claro que para isso funcionar bem, eu preciso combinar outras práticas, que discutimos nos capítulos anteriores, como ter uma arquitetura desacoplada, com redundância e tolerância a falhas. E principalmente, ter uma cultura de aprendizado contínuo e melhoria, onde as falhas são encaradas como oportunidades de aprendizado.
+
+A ideia é ter uma cultura voltada as falhas, onde a equipe não desenvolve apenas pensando que o sistema pode falhar, mas sim, que ele **vai falhar**. Isso muda a forma como o software é desenvolvido, garantimos que não os desenvolvedores não pensem como o [peru de natal](#o-peru-de-natal).
 
 ## Conclusão
 
+Neste post, exploramos formas de checar além da resiliência, e construir sistemas que se beneficiam das falhas, o que encontramos no conceito da antifragilidade. 
+
+Vimos que a antifragilidade conceito criado por Nassim Taleb, é a capacidade de um sistema, organismo ou indivíduo não apenas resistir ao caos, mas beneficiar-se dele. Em vez de simplesmente sobreviver a choques e perturbações, sistemas antifrágeis crescem e se fortalecem com a adversidade. É o oposto da fragilidade, onde algo se quebra ou se deteriora sob pressão.
+
+Conhecemos formas de identificar a fragilidade, como os eventos cisne negros, o peru de natal e o prolema de Lucrécio. E também conhecemos estratégias para trazer antifragilidade como a exposição controlada, opções assimétricas, Decentralização e diversidade, redundância planejada e aprendizado continuo.
+
+Utilizamos os conceitos introduzidos por Taleb para explorar aplicar a antifragilidade em sistemas de software, e identificamos diversas praticas muito conhecidas que trazem antifragilidade para o sistema, como, Postmortem, Blameless culture, Game Day, CI/CD, Disaster Recovery, Arquitetura desacoplada, segurança ofensiva, teste de estresse, teste de mutação, canary deployment e Chaos Engineering.
+
+Exploramos cada conceito e entendemos o por que essas técnicas beneficiam o sistema quando são introduzidas falhas, aleatoriedades e chaos, deixando-o melhor e mais forte.
+
+Também podemos resumir esse trabalho em algumas máximas escritas e ditas por grandes nomes:
+
+> "Você não pode dizer com segurança que um determinado evento ou choque remoto é mais provável do que outro... mas você pode afirmar com muito mais confiança que um objeto ou estrutura é mais frágil do que outro caso um determinado evento aconteça" - Nassim Nicholas Taleb, ANTIFRAGIL
+
+> "Se isso dói, faça isso com mais frequência e leve a dor adiante" - Jez Humble, CONTINUOUS DELIVERY
+
+> "Para criar sistemas antifrágil, estresse eles ao máximo continuamente, então seremos forçados a simplificar e automatizar" - Autor desconhecido
+
+> "Falhar rápido, corrigir rápido e aprender com isso" - Autor desconhecido
+
 ## Para saber mais
 
+- TALEB, N. N. Antifrágil: Coisas que se beneficiam com o caos. Rio de Janeiro: Objetiva, 2012
+- https://martinfowler.com/articles/continuousIntegration.html
+- https://sre.google/sre-book/example-postmortem/
+- https://dora.dev/
+- https://principlesofchaos.org/pt/
+- https://wa.aws.amazon.com/wat.concept.gameday.en.html
+- https://netflixtechblog.com/tagged/simian-army
+- https://microservices.io/index.html
+- https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html
+
 ## Esse trabalho não termina aqui
+Esse é um trabalho em andamento, e eu adoraria ouvir sua opinião sobre ele. Se você tiver alguma sugestão, crítica, comentário ou pensar em outras formas de aplicar os conceitos da antifragilidade da cadeia de desenvolvimento de software, por favor, entre em contato comigo ou abra um [pull request](/projects/blog/como-contribuir) com as ideias de melhorias ou correções. 
+
+Se você gostou deste post, considere compartilhá-lo com outras pessoas. 
+
+Obrigado por ler!
