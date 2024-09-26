@@ -4,7 +4,7 @@ authors: [ltmleo]
 ---
 # Além da resiliência: Construindo sistemas que se beneficiam das falhas
 
-Na ultima quarta-feira (18/09/2024) tive a oportunidade de apresentar uma palestra na trilha digital de arquitetura e segurança da Vivo no [TDC](https://thedevelopersconference.rds.land/sp24-vivo) 2024. 
+Na ultima quarta-feira (18/09/2024) tive a oportunidade de apresentar uma palestra na trilha digital de arquitetura e segurança da Vivo no [TDC 2024](https://thedevelopersconference.rds.land/sp24-vivo). 
 
 O TDC (The Developers Conference) é um dos maiores eventos de tecnologia do Brasil e reúne profissionais de diversas áreas para discutir as tendências e desafios do mercado de tecnologia. A edição de 2024 foi realizada de forma híbrida, com palestras presenciais em São Paulo e online para todo o Brasil.
 
@@ -16,9 +16,9 @@ O tema da palestra foi **"Além da resiliência: Construindo sistemas que se ben
 
 Para entender como podemos ir além da resiliência, é importante primeiro entender o que é resiliência. Resiliência é a capacidade de um sistema de se recuperar de falhas e continuar funcionando normalmente. Se pensarmos do ponto de vista do comportamento que um sistema apresenta com relação a falhas ou estresse, podemos classificá-lo em três categorias
 
-- Os que se quebram: são sistemas frágeis, que não conseguem lidar com falhas e param de funcionar quando algo dá errado.
-- Os que são inertes: são sistemas resilientes, que conseguem se recuperar de falhas e continuar funcionando, mas não aprendem com os erros e não melhoram sua capacidade de lidar com falhas no futuro.
-- Os que se beneficiam: são sistemas antifrágeis, que não apenas se recuperam de falhas, mas também aprendem com elas e melhoram sua capacidade de lidar com falhas no futuro.
+- **Os que se quebram**: são sistemas frágeis, que não conseguem lidar com falhas e param de funcionar quando algo dá errado.
+- **Os que são inertes**: são sistemas resilientes, que conseguem se recuperar de falhas e continuar funcionando, mas não aprendem com os erros e não melhoram sua capacidade de lidar com falhas no futuro.
+- **Os que se beneficiam**: são sistemas antifrágeis, que não apenas se recuperam de falhas, mas também aprendem com elas e melhoram sua capacidade de lidar com falhas no futuro.
 
 ![Ganho vs Estresse](https://developers.redhat.com/blog/wp-content/uploads/2016/06/fragile-vs-antifragile.png)
 
@@ -30,13 +30,13 @@ O conceito de antifragilidade foi introduzido por Nassim Nicholas Taleb em seu l
 
 O termo surgiu quando Taleb não encontrou uma palavra para descrever o oposto de frágil. Ele percebeu que o termo "Robusto" ou "Resiliente" não era suficiente, pois um sistema robusto simplesmente resiste a falhas, enquanto um sistema antifrágil se beneficia delas, e assim como "Neutro" não é o oposto de "Negativo" e sim "Positivo", "Resiliente" não é o oposto de "Frágil" e sim "Antifrágil".
 
-Taleb descreve a antrifragildade como "Qualquer coisa que apresenta mais vantagens a partir de certos impactos, o inverso é frágil" e propõe que é muito mais fácil saber se uma coisa ou situação é frágil do que prever um evento capaz de danifica-la, o que fica muito claro quando imaginamos uma situação de fragilidade, como uma taça de cristal equilibrada em uma mesa, é muito mais fácil prever que ela quebrará se cair do que prever o evento que a fará cair. 
+Taleb descreve a antifragilidade como "Qualquer coisa que apresenta mais vantagens a partir de certos impactos, o inverso é frágil" e propõe que é muito mais fácil saber se uma coisa ou situação é frágil do que prever um evento capaz de danifica-la, o que fica muito claro quando imaginamos uma situação de fragilidade, como uma taça de cristal equilibrada em uma mesa, é muito mais fácil prever que ela quebrará se cair do que prever o evento que a fará cair. 
 
 Outro conceito interessante é o de que sistemas complexos enfraquecem e até mesmo morrem quando são privados da exposição a estresse, ou seja, a exposição a eventos adversos é necessária para o crescimento e a evolução de um sistema. Podemos pensar no corpo humano, que se não estiver sempre em movimento, se exercitando e submetendo-se a pequenos níveis de estresse, perde massa muscular e se deteriora com o tempo.
 
 ## Indentificando a fragildidade
 
-Agora que definimos o conceito da antifragilidade, podemos explorar alguns outros conceitos que Taleb apresenta em seu livro, como a identificação da fragildade. Nas próximas sessões, serão apresentados alguns conceitos que podem ser utilizados para identificar a fragildade.
+Agora que definimos o conceito da antifragilidade, podemos explorar alguns outros conceitos que Taleb apresenta em seu livro, como a identificação da fragilidade. Nas próximas sessões, serão apresentados alguns conceitos que podem ser utilizados para identificar a fragilidade.
 
 ### Eventos Cisnes Negros
 Esse conceito foi introduzido por Taleb no livro "A Lógica do Cisne Negro" publicado em 2007, onde ele destaca que apensar das analises de projeções, sistemas complexos estão sujeitos a reviravoltas imprevisíveis.
@@ -48,8 +48,8 @@ Taleb descreve os eventos cisne negros como eventos altamente impactantes, raros
 ### O Peru de Natal
 Outro conceito introduzido por Taleb é o Peru de Natal, que é uma metáfora visual para ilustrar a fragilidade. O peru é alimentado todos os dias, bem tratado e protegido, até que chega o dia de Natal, onde ele é morto e servido como jantar. O peru não tem como prever o que acontecerá no dia de Natal, pois todos os dias anteriores foram de prosperidade e bem-estar. Essa metáfora mostra que a "Ausência da evidência não é evidência da ausência", ou seja, precisamos buscar outros pontos de vista e considerar outras possibilidades além das que já conhecemos, pois o que não sabemos pode ser mais importante do que o que sabemos.
 
-### O Problema de Lucrecio
-O Problema de Lucrecio é uma analogia que Taleb faz com o poeta romano Lucrecio. Resumidamente, "O tolo acredita que a montanha mais alta do mundo é a montanha que ele viu". O problema de Lucrecio é a crença de que o que não vemos não existe, ou seja, acreditar que o que não conhecemos não é importante. Taleb usa essa analogia para ilustrar que muitas vezes não consideramos o que não conhecemos, e isso pode ser um grande erro, pois o que não conhecemos pode ser mais importante do que o que conhecemos.
+### O Problema de Lucrécio
+O Problema de Lucrécio é uma analogia que Taleb faz com o poeta romano Lucrécio. Resumidamente, "O tolo acredita que a montanha mais alta do mundo é a montanha que ele viu". O problema de Lucrécio é a crença de que o que não vemos não existe, ou seja, acreditar que o que não conhecemos não é importante. Taleb usa essa analogia para ilustrar que muitas vezes não consideramos o que não conhecemos, e isso pode ser um grande erro, pois o que não conhecemos pode ser mais importante do que o que conhecemos.
 
 Fukushima é um exemplo, pois foi projetada para aguentar o maior terremoto já registrado no Japão, até que um terremoto maior aconteceu e a usina não aguentou. Precisamos estar preparados para o inesperado, pois o inesperado é o que mais nos impacta.
 
@@ -90,7 +90,6 @@ Talvez um dos pontos mais importantes quando tratamos de antifragilidade seja a 
 Conforme viemos em quase todas as técnicas apresentadas, precisamos sempre experimentar e inovar, e para isso precisamos aprender com os erros e acertos. A ideia é sempre melhorar e evoluir, e para isso precisamos aprender com o que aconteceu.
 
 Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", que ilustram bem o que precisamos fazer para melhorar e evoluir. A ideia é sempre aprender com o que aconteceu, e melhorar a cada dia, e para isso precisamos sempre estar aprendendo.
-
 Um exemplo de sucesso é a industria aérea, que a cada incidente aprende com os erros e acertos, e melhora todos os sistemas, tornando-se a cada dia mais segura e eficiente.
 
 ![Acidentes Aéreos](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/12/29/1419840642471/66aa0efc-9a1c-4eaf-b6cb-486b44c95fc0-1020x612.png?width=620&dpr=1&s=none)
@@ -207,7 +206,7 @@ Ainda com relação a técnica de **[exposição controlada](#exposição-contro
 
 O teste de estresse é uma forma de identificar vulnerabilidades e gargalos no sistema, que podem causar falhas ou degradação de desempenho em situações reais. Ao submeter o sistema a condições extremas, podemos identificar os pontos fracos e corrigi-los antes que impactem em uma situação real ou sejam explorados por atacantes maliciosos.
 
-A ideia é testar além dos limites normais do sistema, para garantir que ele seja capaz de lidar com situações extremas sem falhar, para evitar o [problema de Lucrecio](#o-problema-de-lucrecio), onde dimensionamos o sistema com base no que conhecemos, e não no que não conhecemos, e acabamos sendo surpreendidos por eventos inesperados.
+A ideia é testar além dos limites normais do sistema, para garantir que ele seja capaz de lidar com situações extremas sem falhar, para evitar o [problema de Lucrecio](#o-problema-de-lucrécio), onde dimensionamos o sistema com base no que conhecemos, e não no que não conhecemos, e acabamos sendo surpreendidos por eventos inesperados.
 
 No teste de esteses expomos o sistema controladamente a situações extremas, para identificar vulnerabilidades e gargalos, e corrigi-los e garantirmos a melhoria do sistema.
 
@@ -226,7 +225,7 @@ No canary uma porcentagem do tráfego total é direcionada para a nova versão, 
 Como vimos anteriormente, as opções assimétricas possuem uma tolerância a perdas limitadas enquanto tem uma aversão a perdas significativas, enquanto buscamos o máximo de ganhos possíveis. No caso do Canary Deployment, a ideia é que você possa testar a nova versão em produção, mas expondo somente uma pequena parcela de usuários a possíveis problemas. Isso é uma forma de limitar as perdas, enquanto você busca o ganho, principalmente um [lead time](https://dora.dev/guides/dora-metrics-four-keys/) menor, ou seja, entregar valor para o cliente final de uma forma mais rápida, assim podendo inovar e experimentar de uma forma mais segura e barata.
 
 ### Chaos Engineering
-A engenharia do Chaos utiliza diversas ténicas, principamente podemos listar, **[exposição controlada](#exposição-controlada-mitridatização)**, **[aprendizado contínuo](#aprendizado-continuo)**, **[redundância planejada](#redundância-planejada)** e **[decentralização e diversidade](#descentralização-e-diversidade)**.
+A engenharia do Chaos utiliza diversas técnicas, principalmente podemos listar, **[exposição controlada](#exposição-controlada-mitridatização)**, **[aprendizado contínuo](#aprendizado-continuo)**, **[redundância planejada](#redundância-planejada)** e **[decentralização e diversidade](#descentralização-e-diversidade)**.
 
 Chaos engineering é uma abordagem de teste de software que visa avaliar a resiliência de um sistema a falhas inesperadas. A ideia é introduzir intencionalmente falhas e perturbações no sistema para identificar pontos fracos e garantir que ele seja capaz de se recuperar de forma adequada.
 
@@ -240,7 +239,7 @@ O simian army é um conjunto de ferramentas que a Netflix desenvolveu para testa
 - **Conformity Monkey**: Verifica se os recursos da nuvem estão configurados corretamente de acordo com as políticas de segurança.
 - **Janitor Monkey**: Identifica e exclui recursos não utilizados na nuvem para reduzir custos.
 - **Doctor Monkey**: Monitora a saúde dos sistemas e aplicações e reinicia instâncias que estão com problemas.
-- **security Monkey**: Verifica se as configurações de segurança estão de acordo com as políticas da empresa.
+- **Security Monkey**: Verifica se as configurações de segurança estão de acordo com as políticas da empresa.
 
 Esses macacos oferecem um verdadeiro caos controlado, permitindo que o sistema evolua com as próprias falhas. Claro que para isso funcionar bem, eu preciso combinar outras práticas, que discutimos nos capítulos anteriores, como ter uma arquitetura desacoplada, com redundância e tolerância a falhas. E principalmente, ter uma cultura de aprendizado contínuo e melhoria, onde as falhas são encaradas como oportunidades de aprendizado.
 
