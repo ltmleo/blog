@@ -22,7 +22,7 @@ Para entender como podemos ir além da resiliência, é importante primeiro ente
 
 ![Ganho vs Estresse](https://developers.redhat.com/blog/wp-content/uploads/2016/06/fragile-vs-antifragile.png)
 
-Podemos notar que um novo termo surgiu "Antifrágil", nas próximas sessões esse termo será melhor explorado.
+Podemos notar que um novo termo surgiu "Antifrágil". Nas próximas sessões esse termo será melhor explorado.
 
 ## Antifragilidade
 
@@ -41,9 +41,9 @@ Agora que definimos o conceito da antifragilidade, podemos explorar alguns outro
 ### Eventos Cisnes Negros
 Esse conceito foi introduzido por Taleb no livro "A Lógica do Cisne Negro" publicado em 2007, onde ele destaca que apensar das analises de projeções, sistemas complexos estão sujeitos a reviravoltas imprevisíveis.
 
-O nome Cisne negros vem pelo fato de que no passado na Europa, tinha-se a crença de que só existiam cisnes brancos, mas com o descobrimento de cisnes negros na Australia, todo essa crença foi por água a baixo. 
+O nome Cisnes negros vem pelo fato de que no passado na Europa, tinha-se a crença de que só existiam cisnes brancos, mas com o descobrimento de cisnes negros na Australia, toda essa crença foi por água a baixo. 
 
-Taleb descreve os eventos cisne negros como eventos altamente impactantes, raros e imprevisíveis. Muitas vezes esses eventos, retrospectivamente são atribuídos a explicações convenientes. Em resumo, são events difíceis de prever mas que precisamos estar sempre preparados. 
+Taleb descreve os eventos cisnes negros como eventos altamente impactantes, raros e imprevisíveis. Muitas vezes esses eventos, retrospectivamente são atribuídos a explicações convenientes. Em resumo, são eventos difíceis de prever, mas que precisamos estar sempre preparados. 
 
 ### O Peru de Natal
 Outro conceito introduzido por Taleb é o Peru de Natal, que é uma metáfora visual para ilustrar a fragilidade. O peru é alimentado todos os dias, bem tratado e protegido, até que chega o dia de Natal, onde ele é morto e servido como jantar. O peru não tem como prever o que acontecerá no dia de Natal, pois todos os dias anteriores foram de prosperidade e bem-estar. Essa metáfora mostra que a "Ausência da evidência não é evidência da ausência", ou seja, precisamos buscar outros pontos de vista e considerar outras possibilidades além das que já conhecemos, pois o que não sabemos pode ser mais importante do que o que sabemos.
@@ -65,31 +65,32 @@ Taleb propõe que a exposição controlada a eventos adversos é uma forma de au
 Podemos ver com essa técnica que o antifrágil é um conceito muito antigo que somente não tinha um nome para o descrever.
 
 ### Opções assimétricas (Estrategia de Barbell)
-A estratégia de barbell é uma técnica que consiste em dividir as opções em dois extremos, um extremo extremamente seguros e o outro extremamente arriscados, evitando o moderado ou que está no centro. Taleb propõe que essa técnica é uma forma de aumentar a antifragilidade de um sistema, pois se um dos extremos falhar, o outro compensará.
+A estratégia de barbell é uma técnica que consiste em dividir as opções em dois extremos, um extremamente seguro e o outro extremamente arriscados, evitando o moderado ou que está no centro. Taleb propõe que essa técnica é uma forma de aumentar a antifragilidade de um sistema, pois se um dos extremos falhar, o outro compensará.
 
-A ideia é sempre fazer uma análise do risco associado, tolerando perdas limitadas e tendo aversão a perdas excisavas. Trabalhar de uma forma a potencializar o ganho, e a longo prazo, assim, quando um lado estiver exposto a um evento cisne negro o outro compensa e ganha com essa exposição. 
+A ideia é sempre fazer uma análise do risco associado, tolerando perdas limitadas e tendo aversão a perdas excessivas. Trabalhar de uma forma a potencializar o ganho, e a longo prazo, quando um lado estiver exposto a um evento cisne negro o outro compensa e ganha com essa exposição. 
 
 Aqui sempre precisamos experimentar e inovar, pois enquanto de um lado temos a segurança, do outro precisamos dessa exposição.
 
 ![Barbell Strategy](https://www.hmmrmedia.com/wp-content/uploads/2022/10/Barbell-Strategy.jpeg)
 
 ### Descentralização e Diversidade
-Se pensarmos em um individuo, ele é Antifrágil, pois como vimos, seu corpo se beneficia de pequenos estresses, como por exemplo ir a academia, porém esse individuo ainda é frágil, pois se ele morrer tudo relaciona a ele se vai também. Em contra partida o conjunto de individuo, como uma sociedade, é antifrágil, pois se um individuo morrer, a sociedade continua, e se um individuo se beneficia de um estresse, a sociedade como um todo se beneficia.
+Se pensarmos em um individuo, ele é Antifrágil, pois como vimos, seu corpo se beneficia de pequenos estresses, como por exemplo ir a academia, porém esse individuo ainda é frágil, pois se ele morrer tudo relacionado a ele se vai também. Em contra partida o conjunto de indivíduos, como uma sociedade, é antifrágil, pois se um individuo morrer, a sociedade continua, e se um individuo se beneficia de um estresse, a sociedade como um todo se beneficia.
 
-Um ótimo exemplo de Descentralização e Diversidade é a vida, pois é adaptada aos mais diversos ambientes. E mesmo grandes eventos cisne negros como cinco extinções em massa, a vida ainda prospera. A máxima "Sistemas complexos enfraquecem e morrem na ausência de estressores" ilustra bem o que acontece na vida, pois, sem eventos estressores como a seleção natural, a vida deixa de evoluir e se adaptar, tornando-a mais suscetível a impactos.
+Um ótimo exemplo de Descentralização e Diversidade é a vida, pois é adaptada aos mais diversos ambientes. E mesmo grandes eventos cisnes negros como cinco extinções em massa, a vida ainda prospera. A máxima "Sistemas complexos enfraquecem e morrem na ausência de estressores" ilustra bem o que acontece na vida, pois sem eventos estressores, como a seleção natural, a vida deixa de evoluir e se adaptar, tornando-a mais suscetível a impactos.
 
-![descentralizacao_e_diversidade](./images/descentralizacao_e_diversidade.png)
+![descentralização e diversidade](./images/descentralizacao_e_diversidade.png)
 
 ### Redundância planejada
 Como vimos, ter redundância é uma ótima abordagem para que sistemas resistam a choques e estresse, porém, somente a redundância não é suficiente para beneficiar um sistema em caso de falha, precisamos planejar a redundância, para que em determinados choques, o sistema possa se recuperar de forma rápida e eficiente e melhorar com isso.
 
-Em alguns pontos do sistema preciso ter diversos níveis de redundância, porém em outros talvez não precise, precisamos sempre planejar de uma forma a otimizar os custos envolvidos, a segurança necessária e a capacidade de experimentar e inovar, como vimos nas opções assimétricas. 
+Em alguns pontos do sistema é preciso ter diversos níveis de redundância, porém em outros talvez não precise. Precisamos sempre planejar de uma forma a otimizar os custos envolvidos, a segurança necessária e a capacidade de experimentar e inovar, como vimos nas opções assimétricas. 
 
 ### Aprendizado Continuo
 Talvez um dos pontos mais importantes quando tratamos de antifragilidade seja a capacidade de aprender com os eventos passados.
-Conforme viemos em quase todas as técnicas apresentadas, precisamos sempre experimentar e inovar, e para isso precisamos aprender com os erros e acertos. A ideia é sempre melhorar e evoluir, e para isso precisamos aprender com o que aconteceu.
+Conforme vimos em quase todas as técnicas apresentadas, precisamos sempre experimentar e inovar e para isso precisamos aprender com os erros e acertos. A ideia é sempre melhorar e evoluir.
 
-Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", que ilustram bem o que precisamos fazer para melhorar e evoluir. A ideia é sempre aprender com o que aconteceu, e melhorar a cada dia, e para isso precisamos sempre estar aprendendo.
+Podemos pensar nas máximas, "1% melhor a cada dia" ou "Fail fast, learn fast", que ilustram bem o que precisamos fazer para melhorar e evoluir. A ideia é sempre aprender com o que aconteceu, e melhorar a cada dia e para isso precisamos estar em constante aprendizado.
+
 Um exemplo de sucesso é a industria aérea, que a cada incidente aprende com os erros e acertos, e melhora todos os sistemas, tornando-se a cada dia mais segura e eficiente.
 
 ![Acidentes Aéreos](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/12/29/1419840642471/66aa0efc-9a1c-4eaf-b6cb-486b44c95fc0-1020x612.png?width=620&dpr=1&s=none)
@@ -102,9 +103,9 @@ Nesta seção, utilizaremos os conceitos introduzidos por Taleb para explorar co
 Talvez um dos pontos mais importantes quando falamos de **[aprendizado continuo](#aprendizado-continuo)** sejam os postmortems, pois neles conseguimos compartilhar todo o background de um problema, como ele foi resolvido e o que foi aprendido com ele. A ideia é que não somente os envolvidos possam aprender com o problema, mas também as gerações futuras.
 
 Um postmortem deve contemplar principalmente os seguintes pontos:
-- **cabeçalho**: data, título, autor, versão, revisor, status, tipo, dono, data de revisão, data de aprovação, data de publicação e outras informações relevantes;
+- **Cabeçalho**: data, título, autor, versão, revisor, status, tipo, dono, data de revisão, data de aprovação, data de publicação e outras informações relevantes;
 - **Sumário executivo**: resumo do problema, impacto, ações tomadas, lições aprendidas e ações futuras;
-- **Sumario do problema**: descrição do problema, impacto, cronologia, resolução e ações futuras;
+- **Sumário do problema**: descrição do problema, impacto, cronologia, resolução e ações futuras;
 - **Itens de ação**: ações tomadas, ações futuras, responsáveis, prazos e status;
 - **Cronologia**: detalhamento do problema, desde o início até a resolução;
 - **Lições aprendidas**: o que foi aprendido com o problema;
@@ -113,7 +114,7 @@ Claro que não precisa se limitar somente a isso, mas é um bom ponto de partida
 
 O postmortem deve ser feito logo após a resolução do problema, para que todos os envolvidos ainda tenham o problema fresco na memória, e deve ser revisado periodicamente para garantir que as ações futuras estão sendo tomadas.
 
-Além disso, é importante que o postmortem seja compartilhado com todos, para que todos possam aprender com o problema, até mesmo as gerações futuras podem se beneficiar e encontrar soluções para problemas parecido.
+Além disso, é importante que o postmortem seja compartilhado com todos, para que possam aprender com o problema, até mesmo as gerações futuras, que podem se beneficiar e encontrar soluções para problemas parecidos.
 
 :::tip
 Em um projeto que participei utilizamos o [docussaurus](/projects/blog/how-to) para criar uma documentação de postmortem, onde todos podiam contribuir com o que aprenderam e o que poderia ter sido feito de forma diferente. Por ser uma ferramenta de documentação como código, conseguimos versionar e revisar os postmortems de forma mais fácil. Além de trabalhar com tags e mecanismos de busca para facilitar a busca de postmortems antigos.
@@ -133,18 +134,18 @@ Dentre os principais pontos da cultura blameless, podemos destacar:
 - **Melhoria contínua** ao invés de **culpar por falhas**
 - **Transparência** ao invés de **ocultar informações**
 
-Com essas trocas simples conseguimos construir um ambiente mais aberto, empoderado e que aprender com os erros, melhorando o sistema com as falhas.
+Com essas trocas simples conseguimos construir um ambiente mais aberto, empoderado e que podemos aprender com os erros, melhorando o sistema com as falhas.
 
 ### GameDay
 O gameday é uma forma de **exposição controlada** e **aprendizado contínuo**. A ideia foi popularizada pela Amazon e é uma prática comum em empresas que adotam a cultura DevOps.
 
-No game day, a equipe simula um cenário de falha, um incidente passado ou testam algum hipótese, para observar como o sistema se comporta e como a equipe reage, com o objetivo de aprender e melhorar o sistema.
+No game day, a equipe simula um cenário de falha, um incidente passado ou testam alguma hipótese, para observar como o sistema se comporta e como a equipe reage, com o objetivo de aprendizado e de melhoraria do sistema.
 
-Podemos utilizar o post-mortem tanto para documentar o que foi aprendido e o que pode ser melhorado como os de eventos passados para reencenar o incidente, fazendo com que toda a equipe aprenda com esse evento.
+Podemos utilizar o post-mortem tanto para documentar o que foi aprendido e o que pode ser melhorado, como os de eventos passados para reencenar o incidente, fazendo com que toda a equipe aprenda com esse evento.
 
 Devemos sempre tentar trazer uma equipe multidisciplinar e de diferentes areas da empresa para o game day, para que todos possam aprender e contribuir com o aprendizado, disseminando o conhecimento através da organização.
 
-O gameday é muito importante principalmente para validar planos de disaster recovery, testar se o plano está aderente, as automações e backups funcionam, e toda a equipe tem capacidade e conhecimento para executar o plano em caso de incidente real.
+O gameday é muito importante principalmente para validar planos de disaster recovery, testar se o plano está aderente, as automações e backups funcionam, e se toda a equipe tem capacidade e conhecimento para executar o plano em caso de incidente real.
 
 O gameday é uma oportunidade de aprender com as falhas antes que elas de fato aconteçam, e de melhorar o sistema e a equipe continuamente.
 
@@ -251,7 +252,7 @@ Neste post, exploramos formas de checar além da resiliência, e construir siste
 
 Vimos que a antifragilidade conceito criado por Nassim Taleb, é a capacidade de um sistema, organismo ou indivíduo não apenas resistir ao caos, mas beneficiar-se dele. Em vez de simplesmente sobreviver a choques e perturbações, sistemas antifrágeis crescem e se fortalecem com a adversidade. É o oposto da fragilidade, onde algo se quebra ou se deteriora sob pressão.
 
-Conhecemos formas de identificar a fragilidade, como os eventos cisne negros, o peru de natal e o prolema de Lucrécio. E também conhecemos estratégias para trazer antifragilidade como a exposição controlada, opções assimétricas, Decentralização e diversidade, redundância planejada e aprendizado continuo.
+Conhecemos formas de identificar a fragilidade, como os eventos cisnes negros, o peru de natal e o prolema de Lucrécio. E também conhecemos estratégias para trazer antifragilidade como a exposição controlada, opções assimétricas, Decentralização e diversidade, redundância planejada e aprendizado continuo.
 
 Utilizamos os conceitos introduzidos por Taleb para explorar aplicar a antifragilidade em sistemas de software, e identificamos diversas praticas muito conhecidas que trazem antifragilidade para o sistema, como, Postmortem, Blameless culture, Game Day, CI/CD, Disaster Recovery, Arquitetura desacoplada, segurança ofensiva, teste de estresse, teste de mutação, canary deployment e Chaos Engineering.
 

@@ -44,6 +44,10 @@ const config: Config = {
     [
       '@docusaurus/preset-classic',
       {
+        gtag: {
+          trackingID: 'G-714QFE3V9G',
+          anonymizeIP: true,
+        },
         docs: {
           sidebarPath: './sidebars.ts',
           path: './learning',
