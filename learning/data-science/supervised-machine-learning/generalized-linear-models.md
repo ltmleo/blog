@@ -1,7 +1,8 @@
 ---
 sidebar_position: 1
+tags: ['ml', 'dsa', 'python', 'learning', 'wip', classnotes]
 ---
-# WIP: GLM - Generalized Linear Models
+# GLM - Generalized Linear Models
 
 ## OLS - Ordinary Least Squares
 

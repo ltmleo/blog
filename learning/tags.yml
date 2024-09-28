@@ -1,0 +1,23 @@
+wip:
+  label: 'WIP'
+  description: 'Work in Progress'
+
+ml:
+  label: 'Machine Learning'
+  description: 'Machine Learning'
+
+dsa:
+  label: 'Data Science and Analytics'
+  description: 'Data Science and Analytics'
+
+learning:
+  label: 'Learning'
+  description: 'Coisas que estou aprendendo'
+
+python:
+  label: 'Python'
+  description: 'Python'
+
+classnotes:
+  label: 'Class Notes'
+  description: 'Notes from classes'

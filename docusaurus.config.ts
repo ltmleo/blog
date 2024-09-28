@@ -89,7 +89,7 @@ const config: Config = {
       },
       items: [
         {
-          to: '/blog/projects/intro', 
+          to: '/blog/projects', 
           label: 'Projects', 
           position: 'left',
           sidebarId: 'projectsSidebar',
@@ -117,11 +117,11 @@ const config: Config = {
           items: [
             {
               label: 'Coisas que estou aprendendo',
-              to: 'learning/intro',
+              to: 'learning/',
             },
             {
               label: 'Projetos que estou desenvolvendo',
-              to: 'projects/intro',
+              to: 'projects/',
             },
           ],
         },

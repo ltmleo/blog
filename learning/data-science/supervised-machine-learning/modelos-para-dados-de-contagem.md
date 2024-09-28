@@ -1,4 +1,8 @@
-# WIP: Modelos para Dados de Contagem
+---
+sidebar_position: 2
+tags: ['ml', 'dsa', 'python', 'learning', 'wip', classnotes]
+---
+# Modelos para Dados de Contagem
 
 **lambda**: Valor previsto de ocorrências, taxa de eventos ou contagem de eventos para dada exposição. Numero de navios em um porto, conversão de clientes em um site, numero de vendas em um dia, numero de acidentes em uma rodovia, etc.
 
