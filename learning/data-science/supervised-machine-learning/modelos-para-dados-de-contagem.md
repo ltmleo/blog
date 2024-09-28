@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-tags: ['ml', 'dsa', 'python', 'learning', 'wip', classnotes]
+tags: ['ml', 'dsa', 'python', 'learning', classnotes]
 ---
 # Modelos para Dados de Contagem
 

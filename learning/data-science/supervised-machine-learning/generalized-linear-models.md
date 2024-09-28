@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: ['ml', 'dsa', 'python', 'learning', 'wip', classnotes]
+tags: ['ml', 'dsa', 'python', 'learning', classnotes]
 ---
 # GLM - Generalized Linear Models
 
