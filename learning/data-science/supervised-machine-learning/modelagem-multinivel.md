@@ -54,9 +54,15 @@ Se a variância dos termos aleatórios forem estadisticamente diferentes de zero
 * nível 2: `β_0j = γ_00 + u_0j` (γ_00 grand mean ou intercepto - componente de efeito fixo, u_0j efeito aleatório de intercepto)
 * substituindo: `desempenho_ij = γ_00 + u_0j + e_ij` (se não tiver variação de u_0j, não se justifica a modelagem multinível)
 
-1. Modelo com intercepto e inclinação aleatórios.
-2. Modelo final
+2. Modelo com **intercepto e inclinação aleatórios**. 
+* nível 1: `desempenho_ij = β_0j + β_1j * x_ij + e_ij` - e_ij erro indiossincrático
+* nível 2: `β_0j = γ_00 + u_0j` e `β_1j = γ_10 + u_1j`  u_0j efeito aleatório de intercepto, u_0j efeito aleatório de inclinação
+* substituindo: `desempenho_ij = γ_00 + γ_10 * x_ij + u_0j + u_1j * x_ij + e_ij` - `γ_00 + γ_10 * x_ij` efeito fixo, `u_0j + u_1j * x_ij` efeito aleatório
 
+1. **Modelo final** 
+* nível 1: `desempenho_ij = β_0j + β_1j * x_ij + e_ij`
+* nível 2: `β_0j = γ_00 + γ_01 * z_j + u_0j` e `β_1j = γ_10 + γ_11 * z_j + u_1j` 
+* substituindo: `desempenho_ij = γ_00 + γ_01 * z_j + γ_10 * x_ij + γ_11 * z_j * x_ij + u_0j + u_1j * x_ij + e_ij`
 
 
 ## Desafios de Modelos Multinível
@@ -64,6 +70,68 @@ Se a variância dos termos aleatórios forem estadisticamente diferentes de zero
 - Métodos de estimação dos parâmetros
 - Clusterização da amostra
 
+ 
+## Python code
+re = random effects
+fe = fixed effects
+groups = agrupamento pela variável
+data = dataframe (bancos de dados)
+
+### Modelo Nulo
+```python
+import statsmodels.api as sm
+sm.MixedLM.from_formula('y ~ 1', data=df, groups='x1', re_formula='1').fit()
+```
+
+### Modelo com Intercepto e Inclinação Aleatórios
+```python
+import statsmodels.api as sm
+sm.MixedLM.from_formula('y ~ x1 + x2', data=df, groups='x1', re_formula='x2').fit()
+```
+
+### Modelo Final
+```python
+import statsmodels.api as sm
+sm.MixedLM.from_formula('y ~ x1 + x2 + x1:x2', data=df, groups='x1', re_formula='x2).fit()
+```
+* dois pontos (:): interação entre x1 e x2 (multiplicação)
+
+
+### Previsão
+
+A função `predict` não considera os efeitos aleatórios de intercepto ou de inclinação por grupo. Neste sentido, precisamos adicioná-los a partir dos parâmetros do modelo.
+
+:::caution
+O predict na modelagem multinível é considera **apenas** o componente de efeito fixo.
+:::
+
+```python
+import statsmodels.api as sm
+model = sm.MixedLM.from_formula('y ~ x1 + x2 + x1:x2', data=df, groups='x1', re_formula='x2).fit()
+fixed_result = model.predict(pd.DataFrame({'x1': [123], 'x2': [456], 'group': ['A']}))
+```
+
+Adicionando os efeitos aleatórios:
+
+```python
+re = pd.DataFrame(model.random_effects).T # T: matriz transposta
+result = fixed_result + re['v0j'][0] * 123 + re['v1j'][0] * 456
+# v0j e v1j são os efeitos aleatórios de intercepto e inclinação
+# [0] é o índice do grupo A
+```
+
+Na Mão...
+
+```
+fitted_fixed = intercept + beta1 * x1 + beta2 * x2 + beta3 * x1 * x2
+fitted_random = u0j + u1j * x1 + u2j * x2 + u3j * x1 * x2
+fitted = fitted_fixed + fitted_random
+
+beta3 = beta1:beta2
+```
+
+
+PAREI EM 1.48
 
 ### Para saber mais
 - http://mfviz.com/hierarchical-models/
