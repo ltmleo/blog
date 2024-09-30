@@ -80,7 +80,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/preview.jpg',
+    image: 'img/preview.png',
     navbar: {
       title: 'Home',
       logo: {
