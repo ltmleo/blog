@@ -131,7 +131,7 @@ beta3 = beta1:beta2
 ```
 
 
-PAREI EM 1.48
+PAREI EM 2.09
 
 ### Para saber mais
 - http://mfviz.com/hierarchical-models/
