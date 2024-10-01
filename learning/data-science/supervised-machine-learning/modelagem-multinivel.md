@@ -130,8 +130,53 @@ fitted = fitted_fixed + fitted_random
 beta3 = beta1:beta2
 ```
 
+## Modelagem HLM3 com medidas repetidas
 
-PAREI EM 1.48
+## Modelagem HLM3 com medidas repetidas
+
+![HLM3](images/hlm3.png)
+
+* Nivel 1: Período t (serie temporal)
+* Nivel 2: Indivíduo j
+* Nivel 3: Grupo k
+
+1. Modelos Nulo (acha o intercepto):
+* nível 1: `desempenho_tjk = beta_0jk + erro_tjk` (erro_tjk = erro indiossincrático)
+* nível 2: `beta_0jk = gamma_00k + u_0jk` (efeito aleatório do indivíduo)
+* nível 3: `gamma_00k = alpha_000 + tau_00k` (alpha_000 = grand mean, tau_00k = efeito aleatório do grupo)
+* substituindo: `desempenho_tjk = alpha_000 + tau_00k + u_0jk + erro_tjk` (alpha_000 = EF, restante EA)
+
+ICCs (Intra-Class Correlation): proporção da variância total que é devida a variância entre os grupos.
+
+icc_grupo = var(tau_00k) / (var(tau_00k) + var(u_0jk) + var(erro_tjk))
+icc_individuo = var(u_0jk) / (var(tau_00k) + var(u_0jk) + var(erro_tjk))
+
+**Obs**: Na aula grupo = escola, individuo = aluno.
+
+2. Modelo com Intercepto e Inclinação Aleatórios
+
+
+3. Modelo Final
+
+
+### Python
+
+```python
+import statsmodels.api as sm
+modelo_nulo_hlm3 = sm.MixedLM.from_formula("desempenho ~ 1", data=df, groups=df["grupo"], re_formula="1", vc_formula={"individuo": "0 + C(individuo)"})
+```
+* desempenho: variável dependente
+* re_formula: efeito aleatório do indivíduo
+* vc_formula: componente de variância do grupo
+
+A funçã0omixedlm() não comporta efeitos aleatorios de inclinação para os niveis 2 e 3 simultaneamente. Para isso, é necessário usar a função Lmer() do pacote pymer4.models.
+
+```python
+from pymer4.models import Lmer
+modelo_nulo_hlm3 = Lmer(formula="desempenho ~ 1 + (1|grupo) + (1|individuo)", data=df)
+```
+
+PAREI EM 2.55
 
 ### Para saber mais
 - http://mfviz.com/hierarchical-models/
