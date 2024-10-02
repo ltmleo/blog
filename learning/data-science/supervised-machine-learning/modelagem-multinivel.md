@@ -217,9 +217,6 @@ fixed_result = modelo_final_hlm3.predict(pd.DataFrame({"tempo": [123], "ativ": [
 * texp = tempo de experiência
 * tempo = tempo (serie temporal)
 
-PAREI em 3.27
-
-
 ### Para saber mais
 - http://mfviz.com/hierarchical-models/
 - https://www.youtube.com/watch?v=QCqF-2E86r0
