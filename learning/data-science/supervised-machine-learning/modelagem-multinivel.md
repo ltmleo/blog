@@ -130,8 +130,90 @@ fitted = fitted_fixed + fitted_random
 beta3 = beta1:beta2
 ```
 
+## Modelagem HLM3 com medidas repetidas
 
-PAREI EM 2.09
+![HLM3](images/hlm3.png)
+
+* Nivel 1: Período t (serie temporal)
+* Nivel 2: Indivíduo j
+* Nivel 3: Grupo k
+
+1. Modelos Nulo:
+* nível 1: `desempenho_tjk = beta_0jk + erro_tjk` (erro_tjk = erro indiossincrático)
+* nível 2: `beta_0jk = gamma_00k + u_0jk` (efeito aleatório do indivíduo)
+* nível 3: `gamma_00k = delta_000 + tau_00k` (delta_000 = grand mean, tau_00k = efeito aleatório do grupo)
+* substituindo: `desempenho_tjk = delta_000 + tau_00k + u_0jk + erro_tjk` (delta_000 = EF, restante EA)
+
+ICCs (Intra-Class Correlation): proporção da variância total que é devida a variância entre os grupos.
+
+icc_grupo = var(tau_00k) / (var(tau_00k) + var(u_0jk) + var(erro_tjk))
+icc_individuo = var(u_0jk) / (var(tau_00k) + var(u_0jk) + var(erro_tjk))
+
+**Obs**: Na aula grupo = escola, individuo = aluno.
+
+1. Modelo com Intercepto e Inclinação Aleatórios
+
+* nível 1: `desempenho_tjk = beta_0jk + beta_1jk * tempo_tjk + erro_tjk`
+* nível 2: `beta_0jk = gamma_00k + u_0jk` e `beta_1jk = gamma_10k + u_1jk`
+* nivel 3: `gamma_00k = delta_000 + tau_00k` e `gamma_10k = delta_100 + tau_10k`
+* substituindo: `desempenho_tjk = delta_000 + delta_100 * tempo_tjk + u_0jk + u_1jk * tempo_tjk + tau_00k + tau_10k * tempo_tjk + erro_tjk` 
+
+
+1. Modelo Final - Modelo de tendência linear com interceptos e inclinações aleatórios e as variáveis de ativ de nivel 2 e texp de nivel 3.
+
+* nível 1: `desempenho_tjk = beta_0jk + beta_1jk * tempo_tjk + erro_tjk`
+* nível 2: `beta_0jk = gamma_00k + gamma_01k * ativ_jk + u_0jk` e `beta_1jk = gamma_10k + gamma_11k * ativ_jk + u_1jk`
+* nivel 3: `gamma_00k = delta_000 + delta_001 * texp_k + tau_00k` e `gamma_01k = delta_010` e `gamma_10k = delta_100 + delta_101 * texp_k + tau_10k` e `gamma_11k = delta_110`
+* substituindo: `desempenho_tjk = delta_000 + delta_100 * tempo_jk + delta_010 * ativ_jk + delta_001 * texp_k + delta_110 * ativ_jk * tempo_jk + delta_101 * texp_k * tempo_jk + u_0jk + u_1jk * tempo_jk + tau_00k + tau_10k * tempo_jk + erro_tjk`
+
+### Python
+
+1. Modelo Nulo
+
+```python
+import statsmodels.api as sm
+modelo_nulo_hlm3 = sm.MixedLM.from_formula("desempenho ~ 1", data=df, groups=df["grupo"], re_formula="1", vc_formula={"individuo": "0 + C(individuo)"})
+```
+* desempenho: variável dependente
+* re_formula: efeito aleatório do indivíduo
+* vc_formula: componente de variância do grupo
+
+A função mixedlm() não comporta efeitos aleatorios de inclinação para os niveis 2 e 3 simultaneamente. Para isso, é necessário usar a função Lmer() do pacote pymer4.models.
+
+```python
+from pymer4.models import Lmer
+modelo_nulo_hlm3 = Lmer(formula="desempenho ~ 1 + (1|grupo) + (1|individuo)", data=df)
+md_nulo_hlm3.fit()
+```
+
+2. Modelo com Intercepto e Inclinação Aleatórios
+
+```python
+from pymer4.models import Lmer
+modelo_intercpt_inclin_hlm3 = Lmer(formula="desempenho ~ tempo + (tempo|grupo) + (tempo|individuo)", data=df)
+modelo_intercpt_inclin_hlm3.fit()
+```
+
+3. Modelo Final
+
+```python
+from pymer4.models import Lmer
+modelo_final_hlm3 = Lmer(formula="desempenho ~ tempo + ativ + texp + ativ:tempo + texp:tempo + (tempo|grupo) + (tempo|individuo)", data=df)
+modelo_final_hlm3.fit()
+```
+
+Prevendo...
+
+```python
+fixed_result = modelo_final_hlm3.predict(pd.DataFrame({"tempo": [123], "ativ": [456], "texp": [789], "grupo": [0], "individuo": [0]}))
+```
+
+## Obervações
+
+* desempemho = variável dependente, o nome é por conta do contexto da aula, desempenho de alunos em escolas.
+* ativ = atividade
+* texp = tempo de experiência
+* tempo = tempo (serie temporal)
 
 ### Para saber mais
 - http://mfviz.com/hierarchical-models/

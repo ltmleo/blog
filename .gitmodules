@@ -1,0 +1,3 @@
+[submodule "mba-dsa-aulas"]
+	path = learning/data-science/mba-dsa-aulas
+	url = git@github.com:ltmleo/mba-dsa-aulas.git

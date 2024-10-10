@@ -20,6 +20,10 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -36,7 +40,8 @@ const config: Config = {
         routeBasePath: 'projects',
         path: './projects',
         sidebarPath: require.resolve('./sidebars.ts'),
-        editUrl: 'https://github.com/ltmleo/blog/edit/main/'
+        editUrl: 'https://github.com/ltmleo/blog/edit/main/',
+        exclude: ['**/_archive/**', '**/_drafts/**', 'data-science/mba-dsa-aulas/**'], 
       },
     ],
   ],
