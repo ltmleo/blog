@@ -85,7 +85,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/preview.png',
     navbar: {
       title: 'Home',
       logo: {
@@ -108,7 +108,7 @@ const config: Config = {
         {to: '/blog/blog', label: 'Blog', position: 'left'},
 
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/ltmleo/blog',
           label: 'GitHub',
           position: 'right',
         },

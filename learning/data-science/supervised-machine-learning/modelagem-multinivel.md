@@ -132,8 +132,6 @@ beta3 = beta1:beta2
 
 ## Modelagem HLM3 com medidas repetidas
 
-## Modelagem HLM3 com medidas repetidas
-
 ![HLM3](images/hlm3.png)
 
 * Nivel 1: Período t (serie temporal)
