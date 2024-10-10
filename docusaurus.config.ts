@@ -40,7 +40,8 @@ const config: Config = {
         routeBasePath: 'projects',
         path: './projects',
         sidebarPath: require.resolve('./sidebars.ts'),
-        editUrl: 'https://github.com/ltmleo/blog/edit/main/'
+        editUrl: 'https://github.com/ltmleo/blog/edit/main/',
+        exclude: ['**/_archive/**', '**/_drafts/**', 'data-science/mba-dsa-aulas/**'], 
       },
     ],
   ],
