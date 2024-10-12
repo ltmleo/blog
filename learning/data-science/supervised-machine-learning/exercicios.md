@@ -118,4 +118,4 @@ Comparar o Log-Likelihood de cada modelo, para saber qual é o melhor modelo. Qu
 
 ## Para saber mais
 
-- <https://www.ibm.com/docs/pt-br/spss-modeler/18.4.0?topic=node-analysis-analysis-tab>
+- https://www.ibm.com/docs/pt-br/spss-modeler/18.4.0?topic=node-analysis-analysis-tab
