@@ -110,4 +110,43 @@ pequena_amostra = df.sample(fraction=0.01)
 
 Com isso, consigo fazer inferências sobre a base de dados sem precisar carregar todos os dados.
 
+O Spark oferece diversas operações de transformação e ação para manipular e analisar os dados.
 
+```python
+import pyspark.sql.functions as F
+# Extraindo o ano da variável FL_DATE
+df = df.withColumn("ano", F.year(df["FL_DATE"]))
+# Lógica: contagem quando cada linha da coluna é um valor nulo
+df.select([F.count(F.when(F.isnull(c), c)).alias(c) for c in df.columns]).show(
+    vertical=True
+)
+# Agrupando por mes e agregando pela média do atraso na chegada
+df.groupby("mes").agg(F.avg("ARR_DELAY").alias("media_atraso_chegada")).show()
+# Ente outros
+```
+
+Consigo transformar o dataframe spark em um dataframe pandas, posso reduzir o tamanho fazendo transformações no spark e depois passar para o pandas para fazer análises mais detalhadas e gráficos.
+
+```python
+df_reduzido_pandas = df_reduzido.toPandas()
+ax = sns.barplot(
+    df_reduzido_pandas.sort_values(by="y", ascending=False),
+    x="x",
+    y="y",
+    color="#8e44ad"
+)
+```
+
+Após finalizar:
+
+```python
+# Retirando o dataframe spark da memória e do disco
+df.unpersist()
+# Finalizando a aplicação Spark
+spark.stop()
+```
+
+
+## Para saber mais
+
+- https://spark.apache.org/docs/latest/api/python/getting_started/index.html
