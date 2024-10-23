@@ -1,0 +1,3 @@
+# Notas
+
+- O Oracle Roving Edge Infrastructure é um serviço que fornece um dispositivo portátil e robusto executando um subconjunto de serviços OCI, projetado para implantação em campo fora de um data center tradicional. Não é um serviço projetado especificamente para implantação multicloud. Por outro lado, serviços como o Oracle Database Service for Azure e o Oracle Interconnect for Azure são projetados para permitir que o Oracle Cloud Infrastructure interopere com o Azure, indicando uma abordagem multicloud. O Oracle MySQL HeatWave é um serviço de análise para o serviço MySQL Database que é executado na AWS, mas o gerenciamento de contas, o faturamento e a medição são feitos por meio do OCI.
