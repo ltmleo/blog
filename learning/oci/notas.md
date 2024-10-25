@@ -1,3 +1,9 @@
 # Notas
 
 - O Oracle Roving Edge Infrastructure é um serviço que fornece um dispositivo portátil e robusto executando um subconjunto de serviços OCI, projetado para implantação em campo fora de um data center tradicional. Não é um serviço projetado especificamente para implantação multicloud. Por outro lado, serviços como o Oracle Database Service for Azure e o Oracle Interconnect for Azure são projetados para permitir que o Oracle Cloud Infrastructure interopere com o Azure, indicando uma abordagem multicloud. O Oracle MySQL HeatWave é um serviço de análise para o serviço MySQL Database que é executado na AWS, mas o gerenciamento de contas, o faturamento e a medição são feitos por meio do OCI.
+
+- O dimensionamento automático em um pool de instâncias dentro do serviço OCI Compute provisiona e remove instâncias automaticamente com base em condições ou programações específicas. Ele não altera a forma da instância de computação, nem se limita apenas ao dimensionamento automático baseado em métricas ou em programações. Em vez disso, o dimensionamento automático pode ser conduzido por políticas baseadas em métricas e em programações, oferecendo uma solução de dimensionamento mais dinâmica e flexível.
+
+- The OCI Compute service offers instances powered by various processor types, including AMD, Intel, and Ampere. However, Snapdragon, which is a processor type commonly used in mobile devices, is not available for OCI Compute.
+
+- Uma URL de solicitação pré-autenticada é um recurso no serviço OCI Object Storage que fornece acesso temporário e seguro a um objeto específico. Ela permite que os usuários gerem uma URL exclusiva com um tempo de expiração predefinido, permitindo que usuários externos acessem o objeto sem exigir autenticação ou autorização por meio do OCI Identity and Access Management.

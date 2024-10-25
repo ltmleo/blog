@@ -60,3 +60,24 @@ Recursos de múltiplas regiões podem ser colocados em um mesmo compartimento.
 Pode-se setar quotas e budgets em um compartimento.
 
 ### AuthN and AuthZ
+
+- **AuthN**: Autenticação é o processo de verificar a identidade de um usuário.
+  - **Users**: Representam pessoas que precisam acessar a Oracle Cloud. Cada usuário tem um nome de usuário e uma senha.
+  - **Groups**: Coleção de usuários. Permite aplicar políticas a um grupo de usuários.
+  - **API Keys**: Chave de autenticação para acessar a Oracle Cloud via API.
+  - **Authentication tokens**: Token de autenticação para acessar a Oracle Cloud via API.
+- **AuthZ**: Autorização é o processo de determinar se um usuário tem permissão para acessar um recurso.
+  - **Policies**: definições human readable que especificam quem pode acessar quais recursos e como. São compostas por regras que são avaliadas para determinar se um acesso é permitido ou negado.
+
+``` plaintext
+Allow group <group_name> to <verb> <resource-type> in <location> where <conditions>
+```
+
+## Tenancy
+
+Tenancy é o nível mais alto da hierarquia de recursos da Oracle Cloud. Quando você se inscreve na Oracle Cloud, a Oracle cria um tenancy para você. O tenancy é um contêiner lógico para todos os recursos da Oracle Cloud que você cria.
+
+- **Tenancy Admin**: Usuário que tem permissões para gerenciar recursos no tenancy. Criador da conta Oracle Cloud. Boa prática: criar um usuário separado para gerenciar o tenancy.
+- **OCI Admin**: Usuário que tem permissões para gerenciar recursos na Oracle Cloud. Pode ser um usuário do tenancy ou um usuário federado.
+- **OCI Admin Groups**: Grupos de usuários que têm permissões para gerenciar recursos na Oracle Cloud. Pode ser um grupo de usuários do tenancy ou um grupo de usuários federados.
+- **OCI Admin Policies**: Políticas que concedem permissões a usuários e grupos para gerenciar recursos na Oracle Cloud. Boa prática: criar compartimentos dedicados para organizar recursos.
