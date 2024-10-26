@@ -2,6 +2,8 @@
 
 Computer instances são baseadas em shapes (CPU, Memoria e Storage) e são executadas em instâncias virtuais (VMs), em hardware dedicado (Bare Metal) ou Deticated VM Hosts.
 
+![Compute Services](./images/compute.png)
+
 - **Virtual Machines**: VMs são instâncias de computação que rodam em hardware compartilhado. São altamente seguras. Não necessitam de toda máquina física para serem executadas.
 - **Bar Metal**: São instâncias de computação que rodam em hardware dedicado. São altamente seguras. Necessitam de toda máquina física para serem executadas. Ideal para aplicações que necessitam de alto desempenho.
 - **Deticated VM Hosts**: São instâncias de computação que rodam em hardware dedicado ou VM host dedicado. São altamente seguras. Necessitam de toda máquina física para serem executadas. Ideal para VMS mas atenção em termos de performance.

@@ -59,3 +59,20 @@ Voce pode escolher o falut domain onde sua instância será provisionada. Se nã
 Voce pode mudar o FD de uma instancia editando o fault domain, para bare metal ou VM DB System instance, precisa terminar a instancia e depois lançar ela em um novo FD.
 
 
+## Pricing
+
+- **Pay as you go**: Pague pelo que você usa.
+- **Annual Flex**: Anual, com desconto. Minimo de 1 ano. Comprometer-se com um valor minimo de gasto de $2k.
+
+Preço na OCI é global, não varia de região para região.
+
+Fatores que afetam o preço:
+
+- Tamanho de recursos
+- Tipo de recursos
+- Data transfer (No ingress cost, carefull with egress cost)
+- All OCI regions have the same pricing
+
+Na calculadora de preço, voce pode ver o custo de cada recurso, o custo total e custos de arquiteturas pre-definidas.
+
+

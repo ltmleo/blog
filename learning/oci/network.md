@@ -19,7 +19,7 @@ O gateway é um dispositivo que conecta redes. No contexto de um VCN, o gateway 
 - **Internet Gateway**: é um tipo de gateway que permite que instâncias de computação no VCN se comuniquem com a internet.
 - **NAT gateway**: é um tipo de gateway que permite que instâncias de computação no VCN se comuniquem com a internet, mas não permite que a internet se comunique com as instâncias (apenas Outbound e não Inbound).
 - **Service Gateway**: é um tipo de gateway que permite que instâncias de computação no VCN se comuniquem com serviços Oracle sem usar a internet pública.
-- **Dynamic Routing Gateway**: é um tipo de gateway que permite que um VCN se conecte a uma rede local usando uma conexão Site-to-Site VPN ou FastConnect. Permite comunicação cloud to on-premises.
+- **Dynamic Routing Gateway (DRG)**: é um tipo de gateway que permite que um VCN se conecte a uma rede local usando uma conexão Site-to-Site VPN ou FastConnect. Permite comunicação cloud to on-premises. E permite comunicação entre VCNs em diferentes regiões.
 
 ## VCN Routing
 
@@ -33,7 +33,6 @@ Peering é um processo de interconexão de redes. No contexto de um VCN, o peeri
 
 - **Local Peering**: Peering entre VCNs na mesma região.
 - **Remote Peering**: Peering entre VCNs em diferentes regiões.
-
 
 ## VCN Security
 
@@ -54,4 +53,15 @@ O Load Balancer é um dispositivo de rede que distribui o tráfego de rede entre
 
 ## Network Load Balancer
 Layer 4 TCP/UDP Load Balancer. Public and Private Load Balancer. Altamente escalável e disponível. Muito mais rápido que o Load Balancer padrão.
+
+## VPN
+
+O VPN é um serviço que permite que instâncias de computação em diferentes VCNs se comuniquem entre si usando uma conexão segura. O VPN é usado para conectar VCNs em diferentes regiões. O VPN é usado para conectar VCNs a redes locais.
+
+## Fastconnect
+
+O FastConnect é um serviço que permite que instâncias de computação em diferentes VCNs se comuniquem entre si usando uma conexão de alta velocidade. O FastConnect é usado para conectar VCNs em diferentes regiões. O FastConnect é usado para conectar VCNs a redes locais. 
+
+- Com colocation, você pode conectar sua rede local diretamente à rede Oracle Cloud em um data center compartilhado. Com
+- Com provedores parceiros, você pode conectar sua rede local à rede Oracle Cloud por meio de um provedor de serviços de rede.
 
