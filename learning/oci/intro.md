@@ -75,4 +75,20 @@ Fatores que afetam o preço:
 
 Na calculadora de preço, voce pode ver o custo de cada recurso, o custo total e custos de arquiteturas pre-definidas.
 
+Os modelos de preços suportados no OCI incluem:
 
+- Pay As You Go: Pague conforme o uso.
+- Oracle Universal Credits: Créditos que podem ser usados em qualquer serviço OCI.
+- Bring Your Own License (BYOL): Use suas licenças Oracle existentes no OCI.
+
+No Oracle Cloud Infrastructure, você pode configurar alertas de e-mail para receber notificações quando os limites de orçamento forem atingidos. Esses alertas ajudam os clientes a se manterem informados sobre seus gastos e a tomarem as ações apropriadas para gerenciar seus custos.
+
+No OCI, a transferência de dados de entrada (dados que entram no OCI pela internet) é normalmente gratuita. No entanto, a transferência de dados de saída (dados que saem do OCI para a internet) é cobrada após os primeiros 10 TB/mês, dependendo da região e do destino específicos.
+
+## Quotas and Limits
+
+Os limites de serviço são os limites superiores colocados pela Oracle no número de recursos que você pode criar em uma região ou tenancy.
+
+As cotas de compartimento são os limites superiores definidos pelos usuários para uso de recursos dentro de compartimentos específicos. 
+
+A distinção é que os limites de serviço são definidos pela Oracle e se aplicam a uma tenancy em uma região, enquanto as cotas de compartimento são definidas pelos usuários e se aplicam a compartimentos específicos.
