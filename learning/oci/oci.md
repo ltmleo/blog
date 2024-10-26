@@ -85,6 +85,14 @@ No Oracle Cloud Infrastructure, você pode configurar alertas de e-mail para rec
 
 No OCI, a transferência de dados de entrada (dados que entram no OCI pela internet) é normalmente gratuita. No entanto, a transferência de dados de saída (dados que saem do OCI para a internet) é cobrada após os primeiros 10 TB/mês, dependendo da região e do destino específicos.
 
+## Cost Analysis
+
+Cost Analysis é uma ferramenta de visualização fácil de usar para ajudar você a rastrear e otimizar seus gastos com Oracle Cloud Infrastructure. Você pode gerar gráficos e baixar relatórios tabulares precisos e confiáveis ​​de dados de custo agregados sobre seu consumo de Oracle Cloud Infrastructure.
+
+## Usage Report
+
+Um relatório de custo é um arquivo de valor separado por vírgula (CSV) que é semelhante a um relatório de uso, mas também inclui colunas de custo. O relatório pode ser usado para obter um detalhamento dos itens de linha da sua fatura na granularidade do nível do recurso. Como resultado, você pode otimizar seus gastos com o Oracle Cloud Infrastructure e tomar decisões de gastos com a nuvem mais informadas.
+
 ## Quotas and Limits
 
 Os limites de serviço são os limites superiores colocados pela Oracle no número de recursos que você pode criar em uma região ou tenancy.
@@ -92,3 +100,5 @@ Os limites de serviço são os limites superiores colocados pela Oracle no núme
 As cotas de compartimento são os limites superiores definidos pelos usuários para uso de recursos dentro de compartimentos específicos. 
 
 A distinção é que os limites de serviço são definidos pela Oracle e se aplicam a uma tenancy em uma região, enquanto as cotas de compartimento são definidas pelos usuários e se aplicam a compartimentos específicos.
+
+No Oracle Cloud Infrastructure, as cotas de compartimento são aplicadas por compartimento. Isso permite que os administradores definam diferentes limites de recursos para cada compartimento, garantindo que o uso de recursos esteja alinhado com as políticas e requisitos da organização.

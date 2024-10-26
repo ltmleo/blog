@@ -19,7 +19,9 @@ O Oracle Autonomous Database oferece suporte a vários tipos de carga de trabalh
 - Autonomous Data Warehouse (ADW) para análises de alto desempenho
 - Autonomous Transaction Processing (ATP) para cargas de trabalho transacionais de alto desempenho
 - APEX para desenvolvimento de aplicativos de baixo código e JSON para armazenamento e consulta de documentos JSON.
-  
+
+Autonomous Data Warehouse (ADW) é o tipo de carga de trabalho no Oracle Cloud Infrastructure Autonomous Database projetado para análises e relatórios em tempo real. O ADW fornece um serviço totalmente gerenciado, de alto desempenho e elástico que simplifica o gerenciamento de data warehouse.
+
 O recurso de **self-repair** do Oracle Autonomous Database garante a recuperação automática do banco de dados em caso de falhas. Ele detecta e corrige problemas na infraestrutura do banco de dados, incluindo hardware, software e erros humanos, ajudando a manter alta disponibilidade e proteger contra perda de dados.
 
 O recurso de **self-driven** do Oracle Autonomous Database permite otimizações automáticas de banco de dados sem intervenção manual. Ele usa machine learning e automação para executar tarefas como provisionamento, aplicação de patches, ajuste e backup, o que ajuda a reduzir a necessidade de administração e manutenção manual do banco de dados.

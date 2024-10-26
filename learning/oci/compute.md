@@ -15,6 +15,11 @@ Computer instances são baseadas em shapes (CPU, Memoria e Storage) e são execu
 - **Flex**: Permite que você escolha o número de CPUs e a quantidade de memória.
 - **Fixed**: Oferece um número fixo de CPUs e memória.
 
+
+### Instance Configuration
+
+No serviço Oracle Cloud Infrastructure Compute, uma Instance Configuration é uma configuração predefinida que inclui o formato, a imagem base e os metadados da instância. Ela permite que os usuários criem rapidamente novas instâncias com a mesma configuração, simplificando o processo de implantação.
+
 ## Scaling
 
 Scaling é o processo de aumentar ou diminuir a capacidade de uma instância. Pode ser feito de duas formas: Vertical Scaling e Horizontal Scaling.

@@ -33,6 +33,8 @@ Volume Groups: Conjunto de volumes de bloco que são criados juntos e anexados a
 
 Armazenamento compartilhado de arquivos para instâncias de computação. Ideal para containers, big data, analytics, etc. Gerenciamento de dados como arquivos.
 
+O serviço Oracle Cloud Infrastructure File Storage usa o protocolo Network File System (NFS) para acesso a arquivos. O NFS permite que os clientes acessem arquivos por uma rede de uma maneira que pareça que eles são parte do sistema de arquivos local.
+
 Coleçã de arquivos hierarquicos organizados em diretórios. Cada arquivo tem um caminho único. Cada arquivo tem um **File Storage Namespace** único.
 
 Filesystem distribuido (Linux NFS, Windows SMB). Suporta Unix e Windows, Permite criar, deletar, ler, escrever, etc. Suportado pela maioria dos sistemas operacionais. e hypervisors. Tipicamente não precisa de um cliente extra para acessar. Prove acesso sobre redes.

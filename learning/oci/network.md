@@ -25,6 +25,8 @@ O gateway é um dispositivo que conecta redes. No contexto de um VCN, o gateway 
 
 O roteamento é o processo de encaminhar pacotes de dados entre redes. O roteamento é feito por um roteador, que é um dispositivo de rede que encaminha pacotes de dados entre redes. O roteamento é feito com base em tabelas de roteamento, que são tabelas que mapeiam destinos de pacotes de dados a interfaces de rede.
 
+Uma Tabela de Rota é um componente no Oracle Cloud Infrastructure Networking Service que define regras para encaminhamento de pacotes para destinos fora da Virtual Cloud Network (VCN). As Tabelas de Rota têm regras para rotear tráfego de sub-redes para destinos fora da VCN por meio de gateways ou instâncias especialmente configuradas.
+
 ![VCN Routing](https://miro.medium.com/v2/resize:fit:1400/1*9A-uFVT-BuRbThq_9Dhv6g.png)
 
 ## Peering
@@ -41,10 +43,13 @@ A segurança de um VCN é garantida por meio de listas de controle de acesso (AC
 - **Security List**: Lista de regras de segurança que controlam o tráfego de entrada e saída de uma sub-rede.
 - **Network Security Group**: Grupo de regras de segurança que controlam o tráfego de entrada e saída de uma sub-rede. 
 
+No Oracle Cloud Infrastructure, as Listas de Segurança são responsáveis ​​por controlar o tráfego entre sub-redes dentro de uma rede de nuvem virtual (VCN). Elas definem regras de entrada e saída para determinar o tráfego permitido no nível de sub-rede.
 
 ## Load Balancer
 
 O Load Balancer é um dispositivo de rede que distribui o tráfego de rede entre várias instâncias de computação. O Load Balancer é usado para distribuir o tráfego de rede entre várias instâncias de computação, para que o tráfego seja distribuído de forma equitativa entre as instâncias. O Load Balancer é usado para melhorar o desempenho e a disponibilidade de aplicativos. Layer 7 HTTP/HTTPS Load Balancer.
+
+O Oracle Cloud Infrastructure Load Balancer oferece suporte a três tipos de algoritmos de balanceamento de carga: Round Robin, Least Connections e IP Hash. O algoritmo Round Robin distribui o tráfego de entrada uniformemente entre as instâncias. Esse algoritmo ajuda a garantir a distribuição eficiente do tráfego de rede e a manter a disponibilidade e o desempenho dos aplicativos. Weighted Round Robin, Weighted Least Connections e Random não são suportados pelo OCI Load Balancer.
 
 - **Flexible shape**: Pode definir o mínimo e máximo de tráfego que o Load Balancer pode suportar.
 - **Dyanmic shape**: Shapes predefinidos que suportam um tráfego específico (ex. Medium, Large, etc.), Quando o tráfego excede o limite, o Load Balancer é escalado automaticamente para um shape maior.

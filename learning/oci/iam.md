@@ -81,3 +81,9 @@ Tenancy é o nível mais alto da hierarquia de recursos da Oracle Cloud. Quando 
 - **OCI Admin**: Usuário que tem permissões para gerenciar recursos na Oracle Cloud. Pode ser um usuário do tenancy ou um usuário federado.
 - **OCI Admin Groups**: Grupos de usuários que têm permissões para gerenciar recursos na Oracle Cloud. Pode ser um grupo de usuários do tenancy ou um grupo de usuários federados.
 - **OCI Admin Policies**: Políticas que concedem permissões a usuários e grupos para gerenciar recursos na Oracle Cloud. Boa prática: criar compartimentos dedicados para organizar recursos.
+
+## Policies
+
+Uma declaração de política do IAM no Oracle Cloud Infrastructure geralmente consiste nestes componentes: Localização (compartimento ou locação), Verbo de Ação (a ação específica a ser permitida), Recurso (os recursos nos quais a ação pode ser executada), Principal (grupo ao qual a política se aplica) e um conjunto de Condições opcionais. A criptografia não é um componente de uma declaração de política do IAM; é uma medida de segurança usada para proteger dados confidenciais.
+
+No Oracle Cloud Infrastructure, o componente "Principal" de uma declaração de política do IAM define o usuário ou grupo ao qual a política se aplica. Ele especifica os grupos que a declaração de política afeta, concedendo a eles acesso a recursos e ações definidos na declaração de política.
