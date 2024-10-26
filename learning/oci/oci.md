@@ -47,7 +47,7 @@ FDs agem como um data center logico dentro de um AD. FDs são isolados uns dos o
 
 Isolados uns dos outros, portanto, uma falha em um AD não afeta os outros ADs em uma região. Muito pouco provável que dois ADs falhem ao mesmo tempo. A infraestrutura física nao é compartilhada entre ADs.
 
-::: note
+:::note
 Uma região OCI é composta de um ou mais domínios de disponibilidade isolados e interconectados. Cada domínio de disponibilidade é um local físico separado dentro de uma região. O número de domínios de disponibilidade por região pode variar; algumas regiões OCI têm três domínios de disponibilidade, enquanto outras têm um único domínio de disponibilidade.
 :::
 

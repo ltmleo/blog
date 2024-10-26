@@ -41,7 +41,7 @@ Block Volume: ocid1.volume.oc1.eu-frankfurt-1.aaaaaaaaxxxxxxxx
 
 Compartments são contêineres lógicos que ajudam a organizar e isolar os recursos da Oracle Cloud. Você pode criar compartimentos para organizar recursos por projeto, equipe, aplicativo ou ambiente. Coleções de recursos relacionados são colocadas em um compartimento. Podem ser usados para isolamento e controle de acesso.
 
-::: note
+:::note
 O compartimento root é o tenancy, que é criado automaticamente quando você se inscreve na Oracle Cloud.
 O root pode conter todos os recursos da Oracle Cloud.
 Por boas práticas, crie compartimentos para organizar e isolar recursos.
