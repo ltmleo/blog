@@ -61,11 +61,70 @@ Onde:
 
 O modelo aditivo é mais apropriado quando as variações sazonais são constantes ao longo do tempo. O modelo multiplicativo é mais apropriado quando as variações sazonais são proporcionais ao nível da série.
 
+## Decompondo uma serie temporal
 
+Decompor a série temporal em:
+
+- Componente de tendencia
+- Componente de Sazionalidade
+- Residuos
+
+
+## Estatisticas de erro das previsões
+
+-**ME: Mean Error** - é a média da diferença entre realizado e o previsto
+
+```plaintext
+erro_t = X_t - x_t
+ME = (SUM erro_t)/h
+```
+
+- **MAE: Mean Absolute Error **- é a média da diferença absoluta entre realizado e previsto
+
+```plaintext
+MAE = (SUM |erro_t|)/h
+```
+
+- **RMSE: Root Mean Square Error** - É o desvio padrão total da amostra da diferença entre o previsto e o realizado
+
+```plaintext
+RMSE = sqrt(SUM (erro_t)^2)/h)
+```
+
+- **MPE: Mean Percentage Error** - é a diferença percentual do erro
+
+```plaintext
+MPE = (SUM(erro_t/X_t)/h)*100%
+```
+
+- **MAPE: Mean Absolute Percentage Error** - É a diferença absoluta percentual do erro
+
+```plaintext
+MAPE = (SUM(|erro_t/X_t|)/h)*100%
+```
+
+- **TIC: Theil Inequality Coefficient** - Theil's U - É o grau de ajuste da previsão. Quanto menor, melhor. Zero é o ideal.
+
+```plaintext
+Theil's U = sqrt(SUM((x_t+1-X_t+1)/X_t)^2)/SUM((X_t+1-X_t)/X_t)^2))
+```
+
+- **ACF1: First-Order Autocorrelation Function** - Autocorrelação dos residuos
+
+```plaintext
+ACF_k = cov(R_it, Ri,t-k)/variancia(Rit)
+```
+
+## Metodos Simples
+
+- **NAIVE**: Projeta o último valor para o futuro
+- **NAIVE SAZONAL**: Considera o último valor no mesmo período de tempo (para séries com sazonalidade)
+- **Média**: usa a média histórica como previsão para o futuro
+- **Drift**: faz uma previsão que acompanha a tendência da série (equivale a traçar uma renta entre o primeiro e o último ponto)
 
 ## Para saber mais
 
 - Moderem Time Series Forecasting with Python
 - Forecasting: Principles and Practice, de Rob J Hyndman e George Athanasopoulos
-- Introduç˜ao à Séries Temporais
+- Introdução à Séries Temporais
 - Analise de Séries Temporais

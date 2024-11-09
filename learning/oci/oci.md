@@ -54,7 +54,7 @@ Uma região OCI é composta de um ou mais domínios de disponibilidade isolados 
 ### Fault Domains
 Grupo de hardware e infraestrutura de software dentro de um AD. Cada AD tem três ou mais FDs. Protege contra falhas de hardware e software inesperadas e contra falhas planejadas, como atualizações de software.
 
-Voce pode escolher o falut domain onde sua instância será provisionada. Se não fizer nenhuma escolha, o Oracle escolherá um FD para você, garantindo que suas instâncias sejam distribuídas em diferentes FDs. 
+Voce pode escolher o fault domain onde sua instância será provisionada. Se não fizer nenhuma escolha, o Oracle escolherá um FD para você, garantindo que suas instâncias sejam distribuídas em diferentes FDs. 
 
 Voce pode mudar o FD de uma instancia editando o fault domain, para bare metal ou VM DB System instance, precisa terminar a instancia e depois lançar ela em um novo FD.
 
