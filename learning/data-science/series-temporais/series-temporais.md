@@ -119,8 +119,31 @@ ACF_k = cov(R_it, Ri,t-k)/variancia(Rit)
 
 - **NAIVE**: Projeta o último valor para o futuro
 - **NAIVE SAZONAL**: Considera o último valor no mesmo período de tempo (para séries com sazonalidade)
-- **Média**: usa a média histórica como previsão para o futuro
+- **Média**:  usa a média histórica como previsão para o futuro
 - **Drift**: faz uma previsão que acompanha a tendência da série (equivale a traçar uma renta entre o primeiro e o último ponto)
+
+## Metodos mais complexos
+
+- **Modelos de Suavização Exponencial (SES)**: Série temporal que não apresenta tendência e nem sazonalidade;
+- **Suavização Exponencial de Holt (SEH)**: Série temporal com Tendência mas sem sazonalidade;
+- **Suavização Exponencial de Holt-Winters**: Série temporal com Tendência e Sazonalidade;
+
+A característica principal da suavização exponencial é dar pesos maiores às observações mais recentes, captando melhor as mudanças de comportamento. Ao atribuir pesos maiores aos dados mais recentes, o modelo se torna mais sensível a mudanças recentes no comportamento da série temporal, adaptando-se melhor a tendências e variações.
+
+O componente de tendência pode ser definido pelas médias móveis, sendo α um coeficiente entre [0, 1] que pondera a contribuição dos valores passados. O parâmetro α, de fato, controla o peso dado às observações passadas no cálculo da tendência. Valores de α mais próximos de 1 atribuem mais peso aos dados mais recentes, enquanto valores mais próximos de 0 dão mais peso aos dados mais antigos. A escolha de α influencia diretamente a suavidade da tendência estimada.
+
+A suavização exponencial, como outros métodos de previsão, funciona melhor com um número razoável de observações. Com poucos dados, a estimativa dos parâmetros do modelo pode ser instável e as previsões menos precisas. É recomendado ter um histórico de dados suficientemente longo para obter resultados confiáveis.
+
+O método de Suavização Exponencial de Holt é semelhante ao método de Suavização Exponencial Simples, mas, em vez de suavizar apenas o nível, ele utiliza uma nova constante de suavização para modelar a tendência da série.
+
+O método de Holt é uma extensão do método de suavização exponencial simples. Enquanto o método simples considera apenas o nível da série, o método de Holt incorpora um componente de tendência, permitindo modelar séries com um comportamento crescente ou decrescente ao longo do tempo. A introdução de uma nova constante de suavização (β) permite ajustar a suavidade da tendência estimada.
+
+O método de Suavização de Holt-Winters pode também ser chamado de método de Suavização Exponencial Tripla, pois é muito utilizado quando há necessidade de calcular previsões em séries temporais que possuem tendência e sazonalidade.
+O método de Holt-Winters é frequentemente chamado de método de suavização exponencial tripla porque ele incorpora três componentes: nível, tendência e sazonalidade. Essa característica o torna uma ferramenta poderosa para modelar séries temporais com padrões sazonais, como dados de vendas mensais ou dados climáticos anuais.
+
+Existem tanto modelos de Holt-Winters aditivos quanto multiplicativos. A escolha entre os dois depende do tipo de sazonalidade presente na série.
+Modelos aditivos: A componente sazonal é adicionada ao nível e tendência. São mais adequados quando a magnitude da sazonalidade permanece relativamente constante ao longo do tempo.
+Modelos multiplicativos: A componente sazonal é multiplicada pelo nível e tendência. São mais adequados quando a magnitude da sazonalidade varia proporcionalmente ao nível da série.
 
 ## Para saber mais
 
