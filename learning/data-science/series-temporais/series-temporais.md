@@ -138,12 +138,105 @@ O método de Suavização Exponencial de Holt é semelhante ao método de Suaviz
 
 O método de Holt é uma extensão do método de suavização exponencial simples. Enquanto o método simples considera apenas o nível da série, o método de Holt incorpora um componente de tendência, permitindo modelar séries com um comportamento crescente ou decrescente ao longo do tempo. A introdução de uma nova constante de suavização (β) permite ajustar a suavidade da tendência estimada.
 
-O método de Suavização de Holt-Winters pode também ser chamado de método de Suavização Exponencial Tripla, pois é muito utilizado quando há necessidade de calcular previsões em séries temporais que possuem tendência e sazonalidade.
+O **método de Suavização de Holt-Winters** pode também ser chamado de método de Suavização Exponencial Tripla, pois é muito utilizado quando há necessidade de calcular previsões em séries temporais que possuem tendência e sazonalidade.
+
 O método de Holt-Winters é frequentemente chamado de método de suavização exponencial tripla porque ele incorpora três componentes: nível, tendência e sazonalidade. Essa característica o torna uma ferramenta poderosa para modelar séries temporais com padrões sazonais, como dados de vendas mensais ou dados climáticos anuais.
 
 Existem tanto modelos de Holt-Winters aditivos quanto multiplicativos. A escolha entre os dois depende do tipo de sazonalidade presente na série.
-Modelos aditivos: A componente sazonal é adicionada ao nível e tendência. São mais adequados quando a magnitude da sazonalidade permanece relativamente constante ao longo do tempo.
+
+**Modelos aditivos**: A componente sazonal é adicionada ao nível e tendência. São mais adequados quando a magnitude da sazonalidade permanece relativamente constante ao longo do tempo.
 Modelos multiplicativos: A componente sazonal é multiplicada pelo nível e tendência. São mais adequados quando a magnitude da sazonalidade varia proporcionalmente ao nível da série.
+
+## Modelos ARIMA (Box-Jenkins)
+
+- Robusto: pode ser aplicado em praticamente qualquer tipo de série temporal
+- Funciona melhor com dados estáveis, com poucos outliers (embora podemos removê-los) -
+tsclean
+- Requer dados estacionários
+- Pode ser transformada usando diferenciação: remove tendências
+- Diferenciação: subtrai a observação atual da anterior
+- Diferenciação pode ser feita 1x: diferenciação de primeira ordem 
+- Diferenciação2x:diferenciação de segunda ordem(mais raro)
+
+```plaintext
+ARIMA = (p,d,q)
+```
+
+![ARIMA](https://www.revistaespacios.com/a20v41n15/20-f02.png)
+
+- **p**: Ordem do componente autoregressivo (AR). Indica a dependência do valor atual da série em relação a seus valores passados.
+- **d**: Ordem de diferenciação. Indica o número de vezes que a série é diferenciada para torná-la estacionária.
+-**q**: Ordem do componente de média móvel (MA). Indica a dependência do valor atual da série em relação aos erros de previsão passados.
+
+### Tipos de moelos ARIMA
+
+- Modelos autorregressivos (AR): avalia a relação entre os períodos (lags): autocorrelação – extrai a influência;
+- Integrado (I): Aplicado à diferenciação, quando necessário
+- Modelos médias móveis (MA): avalia erros entre períodos e extrai esses erros;
+- Modelos autorregressivos e de médias móveis (ARMA)
+- Modelos autorregressivos integrados e de médias móveis (ARIMA)
+
+
+### Teste de Ljung-Box
+
+Após estimar um modelo ARIMA, é crucial verificar se os resíduos do modelo apresentam as características de um ruído branco. Um teste comumente utilizado para avaliar a autocorrelação dos resíduos e, consequentemente, a adequação do modelo, é o teste de Ljung-Box.
+
+Por que o teste de Ljung-Box é importante?
+
+Ruído branco: Se os resíduos forem um ruído branco, significa que eles são independentes e identicamente distribuídos, ou seja, não há nenhuma informação relevante nos resíduos que não tenha sido capturada pelo modelo.
+Autocorrelação: Se houver autocorrelação nos resíduos, isso indica que o modelo não capturou todas as dependências presentes nos dados, e portanto, o modelo não é adequado.
+Como o teste de Ljung-Box funciona?
+
+O teste de Ljung-Box verifica se a autocorrelação dos resíduos é significativamente diferente de zero em um conjunto de defasagens. A hipótese nula do teste é de que não há autocorrelação nos resíduos até determinada defasagem. Se o valor-p do teste for menor que o nível de significância escolhido (por exemplo, 5%), rejeita-se a hipótese nula, indicando que há evidências de autocorrelação nos resíduos.
+
+Outros testes para verificar a adequação do modelo ARIMA:
+
+Teste de Durbin-Watson: Embora menos poderoso que o teste de Ljung-Box, o teste de Durbin-Watson também é utilizado para verificar a autocorrelação de primeira ordem nos resíduos.
+Análise gráfica dos resíduos: Gráficos como o gráfico de autocorrelação (ACF) e autocorrelação parcial (PACF) dos resíduos podem fornecer informações visuais sobre a presença de autocorrelação.
+Teste de normalidade: Os resíduos de um modelo ARIMA idealmente seguem uma distribuição normal. Testes de normalidade, como o teste de Shapiro-Wilk, podem ser utilizados para verificar essa suposição.
+Em resumo:
+
+O teste de Ljung-Box é uma ferramenta fundamental na avaliação da adequação de um modelo ARIMA. Ao verificar a autocorrelação dos resíduos, ele ajuda a determinar se o modelo captura adequadamente a estrutura da série temporal.
+
+#### Escolha dos Modelos
+
+- Critério de AIC – Critério de Informação de Akaike
+- O AIC estima a quantidade relativa de informações perdidas por um determinado modelo: quanto menos informações um modelo perde, maior a qualidade desse modelo e menor a pontuação AIC.
+- Critério de BIC – Critério de Informação Bayesiano 
+- BIC mais baixoimplicaem melhor ajuste.
+
+
+**Critério de Informação de Akaike (AIC)**: O AIC é uma métrica utilizada para comparar e selecionar modelos estatísticos. Ele busca encontrar um equilíbrio entre a complexidade do modelo e sua capacidade de ajustar os dados.
+Informações perdidas: Quanto menor a quantidade de informação perdida por um modelo, melhor ele se ajusta aos dados. O AIC penaliza modelos mais complexos, evitando o overfitting (ajuste excessivo).
+Menor AIC: Um valor menor de AIC indica que o modelo é mais parcimonioso (simples) e explica os dados de forma mais eficiente.
+
+Tanto o AIC quanto o BIC são critérios amplamente utilizados para seleção de modelos.  BIC significa Critério de Informação Bayesiano e é diferente do AIC. Embora ambos busquem a mesma finalidade (seleção de modelos), possuem formulações e penalidades distintas.
+
+
+### Teste de Estacionariedade
+
+[...] um processo estocástico é estacionário se suas média e variância forem constantes ao longo do tempo e o valor da covariância entre dois períodos de tempo depender apenas da distância ou defasagem entre os dois períodos, e não do período de tempo efetivo em que a covariância é calculada (ENDERS, 2003).
+
+#### Teste de Dickey-Fuller (ADF):
+
+Teste feito porque não se sabe se a série temporal possui mais de uma raiz unitária, pois o número de termos de diferenças defasadas é, muitas vezes, determinado empiricamente.
+
+- Hipótese nula: A série possui raiz unitária (ou seja, é não estacionária).
+- Hipótese alternativa: A série é estacionária (sem raiz unitária). 
+- Objetivo: O teste ADF busca evidências para rejeitar a hipótese nula de raiz unitária, indicando que a série é estacionária.
+
+#### Teste KPSS:
+
+- Hipótese nula: A série é estacionária em torno de uma tendência determinística ou em torno de uma média.
+- Hipótese alternativa: A série é não estacionária.
+- Objetivo: O teste KPSS busca evidências para rejeitar a hipótese nula de estacionariedade, indicando que a série é não estacionária.
+
+#### Teste de Phillips-Perron (PP):
+
+- Hipótese nula: A série possui raiz unitária (ou seja, é não estacionária).
+- Hipótese alternativa: A série é estacionária.
+- Objetivo: Similar ao teste ADF, o teste PP busca evidências para rejeitar a hipótese nula de raiz unitária, indicando que a série é estacionária.
+
 
 ## Para saber mais
 
