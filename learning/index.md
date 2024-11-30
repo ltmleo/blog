@@ -11,3 +11,7 @@ Além disso, quem tiver mais informações sobre o assunto, ou encontrar algum e
 
 ## Data Science
 Aqui compartilho algumas notas de aula do MBA em [Data Science](/learning/data-science/) que estou fazendo na USP.
+
+
+## OCI
+Aqui compartilho algumas notas do estudo para a certificação [OCI](/learning/oci/).

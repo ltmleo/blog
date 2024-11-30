@@ -1,5 +1,6 @@
 # Oracle Cloud Introduction
 
+![Oracle Cloud Certification](./images/OCI2024FNDCFA.png)
 
 - **OCI**: Oracle Cloud Infrastructure
 

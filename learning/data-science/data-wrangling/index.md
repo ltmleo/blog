@@ -45,3 +45,20 @@ Não é uma atividade padronizada, cada projeto pode ter suas particularidades.
 - .sort_values( ) - Ordena os dados do DataFrame por uma ou mais colunas.
 - .value_counts( ) - Retorna uma Série contendo contagens de valores únicos.
 
+### Estatísticas
+
+- **contagem**: `dados_tempo['tempo'].count()`
+- **média**: `dados_tempo['tempo'].mean()`
+- **mediana**: `dados_tempo['tempo'].median()`
+- **mínimo**: `dados_tempo['tempo'].min()`
+- **máximo**: `dados_tempo['tempo'].max()`
+- **desvio padrão**: `dados_tempo['tempo'].std()`
+- **variância**: `dados_tempo['tempo'].var()`
+- **quartis**: `dados_tempo['tempo'].quantile([0.25, 0.75])`
+- **soma**: `dados_tempo['tempo'].sum()`
+- **correlação**: `dados_tempo[['tempo','distancia','semaforos']].corr()`
+- **tabela de frequência**: `dados_tempo['tempo'].value_counts()`
+- **tabela de frequência relativa**: `dados_tempo['tempo'].value_counts(normalize=True)`
+- **tabela de frequencias cruzadas**: `pd.crosstab(dados_tempo['tempo'], dados_tempo['distancia'])`
+- **valores unicos**: `dados_tempo['tempo'].unique()`
+- **criação de um banco de dados agrupado**: `ndf = dados_tempo.groupby('tempo')`
