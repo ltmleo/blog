@@ -62,3 +62,5 @@ Não é uma atividade padronizada, cada projeto pode ter suas particularidades.
 - **tabela de frequencias cruzadas**: `pd.crosstab(dados_tempo['tempo'], dados_tempo['distancia'])`
 - **valores unicos**: `dados_tempo['tempo'].unique()`
 - **criação de um banco de dados agrupado**: `ndf = dados_tempo.groupby('tempo')`
+- **filtro**: `dados_tempo[dados_tempo['tempo'] > 10]`
+- **query**: `dados_tempo.query('tempo > 10')`
