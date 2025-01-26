@@ -16,6 +16,8 @@ graph LR
     E --> F[Deployment]
 ```
 
+Algorítimos famosos: CART, ID3, C4.5, C5.0, CHAID, MARS, etc.
+
 ## Arvores de Decisão
 
 Uma arvore de decisão é uma estrutura de dados (Grafo) que divide um conjunto de dados em subconjuntos menores. Cada divisão é feita com base em um valor de um atributo. O processo é repetido até que todos os subconjuntos sejam homogêneos.
@@ -105,8 +107,7 @@ Podemos ter a estimativa de probabilidade de um evento ocorrer.
 - **Sentitividade**:TRUE POSITIVES / (TRUE POSITIVES + FALSE NEGATIVES)
 - **Especificidade**: TRUE NEGATIVES / (TRUE NEGATIVES + FALSE POSITIVES)
 
-
 ## Para saber mais
 
 - https://jakevdp.github.io/PythonDataScienceHandbook/05.01-what-is-machine-learning.html
-- 
+- https://stackoverflow.com/questions/9979461/different-decision-tree-algorithms-with-comparison-of-complexity-or-performance
