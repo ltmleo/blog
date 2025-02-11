@@ -34,7 +34,7 @@ A entropia é uma medida de incerteza. Quanto maior a entropia, maior a incertez
 
 Arvores são robustas, interpretáveis e flexíveis. Sem suposições probabilísticas. Necessário cross validation.
 
-## Algoritimos para construção de árvores
+### Algoritimos para construção de árvores
 
 O Modelo busca uma separação perfeita das observações que classificamos como eventos e não evento, cam base em variáveis observáveis como ideias, idade, sexo, etc.
 
@@ -49,7 +49,7 @@ A entropia é uma medida de incerteza. Quanto maior a entropia, maior a incertez
 - Impureza máxima com distribuição uniforme
 - Impureza mínima com concentração total
 
-## Gini e ROC
+### Gini e ROC
 
 A curva ROC é uma curva que mostra a taxa de verdadeiros positivos em função da taxa de falsos positivos. A área sob a curva é chamada de AUC.
 
@@ -69,13 +69,13 @@ São parâmetros que controlam o algorítimo como:
 2. Profundidade máxima da árvore
 3. CP - Custo de complexidade
 
-## Overfitting e Underfitting
+### Overfitting e Underfitting
 
 - **Overfitting**: A árvore é muito complexa e se ajusta muito bem aos dados de treinamento, mas não generaliza bem para novos dados.
 - **Underfitting**: A árvore é muito simples e não consegue capturar a complexidade dos dados.
 
 
-## Cross Validation
+### Cross Validation
 
 É uma técnica para avaliar a capacidade de generalização de um modelo. O conjunto de dados é dividido em algumas partes. O modelo é treinado nas partes e testado na parte restante.
 
@@ -87,25 +87,61 @@ Escolher parametros do modelos com uma base de validação ainda pode propiciar 
 - Amostra de validação: Usada para ajustar os hiperparâmetros.
 - Amostra de teste: Usada para avaliar o modelo.
 
-### K-Fold Cross Validation
+#### K-Fold Cross Validation
 
 - Divide o conjunto de dados em k partes.
 - O modelo é treinado em k-1 partes e testado na parte restante.
 - O processo é repetido k vezes.
 - A métrica de avaliação é a média das métricas de avaliação de cada fold.
- 
+
+
+- Dividimos a base em k subamostras
+- Para cada subamostra:
+  - Removemos a subamostra como validação
+  - Treinamos o modelo com as observações restantes
+  - Utilizamos este modelo para classificar a subamostra removida - Avaliamos a métrica de desempenho do modelo
+- Calculamos a média das métricas de desempenho do modelo
+
+Tipicamente, fazemos o mesmo para variações do modelos para otimizar os hiperparametros.
+
+##### NK-Fold
+
+1. Embaralha os dados
+2. Realiza um K-Fold
+3. Repete o processo 1 e 2N vezes
+4. Avalia os resultados com mais precisão 
+
 
 ## Arvore como um classificador
 
 Podemos ter a estimativa de probabilidade de um evento ocorrer.
 
-## Avaliação de um modelo
+### Avaliação de um modelo
 
 - **Matriz de confusão**: Mostra a relação entre as previsões e os valores reais. Para cada ponto de corte, temos uma matriz de confusão.
 - **Precisão**: Proporção de previsões corretas.
 - **Acurácia**: Acerto sobre tentativas.
 - **Sentitividade**:TRUE POSITIVES / (TRUE POSITIVES + FALSE NEGATIVES)
 - **Especificidade**: TRUE NEGATIVES / (TRUE NEGATIVES + FALSE POSITIVES)
+
+
+## Arvore de regressão
+
+Muito semelhante a arvore de classificação, mas a variável resposta é contínua.
+
+O que muda é a métrica de impureza. Tipo o desvio padrão em torono da média (Desvio em torno da predição)
+
+Para avaliar o modelos podemos utilizar o `Rˆ2`.
+
+Estratégias de avaliação:
+
+- **Numérica**: R quadrado, SSE (Soma dos quadrados dos erros), QME (Quadrado médio do erro)
+- **Gráfica**: Variável vs (y e predito), variável vs resíduo, predito vs real
+  
+## Shap
+
+O SHAP (SHapley Additive exPlanations) é um método para explicar a saída de qualquer modelo de machine learning. Ele conecta a teoria dos jogos com a interpretabilidade de modelos.
+Você pode explicar a influência de cada variável em determinado indivíduo.
 
 ## Para saber mais
 
