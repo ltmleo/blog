@@ -25,7 +25,7 @@ Begging é um método de ensemble que utiliza o mesmo algoritmo de aprendizado d
 O begging com árvores de decisão é conhecido como **Random Forest**
 
 Características:
-
+ 
 1. Roda em paralelo
 2. Também classifica em paralelo
 3. Costuma ter bom desempenho sem grandes ajustes de hiperparâmetros
