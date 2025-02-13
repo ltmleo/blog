@@ -50,6 +50,30 @@ Podemos utilizar o random search para cobrir mais combinações de hiperparâmet
 
 O random search seleciona aleatoriamente os hiperparâmetros.
 
+## Stacking
+
+Stacking é um método de ensemble que utiliza diferentes algoritmos de aprendizado de máquina e combina suas previsões em um modelo final.
+
+## Boosting
+
+Boosting é um método de ensemble que utiliza o mesmo algoritmo de aprendizado de máquina para treinar subconjuntos em diferentes conjuntos de dados, mas o treinamento é feito de forma sequencial.
+
+O Gradient Boosting é um dos algoritmos de boosting mais populares. Ele é um método de ensemble que utiliza o gradiente descendente para minimizar o erro. 
+
+XGBoost é uma implementação do Gradient Boosting.
+
+Hiperparâmetros:
+
+* Gama: Redução minima de perda
+* Eta: Learning rate
+* Colsample_bytree: Porcentagem de colunas a serem amostradas
+* Subsample: Porcentagem de linhas a serem amostradas
+* Nrounds: Número de arvores sequenciais
+* Max_depth: Profundidade máxima da árvore
+* Min_child_weight: Peso mínimo da folha
+
+LightGBM é uma versão mais eficiente do XGBoost.
+
 ## Conclusão
 
 Existem infinitas possibilidades de combinações de modelos de ensemble. O importante é entender o problema e escolher a melhor combinação de modelos para resolvê-lo.
@@ -57,3 +81,7 @@ Existem infinitas possibilidades de combinações de modelos de ensemble. O impo
 Estes modes são difíceis de interpretar, mas são muito poderosos.
 
 O Cross validation entra no lugar do step-wise
+
+Quando temos muitas variáveis, podemos utilizar PCA para reduzir a dimensionalidade.
+
+XGBoost é um modelo delicado que leva um tempo maior de tunning.

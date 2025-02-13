@@ -143,6 +143,14 @@ Estratégias de avaliação:
 O SHAP (SHapley Additive exPlanations) é um método para explicar a saída de qualquer modelo de machine learning. Ele conecta a teoria dos jogos com a interpretabilidade de modelos.
 Você pode explicar a influência de cada variável em determinado indivíduo.
 
+SHAP pode ajudar quando é preciso explicar certas decisões do algoritmo.
+
+O grafico basewarm mostra a importância de cada variável para cada observação. O eixo X mostra o impacto na predição e a cor mostra se a variável é alta ou baixa.
+
+O grafico de cascata mostra para uma obervação, a influencia da variável no output do modelo (ou a contribuição de cada variável para a predição).
+
+
+
 ## Para saber mais
 
 - https://jakevdp.github.io/PythonDataScienceHandbook/05.01-what-is-machine-learning.html
