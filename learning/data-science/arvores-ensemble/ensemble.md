@@ -85,3 +85,6 @@ O Cross validation entra no lugar do step-wise
 Quando temos muitas variáveis, podemos utilizar PCA para reduzir a dimensionalidade.
 
 XGBoost é um modelo delicado que leva um tempo maior de tunning.
+
+Quanto maior o valor do feature_importances_ para uma determinada característica, maior a sua importância na decisão final do modelo.
+
