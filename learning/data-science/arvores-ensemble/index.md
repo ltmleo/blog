@@ -145,9 +145,9 @@ Você pode explicar a influência de cada variável em determinado indivíduo.
 
 SHAP pode ajudar quando é preciso explicar certas decisões do algoritmo.
 
-O grafico basewarm mostra a importância de cada variável para cada observação. O eixo X mostra o impacto na predição e a cor mostra se a variável é alta ou baixa.
+O gráfico basewarm mostra a importância de cada variável para cada observação. O eixo X mostra o impacto na predição e a cor mostra se a variável é alta ou baixa.
 
-O grafico de cascata mostra para uma obervação, a influencia da variável no output do modelo (ou a contribuição de cada variável para a predição).
+O gráfico de cascata mostra para uma obervação, a influencia da variável no output do modelo (ou a contribuição de cada variável para a predição).
 
 
 
