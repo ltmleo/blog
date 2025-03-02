@@ -56,3 +56,38 @@ E = 1/2 * SUM(Valor_real - Valor_estimado)^2
 
 Processo utilizado para encontrar o mínimo de uma função com base em variações de pesos.
 Utiliza Backpropagation para ajustar os pesos, os erros obtidos são propagados de volta para a rede.
+
+## Redes Neurais Multicamadas (Deep Learning)
+
+Como resolver o problema Xor?
+
+- Multicamadas permitem identificar relações não lineares
+- No caso de termos varias camadas intermediarias, chamamos de Deep Learning
+
+
+### Estrutura da rede
+
+- **Camadas**: Grupo de neurônios em um estágio do processo
+- **Camada Densa**: Conecta cada neurônio de uma camada com todos os neurônios da camada seguinte (não conecta com neurônios da mesma camada). Se a camada tem 5 neurônios, e a camada seguinte tem 3, teremos 5*3 = 15 conexões.
+
+### Vies X Variância
+
+- **Vies**: Erro sistemático, erro que não depende da quantidade de dados. O modelo não consegue capturar a complexidade dos dados. (Redução de vies: Na media você acerta)
+- **Variância**: Erro aleatório, erro que depende da quantidade de dados. O modelo é muito complexo e acaba decorando os dados. (Redução de variancia: Tiro ao alvo)
+
+![Vies X Variância](https://www.appliedaicourse.com/blog/wp-content/uploads/2024/09/low-variance-and-high-variance-947x1024.webp)
+
+Importancia da generalização do modelo - Teoria do Mapa.
+
+![Biass-Variance](https://media.geeksforgeeks.org/wp-content/uploads/20200107023418/1_oO0KYF7Z84nePqfsJ9E0WQ.png)
+
+### Overfitting X Underfitting
+
+- **Overfitting**: Modelo muito complexo, decorando os dados de treinamento, mas não consegue generalizar para novos dados.
+- **Underfitting**: Modelo muito simples, não consegue capturar a complexidade dos dados.
+
+![Over X Under](https://i0.wp.com/thecorrelation.in/wp-content/uploads/2022/06/Sambhav-e7a6ca0c.png?fit=2000%2C1414&ssl=1)
+
+
+## Para saber mais
+- https://support.minitab.com/pt-br/minitab/
