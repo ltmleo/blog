@@ -89,5 +89,25 @@ Importancia da generalização do modelo - Teoria do Mapa.
 ![Over X Under](https://i0.wp.com/thecorrelation.in/wp-content/uploads/2022/06/Sambhav-e7a6ca0c.png?fit=2000%2C1414&ssl=1)
 
 
+## Termos
+
+- **Epocas**: Quantidade de vezes que o modelo irá treinar com o mesmo conjunto de dados.
+- **Batch**: Quantidade de dados que o modelo irá treinar por vez.
+- **Iterações**: Quantidade de vezes que o modelo irá treinar com um batch.
+- **Batch Size**: Quantidade de dados que o modelo irá treinar por vez.
+- **Learning Rate**: Taxa de aprendizado, define o quanto os pesos serão ajustados a cada iteração.
+- **Momentum**: Controla a velocidade de atualização dos pesos durante o treinamento da rede.
+- **Regularização**: Técnica utilizada para evitar overfitting.
+- **Dropout**: Técnica de regularização que consiste em desligar aleatoriamente um percentual de neurônios durante o treinamento da rede.
+- **Early Stopping**: Técnica de regularização que consiste em interromper o treinamento da rede quando o erro de validação começa a aumentar.
+- **Batch Normalization**: Técnica utilizada para normalizar os dados de entrada da rede.
+- **Data Augmentation**: Técnica utilizada para aumentar a quantidade de dados de treinamento.
+- **Transfer Learning**: Técnica utilizada para transferir o conhecimento de um modelo pré-treinado para um novo modelo.
+- **AutoML**: Abordagem que visa automatizar o processo de construção de modelos de aprendizado de máquina.
+- **Cross-validation**: Técnica que consiste em dividir o conjunto de dados em k partes e treinar o modelo k vezes, cada vez utilizando uma parte diferente como conjunto de validação.
+- **Otimização de hiperparâmetros**: Processo de encontrar os melhores hiperparâmetros para o nosso modelo.
+- **Gradiente Descendente**: Algoritmo utilizado para encontrar o mínimo global de uma função.
+
+
 ## Para saber mais
 - https://support.minitab.com/pt-br/minitab/
