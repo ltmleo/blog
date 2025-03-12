@@ -53,16 +53,32 @@ const config: Config = {
           trackingID: 'G-714QFE3V9G',
           anonymizeIP: true,
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
+        },
         docs: {
           sidebarPath: './sidebars.ts',
           path: './learning',
           routeBasePath: 'learning',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl:
             'https://github.com/ltmleo/blog/edit/main/',
         },
         blog: {
           routeBasePath: 'blog',
           showReadingTime: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,

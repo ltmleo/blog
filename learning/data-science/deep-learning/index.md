@@ -111,3 +111,4 @@ Importancia da generalização do modelo - Teoria do Mapa.
 
 ## Para saber mais
 - https://support.minitab.com/pt-br/minitab/
+- https://www.simplilearn.com/tutorials/deep-learning-tutorial/rnn
