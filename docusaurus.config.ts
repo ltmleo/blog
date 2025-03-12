@@ -167,6 +167,10 @@ const config: Config = {
           title: 'More',
           items: [
             {
+              label: 'Search',
+              to: '/search',
+            },
+            {
               label: 'Blog',
               to: '/blog',
             },
