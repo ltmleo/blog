@@ -181,7 +181,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ltmleo personal blog, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ltmleo personal blog. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
