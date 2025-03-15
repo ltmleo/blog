@@ -15,3 +15,9 @@ Aqui compartilho algumas notas de aula do MBA em [Data Science](/learning/data-s
 
 ## OCI
 Aqui compartilho algumas notas do estudo para a certificação [OCI](/learning/oci/).
+
+## Golang
+Aqui você encontrará uma série de notas sobre a linguagem de programação [Go](/learning/golang/).
+
+
+![Learning](https://www.apprendoo.com/wp/wp-content/uploads/2023/03/continuous-corporate-learning.gif)

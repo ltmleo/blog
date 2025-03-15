@@ -42,6 +42,8 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.ts'),
         editUrl: 'https://github.com/ltmleo/blog/edit/main/',
         exclude: ['**/_archive/**', '**/_drafts/**', 'data-science/mba-dsa-aulas/**'], 
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
   ],
