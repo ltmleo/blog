@@ -21,3 +21,15 @@ python:
 classnotes:
   label: 'Class Notes'
   description: 'Notes from classes'
+
+golang:
+  label: 'Go Lang'
+  description: 'Go Lang'
+
+oci:
+  label: 'OCI'
+  description: 'Oracle Cloud Infrastructure'
+
+books:
+  label: 'Books'
+  description: 'Books I am reading'

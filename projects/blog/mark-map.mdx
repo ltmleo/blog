@@ -1,0 +1,36 @@
+import MarkMap from '@site/src/components/MarkMap';
+
+# MarkMap
+
+Markmap é uma forma de visualizar mapas mentais em Markdown. Ele é uma ferramenta que transforma Markdown em um mapa mental interativo.
+
+Exemplo:
+
+```md
+# [DORA metrics](https://dora.dev/research/)
+## Deployment frequency
+## Lead time for changes
+## Change failure rate
+## Time to restore service
+# [SPACE](https://queue.acm.org/detail.cfm?id=3454124)
+## Satisfaction
+## Performance
+## Action
+## Communication
+## Efficiency
+```
+
+<MarkMap markMap={`
+# [DORA metrics](https://dora.dev/research/)
+## Deployment frequency
+## Lead time for changes
+## Change failure rate
+## Time to restore service
+# [SPACE](https://queue.acm.org/detail.cfm?id=3454124)
+## Satisfaction
+## Performance
+## Action
+## Communication
+## Efficiency
+`} />
+```

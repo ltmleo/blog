@@ -28,3 +28,40 @@
   --ifm-color-primary-lightest: #cce5ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+/* MarkMap */
+
+.markmap-container {
+  width: 100%;
+  height: 50vh; /* Ajuste a altura conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.markmap-svg {
+  width: 100%;
+  height: 100%;
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+}
+
+.markmap-toolbar {
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+}
+
+:root {
+  --markmap-toolbar-bg: var(--ifm-background-color);
+  --markmap-toolbar-color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .markmap-svg {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .markmap-toolbar {
+  color: var(--ifm-font-color-base);
+}

@@ -70,6 +70,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           path: './learning',
+          exclude: ['**/_archive/**', '**/_drafts/**', 'data-science/mba-dsa-aulas/**', 'golang/full-cycle-tech-week/code'], 
           routeBasePath: 'learning',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,

@@ -1,7 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '@site/src/css/custom.css'; // Certifique-se de importar o arquivo CSS
+import '@site/src/css/custom.css';
 
-const obstacleImages = [
+// Definição de tipos
+type ObstacleImage = string;
+
+interface GameState {
+  isJumping: boolean;
+  position: number;
+  obstaclePosition: number;
+  gameOver: boolean;
+  score: number;
+  highScore: number;
+  currentObstacle: ObstacleImage;
+}
+
+const obstacleImages: ObstacleImage[] = [
   require('@site/static/game/obstacles/1.png').default,
   require('@site/static/game/obstacles/2.png').default,
   require('@site/static/game/obstacles/3.png').default,
@@ -12,27 +25,26 @@ const obstacleImages = [
   require('@site/static/game/obstacles/8.png').default,
   require('@site/static/game/obstacles/9.png').default,
   require('@site/static/game/obstacles/10.png').default,
-  // Adicione mais caminhos de imagens conforme necessário
 ];
 
-const playerImage = require('@site/static/game/player/player.png').default;
+const playerImage: string = require('@site/static/game/player/player.png').default;
 
-const getRandomObstacle = () => {
-  const randomIndex = Math.floor(Math.random() * obstacleImages.length);
+const getRandomObstacle = (): ObstacleImage => {
+  const randomIndex: number = Math.floor(Math.random() * obstacleImages.length);
   return obstacleImages[randomIndex];
 };
 
-const Game = () => {
-  const [isJumping, setIsJumping] = useState(false);
-  const [position, setPosition] = useState(0);
-  const [obstaclePosition, setObstaclePosition] = useState(100);
-  const [gameOver, setGameOver] = useState(false);
-  const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
-  const [currentObstacle, setCurrentObstacle] = useState(getRandomObstacle());
+const Game: React.FC = () => {
+  const [isJumping, setIsJumping] = useState<boolean>(false);
+  const [position, setPosition] = useState<number>(0);
+  const [obstaclePosition, setObstaclePosition] = useState<number>(100);
+  const [gameOver, setGameOver] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(0);
+  const [highScore, setHighScore] = useState<number>(0);
+  const [currentObstacle, setCurrentObstacle] = useState<ObstacleImage>(getRandomObstacle());
   const gameRef = useRef<HTMLDivElement>(null);
 
-  const handleJump = () => {
+  const handleJump = (): void => {
     if (!isJumping && !gameOver) {
       setIsJumping(true);
       setTimeout(() => setIsJumping(false), 400);
@@ -40,7 +52,7 @@ const Game = () => {
   };
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent): void => {
       if (event.code === 'Space') {
         handleJump();
       }
@@ -55,7 +67,7 @@ const Game = () => {
       const interval = setInterval(() => {
         setObstaclePosition((prev) => (prev > 0 ? prev - 1 : 100));
         setScore((prev) => prev + 1);
-      }, Math.max(20 - Math.floor(score / 100), 5)); // Aumente a velocidade conforme a pontuação aumenta
+      }, Math.max(20 - Math.floor(score / 100), 5));
 
       return () => clearInterval(interval);
     }
@@ -85,7 +97,7 @@ const Game = () => {
     }
   }, [obstaclePosition]);
 
-  const resetGame = () => {
+  const resetGame = (): void => {
     setGameOver(false);
     setObstaclePosition(100);
     setPosition(0);
@@ -96,7 +108,7 @@ const Game = () => {
   return (
     <div
       ref={gameRef}
-      onClick={handleJump} // Adicione o evento de clique
+      onClick={handleJump}
       style={{
         position: 'relative',
         width: '100%',
@@ -104,7 +116,7 @@ const Game = () => {
         border: '1px solid var(--ifm-color-primary-dark)',
         overflow: 'hidden',
         backgroundColor: 'black',
-        backgroundImage: 'url("/static/game/background/space.jpg")', // Adicione a imagem de fundo
+        backgroundImage: 'url("/static/game/background/space.jpg")',
         backgroundSize: 'cover',
         borderRadius: '10px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -173,8 +185,8 @@ const Game = () => {
           position: 'absolute',
           bottom: `${position}px`,
           left: '40px',
-          width: '50px', // Tamanho do jogador
-          height: '50px', // Tamanho do jogador
+          width: '50px',
+          height: '50px',
           transition: 'bottom 0.1s',
         }}
       />
@@ -185,9 +197,9 @@ const Game = () => {
           position: 'absolute',
           bottom: '0px',
           left: `${obstaclePosition}%`,
-          width: '70px', // Tamanho do obstáculo
-          height: '70px', // Tamanho do obstáculo
-          transition: 'left 0.01s', // Ajuste a transição para um movimento mais fluido
+          width: '70px',
+          height: '70px',
+          transition: 'left 0.01s',
         }}
       />
     </div>
