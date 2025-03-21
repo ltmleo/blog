@@ -30,9 +30,11 @@
     "markmap-lib": "^0.18.11",
     "markmap-toolbar": "^0.18.10",
     "markmap-view": "^0.18.10",
+    "plotly.js": "^3.0.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-plotly.js": "^2.6.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",
