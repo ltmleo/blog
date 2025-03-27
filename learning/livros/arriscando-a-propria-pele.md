@@ -12,6 +12,7 @@
 - Um sistema burocratizado ficará ainda mais complico a partir da ação de pessoas que vendem soluções complicadas por que é isso que sua posição e o seu treinamento as estimulam a fazer.
 - Tudo que é projetado por pessoas que não arriscam a própria pele tende a ficar cada dia mais complicado (antes do colapso final).
 - O sistema força o médico a transferir o risco de si para o paciente, e do presente para o futuro.
+- A principal ideia por trás de sistemas complexos e que conjunto se comporta de maneiras que não podem ser previstas por seus componentes. As interacões importam mais do que a natureza das unidades.
 
 ## Conceitos
 
