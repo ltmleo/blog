@@ -24,3 +24,6 @@ Possível virtualizar o OpenShift dentro do OpenShift (Reduz dependência de vir
 **LightSpeed**: todos os produtos da RedHat conectado em um chatbot com AI para aumentar a produtividade de deploy (AI agent)
 
 > Processo (Pod -> Container -> KVM -> VM)
+
+
+**eBPF (Extended Berkeley Packet Filter)**: Permite que o kernel do Linux execute código de forma segura e eficiente, permitindo a criação de programas que podem monitorar e modificar o comportamento do sistema operacional em tempo real. Isso é útil para tarefas como monitoramento de desempenho, segurança e rede.

@@ -1,0 +1,5 @@
+Siga estritamente as regras abaixo para todos os arquvios .md
+Ao sugerir links em arquivos markdown, sugira apenas o formato e não o conteúdo do link.
+Exemplos
+- Correto: ![]() 
+- Incorreto: ![link](https://www.exemplo.com)
