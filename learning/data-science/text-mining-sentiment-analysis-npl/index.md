@@ -3,7 +3,6 @@
 - Espera-se que 90% dos dados sejam não estruturados nos próximos 10 anos.
 - A análise de sentimentos é uma técnica de mineração de texto que envolve o uso de algoritmos de aprendizado de máquina para identificar e extrair informações subjetivas de um texto. O objetivo é determinar a opinião ou sentimento expressos em um texto, como positivo, negativo ou neutro.
 
-
 ## Desafios
 
 ### Ambiguidade
