@@ -117,7 +117,7 @@ O postmortem deve ser feito logo após a resolução do problema, para que todos
 Além disso, é importante que o postmortem seja compartilhado com todos, para que possam aprender com o problema, até mesmo as gerações futuras, que podem se beneficiar e encontrar soluções para problemas parecidos.
 
 :::tip
-Em um projeto que participei utilizamos o [docussaurus](/projects/blog/how-to) para criar uma documentação de postmortem, onde todos podiam contribuir com o que aprenderam e o que poderia ter sido feito de forma diferente. Por ser uma ferramenta de documentação como código, conseguimos versionar e revisar os postmortems de forma mais fácil. Além de trabalhar com tags e mecanismos de busca para facilitar a busca de postmortems antigos.
+Em um projeto que participei utilizamos o [docussaurus](/projects/blog/) para criar uma documentação de postmortem, onde todos podiam contribuir com o que aprenderam e o que poderia ter sido feito de forma diferente. Por ser uma ferramenta de documentação como código, conseguimos versionar e revisar os postmortems de forma mais fácil. Além de trabalhar com tags e mecanismos de busca para facilitar a busca de postmortems antigos.
 :::
 
 Um ponto importante é deixar claro que o postmortem não é uma ferramenta de punição, mas sim de aprendizado, fazendo uso do blameless postmortem, ponto chave da blameless culture, que exploramos melhor na proxima seção.
