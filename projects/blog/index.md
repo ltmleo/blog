@@ -1,7 +1,13 @@
 ---
 sidebar_position: 1
 ---
-# Como Criar um blog do zero com Docussaurus
+# Blog
+
+https://ltmleo.github.io/blog/
+
+Se deseja criar um site pessoal, um portfólio ou um blog, o Docussaurus é uma ótima opção. Ele é fácil de usar e configurar, e possui uma comunidade ativa que pode ajudar com qualquer dúvida que você tenha.
+
+## Como Criar um blog do zero com Docussaurus
 
 [Docussaurus](https://docusaurus.io/pt-BR/) é uma ferramenta de código aberto do Facebook para construir sites estáticos usando React. Ele foi criado para ser fácil de usar e configurar, permitindo que você crie rapidamente um site estático com uma aparência profissional e trabalhe ele segundo princípios de documentação como código.
 
