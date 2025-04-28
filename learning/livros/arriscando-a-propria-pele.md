@@ -12,7 +12,12 @@
 - Um sistema burocratizado ficará ainda mais complico a partir da ação de pessoas que vendem soluções complicadas por que é isso que sua posição e o seu treinamento as estimulam a fazer.
 - Tudo que é projetado por pessoas que não arriscam a própria pele tende a ficar cada dia mais complicado (antes do colapso final).
 - O sistema força o médico a transferir o risco de si para o paciente, e do presente para o futuro.
-- A principal ideia por trás de sistemas complexos e que conjunto se comporta de maneiras que não podem ser previstas por seus componentes. As interacões importam mais do que a natureza das unidades.
+- A principal ideia por trás de sistemas complexos e que conjunto se comporta de maneiras que não podem ser previstas por seus componentes. As interações importam mais do que a natureza das unidades.
+- a vida e sacrifício e admissão de riscos, e nada que não envolva uma quantidade moderada do primeiro, sob a restrição de satisfazer o ultimo, está proximo do que podemos chamar de vida. Se voce nao assume um risco de dano real, reparável ou mesmo potencialmente irreparável de
+uma aventura, não é uma aventura. (O que é real requer perigo).
+- Arriscar a própria pele impede que os sistemas apodreçam.
+- Os reguladores, têm um incentivo em tornar as regras tão complexas quanto pOssível, para que seus conhecimentos especializados possam ser contratados mais tarde a um preço mais alto.
+- As pessoas que são criadas, selecionadas e recompensadas para encontrar soluções complicadas não têm incentivo para implementar as soluções simplificadas.
 
 ## Conceitos
 
@@ -22,4 +27,8 @@
 
 **Livro dos ofcios**: Suponha que um homem traga um grande carregamento de milho de Alexandria para Rodes, em uma epoca em que o milho era caro em Rodes por conta da escassez. Suponha também que o homem sabe que existe muitos barcos carregados de suprimentos de mercadorias semelhantes. Ele deveria informar isso ao moradores de Rodes?
 
+
+**Efeito Lindy**: O efeito Lindy é um conceito que sugere que a vida útil de uma ideia, tecnologia ou produto é proporcional ao tempo que já existe. Em outras palavras, quanto mais tempo algo sobreviveu, maior a probabilidade de continuar existindo no futuro. Isso se aplica a ideias, livros, tecnologias e até mesmo pessoas. O efeito Lindy sugere que a longevidade de algo é um indicador de sua resiliência e relevância.
+
+> As coisas funcionam 1) se aqueles que estiveram fazendo trabalho assumiram algum tipo de risco, e 2) seu trabalho consegue atravessar gerações.
 

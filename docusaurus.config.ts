@@ -46,6 +46,23 @@ const config: Config = {
         showLastUpdateTime: true,
       },
     ],
+    [
+      'vivo-catalog-generator-plugin',
+      {
+        catalogConfigs: [
+          {
+            catalogPath: '@site/codeplay/capacidades/catalog',
+            outputPath: '@site/src/data/catalog-capabilities.json',
+            outputFormat: 'json',
+          },
+          {
+            catalogPath: '@site/codeplay/other/catalog',
+            outputPath: '@site/src/data/other-catalog.json',
+            outputFormat: 'md',
+          },
+        ],
+      },
+    ],
   ],
   presets: [
     [

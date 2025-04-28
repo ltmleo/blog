@@ -50,3 +50,52 @@ O lowercasing é o processo de converter todas as letras de um texto para minús
 A mineração de texto é o processo de extrair informações úteis e significativas de grandes volumes de dados textuais. Isso envolve a aplicação de técnicas de processamento de linguagem natural (NLP), aprendizado de máquina e estatísticas para analisar, interpretar e transformar dados não estruturados em informações estruturadas. A mineração de texto é amplamente utilizada em diversas áreas, como análise de sentimentos, recuperação de informações, resumo automático, categorização de documentos e detecção de tópicos.
 
 > Método que extrai padrões, insights e informações úteis a partir de grandes quantidades de texto.
+
+
+## Bag of Words
+
+O Bag of Words (BoW) é uma representação de texto que transforma um conjunto de documentos em uma matriz de características. Cada documento é representado como um vetor, onde cada elemento do vetor corresponde à contagem ou frequência de uma palavra específica no documento. O BoW ignora a ordem das palavras e a gramática, concentrando-se apenas na presença ou ausência de palavras em um documento.
+
+> Representação de texto que transforma um conjunto de documentos em uma matriz de características.
+
+|frase \ palavras|de|gostei|não|produto|ruim|
+|---|---|---|---|---|---|
+|0|0|0|1|0|0|
+|1|0|1|0|0|0|
+|2|0|0|1|0|0|
+
+## Pipeline 
+
+Um pipeline é uma sequência de etapas ou processos encadeados que transformam dados brutos em informações úteis. No contexto de processamento de linguagem natural (NLP) e aprendizado de máquina, um pipeline pode incluir etapas como pré-processamento de texto, extração de características, treinamento de modelos e avaliação. O uso de pipelines ajuda a organizar e automatizar o fluxo de trabalho, facilitando a implementação e a manutenção de projetos complexos.
+
+## N-grams
+
+Um N-gram é uma sequência de N itens (palavras, caracteres ou outros elementos) extraídos de um texto. Os N-grams são usados em processamento de linguagem natural (NLP) e aprendizado de máquina para capturar padrões e relações contextuais entre palavras. Eles podem ser unigrams (1 palavra), bigrams (2 palavras), trigrams (3 palavras) e assim por diante. O uso de N-grams ajuda a melhorar a compreensão do contexto e a qualidade das representações textuais.
+
+Quanto maior o N, mais cotexto é capturado, mas também precisa de mais dados para manter bons resultados.
+
+```plaintext
+Frase: "Não recebi o produto"
+Unigramas (n=1): ["Não", "recebi", "o", "produto"]
+Bigramas (n=2): ["Não recebi", "recebi o", "o produto"]
+Trigramas (n=3): ["Não recebi o", "recebi o produto"]
+```
+
+
+### Unigrams
+
+> Quais palavras aparecem no texto.
+
+Unigrams são N-grams que consistem em uma única palavra. Eles são a forma mais simples de N-grams e são frequentemente usados em tarefas de processamento de linguagem natural (NLP) para representar palavras individuais em um texto. Os unigrams capturam a frequência de palavras, mas não consideram o contexto ou a ordem das palavras.
+
+### Bigrams
+
+> Contexto (como as palavras aparecem juntas)
+
+Bigrams são N-grams que consistem em duas palavras consecutivas. Eles são usados em processamento de linguagem natural (NLP) para capturar relações contextuais entre palavras adjacentes. Os bigrams ajudam a melhorar a compreensão do significado e do contexto de um texto, permitindo que os modelos considerem a coocorrência de palavras.
+
+### Trigrams
+
+> Identificar expressões comuns ou padrões de palavras em um texto.
+
+Trigrams são N-grams que consistem em três palavras consecutivas. Eles são usados em processamento de linguagem natural (NLP) para capturar relações contextuais mais complexas entre palavras adjacentes. Os trigrams ajudam a melhorar a compreensão do significado e do contexto de um texto, permitindo que os modelos considerem a coocorrência de palavras em sequências mais longas.
