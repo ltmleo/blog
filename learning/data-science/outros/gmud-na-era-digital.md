@@ -53,6 +53,13 @@ Os 8 Erros do Processo de Mudança (John P. Kotter)
 
 ![DICE](https://businesssimulations.com/literature/files/whitepaper-cl-sm/dice.png)
 
+## Organização Positiva
+
+Criar um senso de propósito, visualizar possibilidades, confiar no processo emergente, nutrir diálogos autênticos e abraçar o bem comum. 
+
+## Cultura Organizacional
+
+É o padrão de pressupostos básicos que um grupo desenvolve para lidar com problemas e ensinar novos membros. 
 
 ## Para saber mais
 
