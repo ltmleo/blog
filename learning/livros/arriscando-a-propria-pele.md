@@ -1,8 +1,15 @@
+import BookDisplay from '@site/src/components/BookDisplay';
+
 # Arriscando a própria pele
 
-**Autor**: Nassim Nicholas Taleb
+<BookDisplay 
+  title="Arriscando a própria pele"
+  author="Nassim Nicholas Taleb"
+  coverImage="https://online.fliphtml5.com/qcgcj/hgmg/files/thumb/1.webp?1630484462&1630484462"
+  publishDate="2018"
+  summary="Arriscando a própria pele é um livro que explora a importância de assumir riscos pessoais e as consequências de decisões tomadas sem responsabilidade direta. Taleb argumenta que sistemas complexos e burocráticos muitas vezes falham porque aqueles que os criam não enfrentam as consequências diretas de suas ações. O autor defende que a verdadeira sabedoria e eficácia vêm da experiência prática e do envolvimento direto com os riscos, em vez de soluções teóricas ou burocráticas. A obra é uma crítica à desconexão entre teoria e prática, enfatizando a necessidade de responsabilidade pessoal na tomada de decisões."
+/>
 
-![Capa](https://online.fliphtml5.com/qcgcj/hgmg/files/thumb/1.webp?1630484462&1630484462)
 
 ## Notas
 
