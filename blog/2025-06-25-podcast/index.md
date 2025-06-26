@@ -1,5 +1,7 @@
 # Omelette au Fromage: Podcast de Idiomas e a Revolução da IA
 
+![Site](image.png)
+
 Nos últimos meses, impulsionado por uma viagem, mergulhei no desenvolvimento de um podcast. A ideia era aprender algumas frases em outros idiomas para me virar em algumas situações na viagem. E no melhor estilo "Arriscando a Própria Pele", esperei fazer a viagem para testar se o podcast realmente ajudaria (realmente ajudou, precisei recorrer ao ingles apenas em situações mais complexas). Por isso, gostaria de compartilhar essa experiência e discutir um pouco sobre Inteligencia Artificial (sim, usei IA em quase toda etapa do desenvolvimento, inclusive para me ajudar com esse texto), e quem sabe, inspirar outros com necessidades semelhantes.
 
 <!-- truncate -->

@@ -4,6 +4,8 @@
 Acesse em https://ltmleo.github.io/omeletteaufromage/
 :::
 
+![Site](image.png)
+
 Podcast dedicado a ensinar frases em outras línguas por repetição para falantes de português.
 
 Omelette Au Fromage é um podcast dedicado a ensinar frases em outras línguas por repetição para falantes de português.
