@@ -66,5 +66,6 @@ O que vocês acharam da ideia do podcast? Já pensaram em utilizar a IA para res
 1. https://www.ufsm.br/pet/sistemas-de-informacao/2025/03/07/a-teoria-da-internet-morta-estamos-cercados-por-bots
 2. https://www.gartner.com/doc/reprints?id=1-2IPGQWUX&ct=240903&st=sb&?ocid=eml_pg454105_gdc_comm_gh&mkt_tok=MTU3LUdRRS0zODIAAAGbF5ftjk5f2YHKk8Ork8DYbxImJKMqoPAhEMh5POMjFjpns4Y0jA9dzspZV5fLw4kgPu9hDhFARmbkIXf5LTAcWt7bXXrkHkoCkOoEwtRuiNWRIIn1hpqCdrfi
 3. https://www.thoughtworks.com/pt-br/insights/blog/implications-tech-stack-complexity-executives
+4. The Software Craftsman: Professionalism, Pragmatism, Pride - Sandro Mancuso 
 
 ![Image](image.png)
