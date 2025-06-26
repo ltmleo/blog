@@ -125,10 +125,19 @@ const config: Config = {
           label: 'Learning',
         },
         {to: '/blog/blog', label: 'Blog', position: 'left'},
-
+        {
+          href: 'https://ltmleo.github.io/omeletteaufromage/',
+          label: 'Omelette Au Fromage',
+          position: 'right',
+        },
         {
           href: 'https://github.com/ltmleo/blog',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://ltmleo.github.io/receitas/',
+          label: 'Receitas',
           position: 'right',
         },
       ],
