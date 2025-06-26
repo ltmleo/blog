@@ -1,6 +1,9 @@
 ---
 hidden: true
+draft: true
 ---
+
+<!-- truncate -->
 
 <!-- Portanto, mais do que nunca, precisamos de uma plataforma que realmente empodere os desenvolvedores, oferecendo ferramentas e estruturas que simplifiquem a criação e a gestão de projetos, em vez de somente adicionar mais burocracia e complexidade. Uma plataforma eficaz deve atuar como um facilitador, fornecendo ambientes de desenvolvimento integrados, bibliotecas e frameworks reutilizáveis, e sistemas de controle de versão que promovam a colaboração e a organização. O objetivo é reduzir a fricção no processo de desenvolvimento, permitindo que os profissionais foquem na resolução de problemas de negócio, e não em superar obstáculos tecnológicos ou administrativos.
 

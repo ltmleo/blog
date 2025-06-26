@@ -131,13 +131,13 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/ltmleo/blog',
-          label: 'GitHub',
+          href: 'https://ltmleo.github.io/receitas/',
+          label: 'Receitas',
           position: 'right',
         },
         {
-          href: 'https://ltmleo.github.io/receitas/',
-          label: 'Receitas',
+          href: 'https://github.com/ltmleo/blog',
+          label: 'GitHub',
           position: 'right',
         },
       ],

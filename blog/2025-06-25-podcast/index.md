@@ -1,12 +1,12 @@
 # Omelette au Fromage: Podcast de Idiomas e a Revolução da IA
 
-![Site](image.png)
+[![Site](image.png)](https://ltmleo.github.io/omeletteaufromage/)
 
-Nos últimos meses, impulsionado por uma viagem, mergulhei no desenvolvimento de um podcast. A ideia era aprender algumas frases em outros idiomas para me virar em algumas situações na viagem. E no melhor estilo "Arriscando a Própria Pele", esperei fazer a viagem para testar se o podcast realmente ajudaria (realmente ajudou, precisei recorrer ao ingles apenas em situações mais complexas). Por isso, gostaria de compartilhar essa experiência e discutir um pouco sobre Inteligencia Artificial (sim, usei IA em quase toda etapa do desenvolvimento, inclusive para me ajudar com esse texto), e quem sabe, inspirar outros com necessidades semelhantes.
+Nos últimos meses, impulsionado por uma viagem, mergulhei no desenvolvimento de um [podcast](https://ltmleo.github.io/omeletteaufromage/). A ideia era aprender algumas frases em outros idiomas para me virar em algumas situações na viagem. E no melhor estilo "[Arriscando a Própria Pele](/blog/learning/livros/arriscando-a-propria-pele)", esperei fazer a viagem para testar se o podcast realmente ajudaria (realmente ajudou, precisei recorrer ao ingles apenas em situações mais complexas). Por isso, gostaria de compartilhar essa experiência e discutir um pouco sobre Inteligencia Artificial (sim, usei IA em quase toda etapa do desenvolvimento, inclusive para me ajudar com esse texto), e quem sabe, inspirar outros com necessidades semelhantes.
 
 <!-- truncate -->
 
-A ideia do podcast surgiu de uma lembrança divertida: um episódio do "Laboratório de Dexter", onde ele precisa aprender francês em uma noite e inventa uma máquina para isso. Devido a um bug, ele acaba aprendendo a dizer apenas "Omelette Du Fromage" (o que, na verdade, é uma maneira incorreta de dizer "Omelette Au Fromage", nome do podcast!). O "Omelette Au Fromage" consiste em 10 episódios de 5min, onde frases são repetidas em diferentes vozes e velocidades, facilitando a memorização.
+A ideia do podcast surgiu de uma lembrança divertida: um episódio do "Laboratório de Dexter", onde ele precisa aprender francês em uma noite e inventa uma máquina para isso. Devido a um bug, ele acaba aprendendo a dizer apenas "Omelette Du Fromage" (o que, na verdade, é uma maneira incorreta de dizer "Omelette Au Fromage", nome do podcast!). O Podcast consiste em 10 episódios de 5min, onde frases são repetidas em diferentes vozes e velocidades, facilitando a memorização.
 
 O mais fascinante de todo esse processo é que o podcast foi **inteiramente desenvolvido utilizando Inteligência Artificial**. Desde a concepção até a execução, a IA foi uma ferramenta poderosa em diversas etapas. Aproveitando o *hype* em torno da IA, gostaria de compartilhar algumas impressões e reflexões sobre como essa tecnologia está transformando a maneira de resolver problemas e criar soluções inovadoras.
 
@@ -17,13 +17,13 @@ O mais fascinante de todo esse processo é que o podcast foi **inteiramente dese
 * **Gerar o script base:** A IA me ajudou a criar os diálogos e frases essenciais para cada episódio.
 * **Construir o construtor do podcast:** Uma ferramenta que automatizou a organização e a estrutura dos áudios.
 * **Criar as falas em diferentes idiomas, velocidades e sotaques:** Isso foi crucial para a eficácia do aprendizado, expondo o ouvinte a diversas pronúncias.
-* **Até mesmo criar um site para divulgar o podcast:** Uma plataforma simples e funcional para compartilhar meu trabalho com o mundo.
+* **Até mesmo criar um site para divulgar o podcast:** Uma plataforma simples e funcional para compartilhar meu trabalho com o mundo. [Acesse aqui!](https://ltmleo.github.io/omeletteaufromage/)
 
 :::note
 Poderia, ter utilizado a IA para gerar todo o conteúdo do podcast de uma vez, mas optei por manter um toque humano, escrevendo os scripts e organizando o conteúdo de forma que pudesse ter mais controle sobre as etapas e evitasse cargas de trabalho desnecessárias. Exploro um pouco mais da motivação disso e o conceito de camadas de automação na seção [Projetos](/blog/projects/omelette-au-fromage/).
 :::
 
-Além do podcast, também criei um site para compartilhar receitas de família, onde escanei os livros de receitas das minhas avós e utilizei IA para transcrever o que estava escrito,  uma forma de preservar e compartilhar memórias afetivas. A IA não é apenas uma ferramenta, mas um parceiro criativo que nos permite explorar novas possibilidades e resolver problemas de maneiras inovadoras. Falo um pouco mais sobre isso em [Receitas](/blog/projects/receitas/).
+Além do podcast, também criei um [site](https://ltmleo.github.io/receitas/) para compartilhar receitas de família, onde escanei os livros de receitas das minhas avós e utilizei IA para transcrever o que estava escrito,  uma forma de preservar e compartilhar memórias afetivas. A IA não é apenas uma ferramenta, mas um parceiro criativo que nos permite explorar novas possibilidades e resolver problemas de maneiras inovadoras. Falo um pouco mais sobre isso em [Receitas](/blog/projects/receitas/).
 
 Esse são epenas pequenos exemplos de como a Inteligência Artificial está democratizando a inovação. Problemas que antes exigiam um investimento de tempo e dinheiro que inviabilizavam soluções, agora podem ser resolvidos de uma forma muito mais rápida e simples. Essa facilidade nos permite criar soluções customizáveis e produtos focados em nichos específicos, algo que antes era economicamente inviável.
 

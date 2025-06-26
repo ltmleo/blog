@@ -4,7 +4,7 @@
 Acesse em https://ltmleo.github.io/omeletteaufromage/
 :::
 
-![Site](image.png)
+[![Site](image.png)](https://ltmleo.github.io/omeletteaufromage/)
 
 Podcast dedicado a ensinar frases em outras línguas por repetição para falantes de português.
 
