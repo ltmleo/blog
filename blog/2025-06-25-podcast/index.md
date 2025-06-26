@@ -2,6 +2,8 @@
 
 Nos últimos meses, impulsionado por uma viagem, mergulhei no desenvolvimento de um podcast. A ideia era aprender algumas frases em outros idiomas para me virar em algumas situações na viagem. E no melhor estilo "Arriscando a Própria Pele", esperei fazer a viagem para testar se o podcast realmente ajudaria (realmente ajudou, precisei recorrer ao ingles apenas em situações mais complexas). Por isso, gostaria de compartilhar essa experiência e discutir um pouco sobre Inteligencia Artificial (sim, usei IA em quase toda etapa do desenvolvimento, inclusive para me ajudar com esse texto), e quem sabe, inspirar outros com necessidades semelhantes.
 
+<!-- truncate -->
+
 A ideia do podcast surgiu de uma lembrança divertida: um episódio do "Laboratório de Dexter", onde ele precisa aprender francês em uma noite e inventa uma máquina para isso. Devido a um bug, ele acaba aprendendo a dizer apenas "Omelette Du Fromage" (o que, na verdade, é uma maneira incorreta de dizer "Omelette Au Fromage", nome do podcast!). O "Omelette Au Fromage" consiste em 10 episódios de 5min, onde frases são repetidas em diferentes vozes e velocidades, facilitando a memorização.
 
 O mais fascinante de todo esse processo é que o podcast foi **inteiramente desenvolvido utilizando Inteligência Artificial**. Desde a concepção até a execução, a IA foi uma ferramenta poderosa em diversas etapas. Aproveitando o *hype* em torno da IA, gostaria de compartilhar algumas impressões e reflexões sobre como essa tecnologia está transformando a maneira de resolver problemas e criar soluções inovadoras.
