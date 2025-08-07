@@ -1,0 +1,7 @@
+label: 'Inteligencia Artificial'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: blue
+link:
+  type: generated-index
+  title: 'Inteligencia Artificial'
