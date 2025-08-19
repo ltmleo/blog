@@ -1,3 +1,7 @@
+---
+description: Uma breve história das redes de informação, da Idade da Pedra à inteligência artificial
+
+---
 import BookDisplay from '@site/src/components/BookDisplay';
 
 # Nexus

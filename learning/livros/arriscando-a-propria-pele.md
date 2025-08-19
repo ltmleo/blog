@@ -1,3 +1,6 @@
+---
+description: Assimetrias ocultas no cotidiano
+---
 import BookDisplay from '@site/src/components/BookDisplay';
 
 # Arriscando a própria pele

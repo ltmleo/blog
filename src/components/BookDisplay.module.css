@@ -4,7 +4,7 @@
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,252,0.98));
   border: 1px solid rgba(20,20,30,0.04);
-  box-shadow: 0 6px 18px rgba(14, 17, 23, 0.06);
+  box-shadow: 0 8px 28px rgba(14, 17, 23, 0.06);
   width: 100%;
   max-width: 100%;
   height: 320px; /* altura fixa */
@@ -21,18 +21,20 @@
 }
 
 .coverImageContainer {
-  flex: 0 0 160px; /* reserva mais espaço vertical para a imagem */
+  flex: 0 0 140px; /* reserva espaço para a capa */
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .coverImage {
-  width: auto;
-  height: 100%;
-  object-fit: cover; /* ocupa vertical mantendo proporção */
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(9, 14, 20, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3; /* proporção de capa de livro */
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(9, 14, 20, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.18s ease;
 }
 
 .coverImage:hover {
@@ -172,4 +174,16 @@
   .coverImageContainer {
     margin-bottom: 1.5rem;
   }
+}
+
+/* dark mode overrides for book card */
+[data-theme='dark'] .bookContainer {
+  background: linear-gradient(180deg, rgba(20,24,30,0.9), rgba(12,16,22,0.9));
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 10px 30px rgba(2,6,12,0.6);
+}
+
+[data-theme='dark'] .toggleButton {
+  background: rgba(102,178,255,0.08);
+  color: #cce8ff;
 }
