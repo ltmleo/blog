@@ -30,3 +30,4 @@ Aqui compartilho algumas notas de leitura de livros que li ou estou lendo.
 
 
 ![Learning](https://www.apprendoo.com/wp/wp-content/uploads/2023/03/continuous-corporate-learning.gif)
+
