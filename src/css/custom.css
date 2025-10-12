@@ -27,17 +27,6 @@
   --ifm-color-primary-lighter: #99ccff;
   --ifm-color-primary-lightest: #cce5ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  /* dark theme tweaks for better contrast and card backgrounds */
-  --ifm-background-color: #07080c;
-  --ifm-card-background-color: #0f1720;
-  --ifm-font-color-base: #e6eef8;
-  --ifm-color-primary: #66b2ff;
-}
-
-/* Improve global background & text color coherence (safe defaults) */
-body {
-  background-color: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
 }
 
 
