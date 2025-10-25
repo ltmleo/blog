@@ -1,42 +1,68 @@
 .bookContainer {
-  margin: 1.25rem 0 0.75rem 0;
-  padding: 0.9rem;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,252,0.98));
-  border: 1px solid rgba(20,20,30,0.04);
-  box-shadow: 0 6px 18px rgba(14, 17, 23, 0.06);
+  margin: 1.5rem 0 1rem 0;
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: var(--book-bg, linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.98)));
+  border: 1px solid var(--book-border, rgba(20,20,30,0.06));
+  box-shadow: var(--book-shadow, 0 8px 24px rgba(14, 17, 23, 0.08));
   width: 100%;
   max-width: 100%;
-  height: 320px; /* altura fixa */
+  min-height: 320px;
+  height: auto;
   box-sizing: border-box;
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bookContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--book-shadow-hover, 0 12px 32px rgba(14, 17, 23, 0.12));
+}
+
+/* Dark mode support */
+[data-theme='dark'] .bookContainer {
+  --book-bg: linear-gradient(135deg, rgba(30,30,35,0.98), rgba(25,28,33,0.98));
+  --book-border: rgba(255,255,255,0.1);
+  --book-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --book-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 .bookInfo {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  height: 100%;
-  align-items: stretch;
+  gap: 1.5rem;
+  min-height: 280px;
+  align-items: flex-start;
 }
 
 .coverImageContainer {
-  flex: 0 0 160px; /* reserva mais espaço vertical para a imagem */
+  flex: 0 0 180px;
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
+  position: relative;
 }
 
 .coverImage {
-  width: auto;
-  height: 100%;
-  object-fit: cover; /* ocupa vertical mantendo proporção */
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(9, 14, 20, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(9, 14, 20, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .coverImage {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .coverImage:hover {
-  transform: scale(1.03);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 15px 40px rgba(9, 14, 20, 0.25);
+}
+
+[data-theme='dark'] .coverImage:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .textInfo {
@@ -44,132 +70,251 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-right: 0.5rem;
-  min-height: 0; /* permite que filhos com overflow funcionem corretamente */
-}
-
-.bookSummaryWrapper {
-  margin-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1 1 auto; /* permite que o resumo ocupe espaço disponível */
-  min-height: 0; /* necessário para overflow interno funcionar */
-}
-
-.bookSummary {
-  transition: max-height 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.18s ease;
-  overflow: hidden;
-  min-height: 0; /* importante para overflow:auto interna */
-  display: block;
-}
-
-.collapsed {
-  max-height: 96px;
-}
-
-.expanded {
-  max-height: 1000px;
-}
-
-.bookSummary.expanded {
-  height: 100%;
-}
-
-.toggleButton {
-  margin-top: 6px;
-  background: rgba(3,102,214,0.08);
-  border: none;
-  color: var(--ifm-color-primary);
-  cursor: pointer;
-  padding: 6px 10px;
-  font-size: 0.95rem;
-  border-radius: 999px;
-  align-self: flex-start;
-  transition: background 0.18s ease, transform 0.12s ease;
-}
-.toggleButton:hover {
-  background: rgba(3,102,214,0.14);
-  transform: translateY(-1px);
-}
-.toggleButton::after {
-  content: '';
-  display: inline-block;
-  margin-left: 8px;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid var(--ifm-color-primary);
-  border-bottom: 2px solid var(--ifm-color-primary);
-  transform: rotate(45deg);
-  transition: transform 0.18s ease;
-}
-.toggleButton[aria-expanded='true']::after {
-  transform: rotate(-135deg);
+  min-height: 0;
 }
 
 .bookTitle {
-  margin-bottom: 0.25rem;
-  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
   color: var(--ifm-color-primary);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+[data-theme='dark'] .bookTitle {
+  color: var(--ifm-color-primary-light);
 }
 
 .bookAuthor {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--ifm-font-color-base);
+  opacity: 0.9;
 }
 
 .publishDate {
   font-size: 0.9rem;
-  color: var(--ifm-color-secondary-darkest);
-  margin-bottom: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[data-theme='dark'] .publishDate {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.publishDate::before {
+  content: '📅';
+  font-size: 0.85rem;
+}
+
+.bookSummaryWrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .bookSummary {
-  transition: max-height 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.18s ease;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  padding-right: 6px; /* espaço para a scrollbar quando expandido */
-  background: linear-gradient(0deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
-  border-radius: 6px;
+  padding-right: 8px;
+  line-height: 1.7;
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
 }
+
+[data-theme='dark'] .bookSummary {
+  color: var(--ifm-color-emphasis-800);
+}
+
 .collapsed {
-  max-height: 96px;
+  max-height: 100px;
+  position: relative;
+}
+
+.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--ifm-background-color));
+  pointer-events: none;
+}
+
+[data-theme='dark'] .collapsed::after {
+  background: linear-gradient(to bottom, transparent, rgba(25,28,33,0.98));
 }
 
 .expanded {
-  /* quando expandido, ocupa toda a altura do wrapper e permite rolagem */
-  max-height: none;
-  height: 100%;
-  overflow: auto;
-  padding-bottom: 8px; /* folga para que a última linha não fique encostada */
+  max-height: 600px;
+  overflow-y: auto;
+  padding-bottom: 0.5rem;
 }
 
-/* custom scrollbar para webkit */
-.bookSummary::-webkit-scrollbar {
-  width: 10px;
+/* Custom scrollbar */
+.expanded::-webkit-scrollbar {
+  width: 8px;
 }
-.bookSummary::-webkit-scrollbar-track {
+
+.expanded::-webkit-scrollbar-track {
   background: transparent;
 }
-.bookSummary::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.18));
-  border-radius: 999px;
+
+.expanded::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.25));
+  border-radius: 10px;
+  transition: background 0.2s ease;
 }
-/* Ensure expanded summary shows scrollbar and fills available space
-   (placed after generic .bookSummary rules to take precedence) */
-.bookSummary.expanded {
-  overflow: auto !important;
-  height: 100% !important;
-  padding-bottom: 8px !important;
+
+.expanded::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35));
 }
+
+[data-theme='dark'] .expanded::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.3));
+}
+
+[data-theme='dark'] .expanded::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.4));
+}
+
+.toggleButton {
+  margin-top: 0.5rem;
+  background: var(--toggle-bg, rgba(3,102,214,0.1));
+  border: 1px solid var(--toggle-border, rgba(3,102,214,0.2));
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[data-theme='dark'] .toggleButton {
+  --toggle-bg: rgba(100,149,237,0.15);
+  --toggle-border: rgba(100,149,237,0.3);
+  color: var(--ifm-color-primary-light);
+}
+
+.toggleButton:hover {
+  background: var(--toggle-bg-hover, rgba(3,102,214,0.18));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3,102,214,0.2);
+}
+
+[data-theme='dark'] .toggleButton:hover {
+  --toggle-bg-hover: rgba(100,149,237,0.25);
+  box-shadow: 0 4px 12px rgba(100,149,237,0.3);
+}
+
+.toggleButton::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.25s ease;
+}
+
+.toggleButton[aria-expanded='true']::after {
+  transform: rotate(135deg);
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .bookContainer {
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .bookInfo {
+    gap: 1.25rem;
+  }
+  
+  .coverImageContainer {
+    flex: 0 0 140px;
+  }
+  
+  .coverImage {
+    max-height: 220px;
+  }
+}
+
 @media (max-width: 768px) {
+  .bookContainer {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
   .bookInfo {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1.5rem;
   }
   
   .coverImageContainer {
-    margin-bottom: 1.5rem;
+    flex: 0 0 auto;
+    width: 160px;
+  }
+  
+  .coverImage {
+    max-height: 240px;
+  }
+  
+  .textInfo {
+    width: 100%;
+  }
+  
+  .bookTitle {
+    font-size: 1.4rem;
+  }
+  
+  .publishDate {
+    justify-content: center;
+  }
+  
+  .toggleButton {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookContainer {
+    padding: 0.875rem;
+    border-radius: 12px;
+  }
+  
+  .coverImageContainer {
+    width: 140px;
+  }
+  
+  .bookTitle {
+    font-size: 1.25rem;
+  }
+  
+  .bookAuthor {
+    font-size: 0.95rem;
+  }
+  
+  .bookSummary {
+    font-size: 0.9rem;
   }
 }
