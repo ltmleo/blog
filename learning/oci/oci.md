@@ -1,6 +1,9 @@
 # Oracle Cloud Introduction
 
-![Oracle Cloud Certification](./images/OCI2024FNDCFA.png)
+<div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+  <img src="./images/OCI2024FNDCFA.png" alt="Oracle Cloud Certification" style="max-width: 45%; height: auto;" />
+  <img src="./images/OCI25AICFA.png" alt="Oracle Cloud AI Certification" style="max-width: 45%; height: auto;" />
+</div>
 
 - **OCI**: Oracle Cloud Infrastructure
 
