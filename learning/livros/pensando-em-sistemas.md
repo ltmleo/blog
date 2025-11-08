@@ -32,6 +32,19 @@ import BookDisplay from '@site/src/components/BookDisplay';
 
 "Se A causa B, é possível que B também cause A?"
 
+"Sistemas com estruturas de feedback semelhantes produzem comportamentos dinâmicos semelhantes."
+
+"Em sistemas físicos de crescimento exponencial, deve haver pelo menos um ciclo de reforço impulsionando o crescimento e pelo menos um ciclo de equilíbrio restringindo o crescimento, pois nenhum sistema físico pode crescer para sempre em um ambiente finito."
+
+"Se o mecanismo da terra for bom, todas as suas partes serão boas, quer as entendamos ou não. Se a biota, ao longo das eras, construiu algo que estimamos mas não entendemos, quem, senão um tolo, descartaria partes aparentemente inúteis? Manter todas as engrenagens e rodas é a primeira precaução do mecânico inteligente - ALDO LEOPOLD, silvicultor"
+
+"Colocar um sistema na camisa de força da constância pode desenvolver fragilidades"
+
+"O proposito original de uma hierarquia é sempre ajudar seus subsistemas de origem a fazer melhor seu trabalho"
+
+"Os sistemas hierárquicos evoluem de baixo para cima, O proposito das camadas superiores da hierarquia é servir aos propósitos das camadas inferiores"
+
+"Um sistema é uma grande caixa-preta Cujo cadeado não podemos abrir. Tudo o que dela podemos conhecer É o que entra e o que sai Observar inputs e outputs. Relacionados por parâmetros, Permite-nos, às vezes, relacionar Um input, um output e um estado Se essa relação for boa e estável Talvez possamos fazer previsões. Mas se isso falhar - Deus nos livre. Teremos que quebrar o cadeado! - Kenneth Boulding, economista"
 
 ## Conceitos
 
@@ -69,3 +82,19 @@ import BookDisplay from '@site/src/components/BookDisplay';
 - Todas decisões de sistemas são tomadas com base em informações do passado para atuar no presente, com consequências que só serão totalmente visíveis no futuro.
 
 - "As informações fornecidas por um ciclo de feedback - ainda que não físico - só podem afetar o comportamento futuro; não podem corrigir o comportamento que gerou o feedback. Mesmo informações físicas levam tempo para ser realimentadas no sistema."
+
+**Sistemas de estoque único**: Sistemas simples compostos por um único estoque e seus fluxos de entrada e saída. Eles são úteis para entender conceitos básicos de dinâmica de sistemas, como equilíbrio, atrasos e feedbacks.
+
+**Sistema com dois ciclos de equilíbrios conflitantes**: Sistemas mais complexos que envolvem dois ciclos de feedback de equilíbrio que atuam em direções opostas. Esses sistemas podem gerar comportamentos dinâmicos interessantes, como oscilações e ciclos. Exemplo: termostato com aquecimento e resfriamento.
+
+**Sistema com um ciclo de reforço e um ciclo de equilíbrio**: Sistemas que combinam um ciclo de feedback de reforço com um ciclo de feedback de equilíbrio. Esses sistemas podem exibir comportamentos complexos, como crescimento exponencial seguido por estabilização ou colapso. Exemplo: população de animais com crescimento populacional e limitação de recursos.
+
+**Sistema com atrasos**: Sistemas que incluem atrasos significativos entre ações e suas consequências. Esses sistemas podem ser difíceis de controlar e prever, pois os atrasos podem levar a respostas inadequadas ou exageradas. Exemplo: Inventário de negócios, onde há um atraso entre o pedido de reposição e a chegada dos produtos.
+
+**Sistema de dois estoques**: Sistemas que envolvem dois estoques interconectados por fluxos. Esses sistemas podem exibir comportamentos dinâmicos complexos, como ciclos e oscilações. Exemplo: sistema econômico com estoque de capital e estoque de trabalho.
+
+**Estoque renovável restringido por um estoque não renovável**: Sistemas que envolvem um estoque renovável (como recursos naturais) que é limitado por um estoque não renovável (como combustíveis fósseis). Esses sistemas podem enfrentar desafios de sustentabilidade e esgotamento de recursos. Exemplo: agricultura dependente de fertilizantes fósseis.
+
+**Hierarquia de sistemas**: A organização de sistemas em níveis hierárquicos, onde sistemas menores estão contidos dentro de sistemas maiores. Essa hierarquia pode influenciar o comportamento dos sistemas e a forma como eles interagem entre si. Exemplo: células dentro de organismos, organismos dentro de ecossistemas.
+
+**Fabula de Hora e Tempus**: Os relogios feitos por Hora e Tempus tinham cera de mil peças cada, Hora entendeu o principio da hierarquia, e fez um relógio com 10 elementos de 100 peças cada, enquanto Tempus sem entender o principio fez um relógio com 1000 elementos de 1 peça cada. Cada momento em que o telefone tocava, precisavam parar, Hora perdia uma pequena parte do trabalho, Tempus perdia tudo. No final do dia, Hora conseguira terminar seu relógio, Tempus não.
