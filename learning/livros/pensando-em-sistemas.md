@@ -46,6 +46,10 @@ import BookDisplay from '@site/src/components/BookDisplay';
 
 "Um sistema é uma grande caixa-preta Cujo cadeado não podemos abrir. Tudo o que dela podemos conhecer É o que entra e o que sai Observar inputs e outputs. Relacionados por parâmetros, Permite-nos, às vezes, relacionar Um input, um output e um estado Se essa relação for boa e estável Talvez possamos fazer previsões. Mas se isso falhar - Deus nos livre. Teremos que quebrar o cadeado! - Kenneth Boulding, economista"
 
+"Quando há longos atrasos nos ciclos de feedback, algum tipo de previsão é fundamental. Agir somente quando um problema se torna óbvio é perder uma importante oportunidade de resolvê-lo."
+
+"O modo mais eficaz de lidar com a Resistencia política é encontrar um meio de alinhar os vários objetivos dos subsistemas, em geral determinando um objetivo abrangente;"
+
 ## Conceitos
 
 **O que é um sistema?** Um sistema é um conjunto de coisas - pessoas, células, moléculas, átomos ou galáxias - interconectadas de maneira a produzir um padrão de comportamento ao longo do tempo. Um sistema pode ser comprimido, deformado, expandido, dividido em partes menores ou combinado com outros sistemas. Mas, se suas partes essenciais e suas interconexões forem preservadas, ele continuará sendo o mesmo sistema e exibirá o mesmo padrão de comportamento. O sistema geralmente gera o seu proprio comportamento.
@@ -98,3 +102,16 @@ import BookDisplay from '@site/src/components/BookDisplay';
 **Hierarquia de sistemas**: A organização de sistemas em níveis hierárquicos, onde sistemas menores estão contidos dentro de sistemas maiores. Essa hierarquia pode influenciar o comportamento dos sistemas e a forma como eles interagem entre si. Exemplo: células dentro de organismos, organismos dentro de ecossistemas.
 
 **Fabula de Hora e Tempus**: Os relogios feitos por Hora e Tempus tinham cera de mil peças cada, Hora entendeu o principio da hierarquia, e fez um relógio com 10 elementos de 100 peças cada, enquanto Tempus sem entender o principio fez um relógio com 1000 elementos de 1 peça cada. Cada momento em que o telefone tocava, precisavam parar, Hora perdia uma pequena parte do trabalho, Tempus perdia tudo. No final do dia, Hora conseguira terminar seu relógio, Tempus não.
+
+**Racionalidade limitada**: A ideia de que os seres humanos têm limitações cognitivas e emocionais que afetam sua capacidade de tomar decisões racionais. Isso pode levar a decisões subótimas ou irracionais em sistemas complexos.
+
+**Armadilhas de sistemas**:
+
+- **A tragedia dos comuns**: Um conceito que descreve a situação em que indivíduos agindo em seu próprio interesse acabam esgotando um recurso compartilhado, levando ao colapso do sistema. Exemplo: sobrepesca em um lago compartilhado.
+- **A Politica de Resistencia**: A tendência dos sistemas a resistir a mudanças, mesmo quando essas mudanças são necessárias para a sobrevivência ou melhoria do sistema. Isso pode levar à estagnação ou declínio do sistema. Surge quando os objetivos dos subsistemas são diferentes e conflitantes entre si. Exemplo: Politicas de natalidade. (Hungira entendeu que aumentando o tamanho da casa, as pessoas teriam mais filhos, Romenia tentou impor uma politica de natalidade rigorosa, mas foi muito mais desastrosa. ineficaz).
+- **Desvio para baixo desempenho**: Permitir que os padrões de desempenho desejam influenciados pelo desempenho passado. O agente tende a confiar mais nas noticias ruins do que nas boas. Exemplo: Queda de participação de mercado de uma empresa.
+- **Escalada**: A tendência dos sistemas a entrar em ciclos de competição destrutiva, onde cada parte tenta superar a outra, levando a um resultado negativo para ambas. Exemplo: corrida armamentista.
+- **Sucesso para os bem-sucedidos**: A tendência dos sistemas a favorecer aqueles que já são bem-sucedidos, levando a uma concentração de recursos e poder. Exemplo: monopólios de mercado.
+- **Transferência de Onus para o interventor**: Quando uma solução para um problema sistemicco reduz (ou disfarça) os sintomas, mas cria novos problemas ou aumenta a gravidade do problema original a longo prazo. Exemplo: uso excessivo de medicamentos.
+- **Violação das regras**: As regras para governar um sistem apodem levar a violação das próprias regras, da a impressão de obedecelas ou de atingir aos objetivos para na verdade distorce o sistema. Exemplo: corrupção.
+- **Busca pelo objetivo errado**: Focar em metas ou objetivos que não refletem os verdadeiros propósitos do sistema, levando a resultados indesejados. Exemplo: maximização do lucro em detrimento da sustentabilidade ambiental.
