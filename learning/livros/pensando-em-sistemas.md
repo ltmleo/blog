@@ -115,3 +115,38 @@ import BookDisplay from '@site/src/components/BookDisplay';
 - **Transferência de Onus para o interventor**: Quando uma solução para um problema sistemicco reduz (ou disfarça) os sintomas, mas cria novos problemas ou aumenta a gravidade do problema original a longo prazo. Exemplo: uso excessivo de medicamentos.
 - **Violação das regras**: As regras para governar um sistem apodem levar a violação das próprias regras, da a impressão de obedecelas ou de atingir aos objetivos para na verdade distorce o sistema. Exemplo: corrupção.
 - **Busca pelo objetivo errado**: Focar em metas ou objetivos que não refletem os verdadeiros propósitos do sistema, levando a resultados indesejados. Exemplo: maximização do lucro em detrimento da sustentabilidade ambiental.
+
+**Pontos de alavancagem**: 
+
+Pontos específicos em um sistema onde uma pequena mudança pode levar a uma grande transformação no comportamento do sistema. Identificar e atuar nesses pontos pode ser uma estratégia eficaz para resolver problemas complexos.
+
+12. Números: Constantes e parâmetros como subsídios, impostos e normas
+11. Buffers: Tamanhos de estoques estabilizadores com relação aos fluxos
+10. Estruturas de estoques e fluxos: sistemas físicos e nos de interseção
+9. Atrasos: Período de tempo relativos as taxas de alteração do sistema
+8. Ciclos de feedback de equilíbrio: Forças dos feedbacks e os impactos que tentam corrigir
+7. Ciclos de feedback de reforço: Forças dos ganhos dos ciclos de condução
+6. Fluxos de informação: estrutura de quem tem e de quem nõa tem acesso a informação
+5. Regras: incentivos, punições e restrições
+4. Auto-Organização: capacidade de adicionar, mudar ou evoluir a estrutura do sistema
+3. Objetivos: o propósito ou a função do sistema
+2. Paradigmas: a mentalidade a partir da qual surge o sistema - com sua estrutura, objetivos, regras, atrasos e parâmetros
+1. Transcender paradigmas: A capacidade de perceber e mudar os paradigmas que sustentam o sistema.
+
+**Diretrizes para viver em um mundo de sistemas**:
+
+1. Pegue o ritmo do sistema
+2. Exponha seus modelos mentais a luz do dia
+3. Honre, respeite e distribua informações
+4. Use a linguagem com cuidado e a enriqueça com conceitos de sistemas
+5. Preste atenção no que é importante, não apenas no que é quantificável
+6. Faça politicas de feedback para sistemas de feedback
+7. Procure o bem estar de todos
+8. Ouça a sabedoria do sistema
+9. Localize a responsabilidade no sistema
+10. Permaneça humilde - seja um aprendiz permanente
+11. Celebre a complexidade
+12. Expanda os horizontes temporais
+13. Desafie as disciplinas de pensamento restrito
+14. Expanda os limites da assistência
+15. Não destrua o objetivo da bondade
