@@ -57,9 +57,9 @@ import BookDisplay from '@site/src/components/BookDisplay';
 **Princípio da exclusão competitiva**: Se um ciclo de feedback recompensa o vencedor de uma competição com os meios para vencer mais competições, o vencedor inevitavelmente levará tudo. O vencedor irá eliminar todos os outros competidores, a menos que haja algum outro ciclo de feedback para impedir isso.
 
 - A quem tem mais, lhe será dado, e terá em abundância; mas ao que não tem, até o que tem lhe será tirado. (Marcos 4:25)
-- O Rio só corre para o mar. 
+- O Rio só corre para o mar.
 
-**Os cegos e o elefante**: Havia uma vez seis cegos que nunca tinham ouvido falar de elefantes. Um dia, um deles sugeriu que fossem ver um elefante. Quando chegaram perto do elefante, cada um tocou uma parte diferente do corpo do animal e descreveu o que sentiu. Um cego tocou a tromba e disse: "Um elefante é como uma mangueira." Outro tocou a orelha e disse: "Não, um elefante é como um leque." O terceiro tocou a pata e disse: "Vocês estão errados, um elefante é como uma árvore." E assim por diante, cada um descrevendo o elefante de acordo com a parte que havia tocado. 
+**Os cegos e o elefante**: Havia uma vez seis cegos que nunca tinham ouvido falar de elefantes. Um dia, um deles sugeriu que fossem ver um elefante. Quando chegaram perto do elefante, cada um tocou uma parte diferente do corpo do animal e descreveu o que sentiu. Um cego tocou a tromba e disse: "Um elefante é como uma mangueira." Outro tocou a orelha e disse: "Não, um elefante é como um leque." O terceiro tocou a pata e disse: "Vocês estão errados, um elefante é como uma árvore." E assim por diante, cada um descrevendo o elefante de acordo com a parte que havia tocado.
 
 - O comportamento do sistema não pode ser conhecido apenas examinando suas partes isoladamente.
 

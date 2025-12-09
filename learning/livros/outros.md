@@ -32,3 +32,36 @@ Eu talvez não estivesse certo do que realmente me interessava, mas estava compl
 Quando me acontece alguma coisa, prefiro estar presente.
 
 Você pode ter tudo e não sentir nada.
+
+## A Única Coisa
+
+<BookDisplay 
+  title="A Única Coisa"
+  author="Gary Keller e Jay Papasan"
+  coverImage="https://m.media-amazon.com/images/I/616lfGzzNlL._SY466_.jpg"
+  publishDate="2021"
+  summary="Em 'A Única Coisa', Gary Keller e Jay Papasan apresentam uma abordagem simples, porém poderosa, para alcançar o sucesso em qualquer área da vida. O livro enfatiza a importância de focar em uma única tarefa ou objetivo que realmente importa, em vez de se dispersar em múltiplas atividades. Com base em pesquisas e exemplos práticos, os autores mostram como identificar a 'única coisa' que pode fazer toda a diferença e como eliminar distrações para maximizar a produtividade. Este livro é um guia essencial para quem busca alcançar resultados extraordinários por meio do foco e da simplicidade."
+
+/>
+
+### Notas
+
+- Se perseguir dois coelhos, não vai pegar nenhum.
+- **Principio de Pareto (80/20)**: 20% das causas são responsáveis por 80% dos efeitos.
+- Posso fazer é diferente de preciso fazer.
+- A ideia de ser multitarefa é um mito.
+- 66 dias para criar um hábito. Não seja disciplinado, crie habítos poderosos.
+- Bloqueie tempo na sua agenda para sua única coisa.
+- Não exija demais da força de vontade.
+- Boas perguntas levam a boas respostas.
+- Qual é minha única coisa? Qual é minha única coisa agora?
+- Qual a unica coisa nas minhas finanças? Na minha saúde? Nos meus relacionamentos? No meu trabalho? Na minha vida espiritual? 
+- Mesmo quem está na trilha certa, será atropelado se ficar parado.
+- Viver não é se encontrar, viver é se criar.
+- Objetivo para algum dia -> Objetivo para 5 anos -> Objetivo para 1 ano -> Objetivo para 1 mês -> Objetivo para a semana -> Objetivo para hoje.
+- Eficiência é fazer as coisas da maneira certa. Eficácia é fazer as coisas certas.
+- Seja um executor de manhã e um gestor à tarde.
+- Mude de `E` para `P` (Empreendedor para Proposito).
+- Jigoro Kano, criado do judo, ao morrer pediu para ser enterrado com a faixa branca, a jornada de quem aprende durante a vida jamais termina.
+- Aprenda a dizer não, cuide da saude, não tenha medo do caos e tenha um ambiente que apoie seus objetivos.
+- [The One Thing](https://www.the1thing.com/): site oficial com recursos adicionais.
