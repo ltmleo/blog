@@ -65,3 +65,39 @@ Você pode ter tudo e não sentir nada.
 - Jigoro Kano, criado do judo, ao morrer pediu para ser enterrado com a faixa branca, a jornada de quem aprende durante a vida jamais termina.
 - Aprenda a dizer não, cuide da saude, não tenha medo do caos e tenha um ambiente que apoie seus objetivos.
 - [The One Thing](https://www.the1thing.com/): site oficial com recursos adicionais.
+
+## Juntos Somos Melhores
+
+<BookDisplay 
+  title="Juntos Somos Melhores"
+  author="Simon Sinek"
+  coverImage="https://m.media-amazon.com/images/I/715xxK7mj0L._SX445_.jpg"
+  publishDate="2019"
+  summary="'A maioria de nós vive ao sabor do acaso – e se deixa levar pelos acontecimentos. A realização vem quando vivemos com propósito.' – Simon Sinek
+  Este pequeno livro vai transformar a maneira como você enxerga sua vida profissional. Além disso, é uma excelente forma de apresentar o movimento Comece pelo porquê aos seus amigos e colegas de trabalho.
+  Simon Sinek tem ajudado milhares de pessoas a encontrar um sentido maior no trabalho. Agora, ele traz sua poderosa mensagem de propósito e liderança nesta fábula para adultos.
+  Com lindas ilustrações e um texto de encantadora simplicidade, Juntos somos melhores aponta o caminho para a realização, destacando o que realmente importa na jornada em direção ao sucesso: as pessoas."
+/>
+
+### Notas
+
+"Para ir depressa, vá sozinho. Para ir longe, vá acompanhado." - Provérbio Africano
+
+- Podemos começar uma revolução quando sabemos contra o que lutamos. Para criar uma mudança duradoura, precisamos saber pelo que estamos lutando.
+- Uma visão é como um sonho - ela desaparece se não fizermos algo a respeito. Faça alguma coisa, grande ou pequena. pare de se perguntar e comece uma aventura.
+- Se o desafio que estamos enfrenatando não nos assusta, ele provavelmente não é tão importante assim.
+- Quando nos fechamos para ideias, o que escutamos são criticas. Quando nos abrimos para criticas, o que recebemos são conselhos.
+- Maus lideres se importam com quem está certo, bons lideres se importam com o que está certo.
+- Sucesso é quando a realidade se parece com o que está na nossa imaginação.
+- O entusiamos vem da conquista. A realização vem do caminho para se chegar la.
+- A realização não nasce do sonho. A realização nasce da jornada.
+- A vida é bela não por causa das coisas que vemos ou fazemos. A vida é be;a por causa das pessoas que conhecemos.
+- A verdadeira força é a coragem de admitir fraquezas.
+- Um chefe tem o titulo, um lider tem pessoas.
+- O verdadeiro valor de um lider não é medido pelo valor do que ele faz, e sim pelo o que inspira os outros a fazerem.
+- Trabalhar duro por algo com que não nos importamos é chamado de estresse. Trabalhar duro por algo que amamos é chamado de paixão.
+- Um lider precisa ser inspirado por pessoas antes de conseguir inspirar pessoas.
+
+"Nossas dificuldades são os passos de curto prazo que devemos dar no caminho para o sucesso de longo prazo."
+
+Há uma antiga história sobre um fazendeiro chinês cujo cavalo fugiu para as colinas. Quando os vizinhos demonstraram compaixão por sua má sorte, ele respondeu: **"Má sorte? Boa sorte? Quem pode saber?"** Pouco depois, o animal voltou acompanhado por vários cavalos selvagens que habitavam as colinas. Quando os vizinhos o parabenizaram pela boa sorte, ele disse: "Boa sorte? Má sorte? Quem pode saber?" O filho do fazendeiro tentou domesticar os animais, mas caiu e quebrou a perna. Quando os vizinhos expressaram seus sentimentos diante daquele infortúnio, o fazendeiro falou: "Má sorte? Boa sorte? Quem pode saber?" Enquanto o filho se recuperava, o exército chegou, e os oficiais recrutaram todos os rapazes saudáveis da aldeia. Como o filho do fazendeiro não foi chamado, os vizinhos congratularam por sua sorte. E ele respondeu: "Boa sorte? Má sorte? Quem pode saber?" A vida não é uma única cena. É um filme inteiro a se desenrolar. Nosso único desafio (ou oportunidade) é não saber o que vem em seguida.
