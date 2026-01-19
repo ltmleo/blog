@@ -16,7 +16,6 @@ Notas sobre alguns outros livros.
   Em A Biblioteca da Meia-Noite, Nora Seed se vê exatamente na situação pela qual todos gostaríamos de poder passar: voltar no tempo e desfazer algo de que nos arrependemos. Diante dessa possibilidade, Nora faz um mergulho interior viajando pelos livros da Biblioteca da Meia-Noite até entender o que é verdadeiramente importante na vida e o que faz, de fato, com que ela valha a pena ser vivida."
 />
 
-### Notas
 
 Não posso ser todas as pessoas que quero e viver todas as vidas que quero. Não posso desenvolver em mim todas as aptidões que quero. E por que eu quero? Quero viver e sentir as nuances, os tons e as variações das experiências físicas e mentais possíveis de minha existência., Sylvia Plath.
 
@@ -44,7 +43,6 @@ Você pode ter tudo e não sentir nada.
 
 />
 
-### Notas
 
 - Se perseguir dois coelhos, não vai pegar nenhum.
 - **Principio de Pareto (80/20)**: 20% das causas são responsáveis por 80% dos efeitos.
@@ -79,7 +77,6 @@ Você pode ter tudo e não sentir nada.
   Com lindas ilustrações e um texto de encantadora simplicidade, Juntos somos melhores aponta o caminho para a realização, destacando o que realmente importa na jornada em direção ao sucesso: as pessoas."
 />
 
-### Notas
 
 "Para ir depressa, vá sozinho. Para ir longe, vá acompanhado." - Provérbio Africano
 
@@ -101,3 +98,18 @@ Você pode ter tudo e não sentir nada.
 "Nossas dificuldades são os passos de curto prazo que devemos dar no caminho para o sucesso de longo prazo."
 
 Há uma antiga história sobre um fazendeiro chinês cujo cavalo fugiu para as colinas. Quando os vizinhos demonstraram compaixão por sua má sorte, ele respondeu: **"Má sorte? Boa sorte? Quem pode saber?"** Pouco depois, o animal voltou acompanhado por vários cavalos selvagens que habitavam as colinas. Quando os vizinhos o parabenizaram pela boa sorte, ele disse: "Boa sorte? Má sorte? Quem pode saber?" O filho do fazendeiro tentou domesticar os animais, mas caiu e quebrou a perna. Quando os vizinhos expressaram seus sentimentos diante daquele infortúnio, o fazendeiro falou: "Má sorte? Boa sorte? Quem pode saber?" Enquanto o filho se recuperava, o exército chegou, e os oficiais recrutaram todos os rapazes saudáveis da aldeia. Como o filho do fazendeiro não foi chamado, os vizinhos congratularam por sua sorte. E ele respondeu: "Boa sorte? Má sorte? Quem pode saber?" A vida não é uma única cena. É um filme inteiro a se desenrolar. Nosso único desafio (ou oportunidade) é não saber o que vem em seguida.
+
+## Ensaio sobre a Cegueira
+
+<BookDisplay 
+  title="Ensaio sobre a Cegueira"
+  author="José Saramago"
+  coverImage="https://m.media-amazon.com/images/I/71Hr1-by3UL._AC_UL320_.jpg"
+  publishDate="1995"
+  summary="Em uma cidade não identificada, uma epidemia de cegueira súbita e inexplicável se espalha rapidamente, mergulhando a sociedade no caos. As autoridades reagem isolando os afetados em um antigo manicômio, onde as condições de vida se deterioram rapidamente. Entre os cegos, uma mulher permanece capaz de ver, tornando-se a guia e protetora de um grupo de sobreviventes. À medida que a cegueira se espalha, a narrativa explora temas profundos como a fragilidade da civilização, a natureza humana e a luta pela sobrevivência em meio ao desespero. 'Ensaio sobre a Cegueira' é uma reflexão poderosa sobre a condição humana e a resiliência diante da adversidade."
+/>
+
+Livro muito denso e pesado, que nos faz refletir sobre a fragilidade da civilização e a natureza humana quando confrontada com o caos e a adversidade. Saramago utiliza uma escrita única, com frases longas e pouca pontuação, o que pode ser desafiador, mas também envolvente.
+O livro combina elementos de distopia, filosofia e crítica social, explorando como as pessoas reagem quando suas vidas são drasticamente alteradas por uma crise inesperada. A cegueira serve como uma metáfora poderosa para a falta de visão moral e ética na sociedade.
+A narrativa é intensa e, por vezes, perturbadora, mas também oferece momentos de esperança e solidariedade entre os personagens. É uma leitura que provoca reflexão sobre a condição humana e a importância da empatia e da compaixão em tempos difíceis.
+
