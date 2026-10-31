@@ -1,6 +1,8 @@
 ---
-tags: [announcements]
-authors: [ltmleo]
+tags:
+  - announcements
+authors:
+  - ltmleo
 ---
 
 # Bem vindo!!
