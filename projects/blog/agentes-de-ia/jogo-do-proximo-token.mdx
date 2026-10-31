@@ -1,0 +1,96 @@
+---
+tags: [IA, LLM, React, Game]
+---
+import NextTokenGame from '@site/blog/2026-11-04-agentes/components/NextTokenGame';
+
+# Jogo do próximo token
+
+Jogo interativo usado no post [Agentes de IA](/blog/2026/11/04/agentes) para mostrar, na prática, como um modelo de linguagem prevê a próxima palavra. Você monta uma frase escolhendo as palavras sugeridas pelo modelo (ou deixando o modelo sortear) e vê a probabilidade de cada opção.
+
+<NextTokenGame />
+
+Por trás do jogo há um **modelo n-gram**: ele prevê a próxima palavra olhando apenas as últimas palavras (o *contexto*) e contando o que veio depois dessas mesmas palavras no texto de treino. Não há rede neural; o "treino" é só contagem.
+
+## Em números
+
+| Item                                      | Valor |
+| ----------------------------------------- | ----: |
+| Frases de treino                          | 38    |
+| Tokens de treino                          | 243   |
+| Vocabulário (palavras distintas + `.`)    | 83    |
+| Memória máxima (contexto)                 | 3 palavras |
+| **Parâmetros** (contagens armazenadas)    | **524** |
+
+Os "parâmetros" deste modelo são as contagens de pares *contexto → próxima palavra* que ele guarda, separados por tamanho de contexto:
+
+| Memória    | Contextos distintos | Contagens |
+| ---------- | ------------------: | --------: |
+| 1 palavra  | 83                  | 158       |
+| 2 palavras | 129                 | 179       |
+| 3 palavras | 147                 | 187       |
+
+Para comparação, o GPT-3 tem 175 bilhões de parâmetros, cerca de 330 milhões de vezes mais, e foi treinado com centenas de bilhões de tokens.
+
+## Como foi treinado
+
+1. **Texto de treino**: 38 frases curtas em português, escritas à mão. Elas repetem palavras em contextos diferentes para criar ramificações interessantes. Destaque para as frases com "banco" (de praça e de dinheiro), que conversam com o trecho do post sobre autoatenção.
+2. **Tokenização**: o texto é colocado em minúsculas e quebrado em palavras (acentos preservados) e pontuação (`. , ! ?`). Cada palavra inteira é um token.
+3. **Marcador de início**: cada frase recebe três tokens especiais `<s>` no começo, para que o modelo também aprenda como as frases *começam*. O `.` final funciona como fim de frase.
+4. **Contagem**: para cada posição da frase e para cada tamanho de contexto (1, 2 e 3 palavras), o modelo soma 1 em `contagem[contexto][próxima palavra]`. Alguns exemplos reais:
+
+   | Contexto      | Próximas palavras (contagem)        |
+   | ------------- | ----------------------------------- |
+   | `banco`       | da (2), emprestou, sacar, cobrou    |
+   | `da`          | praça (2), internet                 |
+   | `banco da`    | praça (2)                           |
+   | `<s> o banco` | da, emprestou, cobrou               |
+
+O treino roda no próprio navegador, uma vez, quando a página carrega, e leva poucos milissegundos.
+
+## Como prevê a próxima palavra
+
+1. Considera só a **frase atual**, ou seja, o que vem depois do último `.`. Cada nova frase recomeça do início.
+2. Pega as últimas palavras, conforme a memória escolhida, e procura esse contexto nas contagens.
+3. **Backoff**: se aquele contexto nunca apareceu no treino, o modelo "esquece" a palavra mais antiga e tenta de novo com um contexto menor, até chegar a uma palavra. O jogo avisa quando isso acontece.
+4. Transforma as contagens em probabilidades:
+
+   ```
+   P(palavra | contexto) = contagem(contexto, palavra) / total de contagens do contexto
+   ```
+
+   Exemplo: depois de `da`, "praça" apareceu 2 vezes e "internet" 1 vez, então P(praça) = 2/3 ≈ 67% e P(internet) = 1/3 ≈ 33%.
+
+Como toda palavra do treino (exceto o `.`) tem pelo menos uma sucessora, o modelo sempre tem candidatas.
+
+### Sorteio
+
+- **Clicar em uma candidata**: você faz o papel do modelo e escolhe.
+- **🎲 Sortear próxima**: sorteio ponderado pelas probabilidades. Uma palavra com 20% sai, em média, 1 a cada 5 vezes.
+- **Completar frase**: repete o sorteio até gerar um `.` (ou 30 palavras).
+
+### Probabilidade da sequência
+
+Cada palavra escolhida guarda a probabilidade que tinha naquele momento. O rodapé mostra o produto delas (regra da cadeia), o que mostra como frases longas ficam improváveis rapidamente. As palavras do começo escolhido não entram na conta.
+
+## Diferenças para um LLM de verdade
+
+| | Este jogo | LLM (GPT, Claude, Gemini) |
+| --- | --- | --- |
+| Contexto | Até 3 palavras | De milhares a milhões de tokens, com autoatenção ligando qualquer token a qualquer outro |
+| Generalização | Só repete sequências que já viu | Aprende representações e prevê bem em contextos inéditos |
+| Tokens | Palavras inteiras | Pedaços de palavras (*subword tokens*) |
+| Treino | Contagem | Ajuste de bilhões de parâmetros por gradiente descendente |
+| Parâmetros | 524 | Bilhões a trilhões |
+
+## Código
+
+O componente fica junto do post, em `blog/2026-11-04-agentes/components/NextTokenGame/`:
+
+- `index.tsx`: texto de treino (`CORPUS`), treino (`train`), previsão (`predict`), sorteio (`sample`) e interface.
+- `styles.module.css`: estilos, usando as variáveis do tema (`--ifm-*`) para funcionar no modo claro e escuro.
+
+Para estender:
+
+- **Novas frases**: adicione linhas ao `CORPUS`, uma frase por linha, terminando em `.`.
+- **Novos começos**: adicione textos a `PROMPTS`, usando palavras que existam no corpus.
+- **Mais memória**: aumente `MAX_CONTEXT` e os botões de memória. Com um corpus pequeno, contextos maiores quase sempre caem no backoff ou repetem frases inteiras do treino.

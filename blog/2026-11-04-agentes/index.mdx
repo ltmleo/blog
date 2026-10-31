@@ -1,3 +1,5 @@
+import NextTokenGame from './components/NextTokenGame';
+
 # Agentes de IA
 
 Conversando com meu irmão (que usa IA diariamente, mas não no contexto de engenharia de software) sobre Agentes de IA, percebi o quão complexo esse assunto pode ser, mas também que o entendimento pode ser muito facilitado para quem acompanhou desde o início a evolução dessa tecnologia. Pensando nisso, resolvi fazer um post explicando para leigos como um agente de IA funciona e como chegamos até aqui.
@@ -42,7 +44,9 @@ Os **modelos de linguagem** são sistemas computacionais estatísticos e probabi
 
 Os modelos mais avançados da época até conseguiam ler frases inteiras, mas liam uma palavra de cada vez, em sequência, e iam "esquecendo" o começo do texto conforme avançavam. Foi aí que, em 2017, um grupo de pesquisadores do Google teve uma ideia brilhante: e se, em vez de ler palavra por palavra, o modelo olhasse para o texto inteiro de uma vez, com cada palavra prestando atenção em todas as outras? Assim nasceu o **Transformer** [6]. Como ele processa tudo em paralelo, ficou possível treinar modelos muito maiores, com muito mais texto, e poucos anos depois isso deu origem aos **Grandes Modelos de Linguagem**.
 
-{/* TODO: Criar jogo do próximo token usando n-gram */}
+Para sentir como isso funciona na prática, brinque com o modelo abaixo. Saiba mais sobre ele [aqui](/projects/blog/agentes-de-ia/jogo-do-proximo-token).
+
+<NextTokenGame />
 
 O "Grande" refere-se à escala. Esses modelos deixaram de treinar com amostras pequenas e passaram a ser treinados com uma parte enorme do texto público da internet (sites, livros, artigos, código), já filtrado para tirar lixo e repetição, e chegaram a ter bilhões ou até trilhões de conexões matemáticas (parâmetros). E é graças àquela ideia da atenção, chamada de **autoatenção** (*self-attention*), que o modelo consegue perceber que a palavra "banco" na página 10 está ligada à palavra "dinheiro" na página 1, e não a um banco de sentar [6].
 
