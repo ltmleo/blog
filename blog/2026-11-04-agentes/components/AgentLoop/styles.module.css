@@ -1,0 +1,138 @@
+.loop {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.chip {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.chipActive {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+}
+
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.box {
+  fill: var(--ifm-color-emphasis-100);
+  stroke: var(--ifm-color-emphasis-400);
+  stroke-width: 1.5;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.active {
+  fill: var(--ifm-color-primary-lightest);
+  stroke: var(--ifm-color-primary);
+  stroke-width: 2.5;
+}
+
+.agent {
+  fill: none;
+  stroke: var(--ifm-color-emphasis-500);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 4;
+}
+
+.agentLabel {
+  text-anchor: end;
+  font-size: 12px;
+  font-weight: bold;
+  fill: var(--ifm-color-emphasis-700);
+}
+
+.title {
+  text-anchor: middle;
+  font-size: 15px;
+  font-weight: bold;
+  fill: var(--ifm-font-color-base);
+}
+
+/* Texto escuro dentro das caixas ativas, que ficam claras nos dois temas */
+.active + .title,
+.active + .title + .detail,
+.active + .title + .state {
+  fill: var(--ifm-color-black);
+}
+
+.detail {
+  text-anchor: middle;
+  font-size: 11px;
+  fill: var(--ifm-color-emphasis-700);
+}
+
+.state {
+  text-anchor: middle;
+  font-size: 14px;
+  fill: var(--ifm-font-color-base);
+}
+
+.arrow {
+  fill: none;
+  stroke: var(--ifm-color-emphasis-600);
+  stroke-width: 1.5;
+}
+
+.arrowHead {
+  fill: var(--ifm-color-emphasis-600);
+}
+
+.arrowLabel {
+  text-anchor: middle;
+  font-size: 12px;
+  font-style: italic;
+  fill: var(--ifm-color-emphasis-700);
+}
+
+.dot {
+  fill: var(--ifm-color-primary);
+  transition: transform 0.9s ease-in-out;
+  pointer-events: none;
+}
+
+.dot circle {
+  opacity: 0.85;
+}
+
+.caption {
+  min-height: 3rem;
+  margin: 0.75rem 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot,
+  .box {
+    transition: none;
+  }
+}

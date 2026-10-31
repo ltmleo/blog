@@ -1,0 +1,36 @@
+---
+tags: [IA, Agentes, React]
+---
+import AgentLoop from '@site/blog/2026-11-04-agentes/components/AgentLoop';
+
+# Ciclo do agente
+
+Animação usada no post [Agentes de IA](/blog/2026/11/04/agentes) para ilustrar a definição formal de agente [Russell & Norvig, cap. 2]: um sistema que percebe o **ambiente** por meio de **sensores**, **decide** o que fazer e age sobre o ambiente por meio de **atuadores**.
+
+<AgentLoop />
+
+## O ciclo
+
+1. **Ambiente**: o mundo em que o agente está (uma sala, uma casa, um projeto de software).
+2. **Sensores**: coletam dados do ambiente. Cada dado recebido é um *percepto*.
+3. **Decisão**: o agente processa os perceptos e escolhe uma ação. Pode ser uma regra fixa (termostato), um algoritmo de navegação (robô aspirador) ou um LLM (agente de IA).
+4. **Atuadores**: executam a ação, que altera o ambiente. O ambiente alterado gera novos perceptos, e o ciclo recomeça.
+
+## Exemplos
+
+| Exemplo         | Sensores                       | Decisão                          | Atuadores                      |
+| --------------- | ------------------------------ | -------------------------------- | ------------------------------ |
+| Termostato      | Termômetro                     | Regra: abaixo de 20 °C, ligar    | Relé do aquecedor              |
+| Robô aspirador  | Câmera e sensor de sujeira     | Calcula o caminho até a sujeira  | Rodas e escovas                |
+| Agente de IA    | Teclado, arquivos e terminal   | LLM decide o próximo passo       | Comandos e edição de arquivos  |
+
+O termostato aparece primeiro de propósito: ele cumpre a definição formal, mas não é um agente *inteligente*, o que leva à pergunta seguinte do post.
+
+## Código
+
+O componente fica junto do post, em `blog/2026-11-04-agentes/components/AgentLoop/`:
+
+- `index.tsx`: os exemplos (`SCENARIOS`), cada um com seus passos, e o diagrama em SVG. A bolinha muda de posição a cada passo (`POSITIONS`) e o CSS anima a transição.
+- `styles.module.css`: estilos com as variáveis do tema (`--ifm-*`), para funcionar no modo claro e escuro. Com `prefers-reduced-motion`, as transições são desligadas.
+
+Para adicionar um exemplo, inclua um item em `SCENARIOS` com nome, sensores, atuadores e cinco passos (ambiente, sensores, decisão, atuadores e ambiente alterado).
