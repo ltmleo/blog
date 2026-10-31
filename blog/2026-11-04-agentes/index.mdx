@@ -52,10 +52,17 @@ O próprio nome `ChatGPT` dá uma dica da sua arquitetura. `GPT` vem de uma rede
 
 E assim nasceram as "IAs" de que tanto ouvimos falar hoje em dia: Gemini, Claude e ChatGPT. Todas seguem esse mesmo mecanismo.
 
+:::note
+O modelo foi treinado para gerar o texto mais *provável*, e não necessariamente o *verdadeiro*. Por isso, às vezes ele inventa uma resposta que soa convincente, mas está errada. Isso se chama alucinação. E como a  aleatoriedade faz parte da natureza dessa tecnologia, ou seja o modelo realmente calcula a probabilidade do próximo token, um de cada vez, e cada token escolhido passa a fazer parte do texto usado para prever o seguinte. Como na famosa frase de Edward Lorenz, um dos pais da Teoria do Caos: "O bater de asas de uma borboleta no Brasil pode provocar um tornado no Texas?". Traduzindo para o nosso contexto: um token mal escolhido no começo de uma frase pode levar a um raciocínio totalmente equivocado.
+:::
+
 Mas repare que, até aqui, temos só o motor: um modelo que recebe texto e devolve texto. Ele não abre arquivos, não pesquisa na internet e não executa nada sozinho. Os agentes de hoje não surgiram de uma vez; foram ganhando peças aos poucos, e cada peça resolveu uma limitação da anterior. Quem acompanhou essa evolução viu cada uma dessas peças chegar e, por isso, entende com naturalidade como saímos de um chat que só conversava para um assistente que lê, edita e testa código por conta própria. É essa evolução que vamos acompanhar nas próximas seções, começando pela peça que deu "mãos" ao modelo: o *tool calling*.
 
 ## Tool Calling
 
+Quando o chatGPT surgiu, quando voce fazia uma pergunta atual ele simplemente nao sabia a resposta. Isso se da por conta da janela de treinamento, um modelo sabe apenas fatos que aconteceram até a data do treinamento. 
+
+> Mas como ele sabe hoje exatamente o dia, horario e até mesmo como está o tempo na minha cidade no interior de SP?
 
 
 
