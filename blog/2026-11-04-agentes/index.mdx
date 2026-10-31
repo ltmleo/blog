@@ -6,21 +6,21 @@ Conversando com meu irmão (que usa IA diariamente, mas não no contexto de enge
 
 ## O que é um agente de IA?
 
-Existem muitas maneiras de se definir um agente de IA. A definição formal é a de um sistema formado por `Sensores` e `Atuadores`, onde os sensores coletam dados do ambiente (perceptos), como câmeras, áudio e texto; o sistema processa esses dados, calcula a ação a ser tomada e altera o ambiente através dos atuadores, como um braço robótico ou comandos executados no computador [1].
+Existem muitas maneiras de se definir um agente de IA. A definição formal é a de um sistema formado por `Sensores` e `Atuadores`, em que os sensores (como câmeras, microfones ou o teclado) coletam dados do ambiente, chamados de perceptos, como imagens, sons e texto; o sistema processa esses dados, calcula a ação a ser tomada e altera o ambiente através dos atuadores, como um braço robótico ou comandos executados no computador [1].
 
 {/* TODO: inserir animação aqui */}
 
 > Mas então qualquer programa que consiga ler e escrever em um meio é um agente? Um termostato é considerado um agente?
 
-Sim, é um agente, mas não um agente inteligente. Para distinguir softwares tradicionais de um software inteligente, a distinção comportamental foi criada. Essa definição estipula que, para ser considerado um agente de IA, o software precisa ter: **Autonomia**, onde o sistema opera sem a intervenção direta e constante de humanos; **Reatividade**, onde o sistema percebe e atua em seu ambiente de forma contínua; **Pró-atividade**, onde o sistema não apenas reage a estímulos, mas é capaz de exibir comportamento direcionado a objetivos; e **Habilidade Social**, onde o sistema é capaz de interagir e negociar com outros agentes ou humanos para resolver problemas [2].
+Sim, é um agente, mas não um agente inteligente. Para distinguir softwares tradicionais de um software inteligente, foi criada a distinção comportamental. Essa definição estipula que, para ser considerado um agente de IA, o software precisa ter: **Autonomia**, em que o sistema opera sem a intervenção direta e constante de humanos; **Reatividade**, em que o sistema percebe e atua em seu ambiente de forma contínua; **Proatividade**, em que o sistema não apenas reage a estímulos, mas é capaz de exibir comportamento direcionado a objetivos; e **Habilidade Social**, em que o sistema é capaz de interagir e negociar com outros agentes ou humanos para resolver problemas [2].
 
 :::note
-Mesmo com essa definição, ainda fica muito abrangente o que pode ser um agente. Pretendo falar mais sobre isso em um post futuro (mais técnico); o Shawn Wallace fez isso brilhantemente em seu [blog](https://www.shawnewallace.com/2026-08-12-lets-talk-about-agents/).
+Mesmo com essa definição, ainda fica muito abrangente o que pode ser um agente. Pretendo falar mais sobre isso em um post futuro (mais técnico); o Shawn Wallace fez isso brilhantemente em seu [blog](https://www.shawnewallace.com/2026-08-12-lets-talk-about-agents/) [3].
 :::
 
 > Entendi o que é um agente, e realmente o Claude entende meu **objetivo**, lê e edita um monte de arquivos de forma **autônoma**, **reage** aos erros da atividade que estou fazendo e parece se comportar como um **colega de trabalho**. Mas como ele funciona?
 
-Os agentes mais populares hoje funcionam com uma tecnologia chamada LLM (Large Language Models). Vamos entender cada parte desse nome nas próximas seções. As LLMs, como o próprio nome diz, são modelos e não conseguem atuar nem perceber o ambiente sozinhas; elas precisam de um *harness* para guiar esse comportamento.
+Os agentes mais populares hoje funcionam com uma tecnologia chamada LLM (Large Language Model). Vamos entender cada parte desse nome nas próximas seções. As LLMs, como o próprio nome diz, são modelos e não conseguem atuar nem perceber o ambiente sozinhas; elas precisam de um *harness* para guiar esse comportamento.
 
 :::tip
 Se o modelo de IA (LLM) for comparado ao motor potente de um carro ou a um cavalo, o harness é o restante do veículo (direção, rodas, freios) ou o arreio/sela que permite controlar, direcionar e transformar essa potência em uma utilidade prática e segura.
@@ -34,23 +34,29 @@ Agente = Modelo + Harness
 
 ## LLMs
 
-A melhor forma de entener o que sao LLMs - Language Large Models (Grande Modelo de Linguagem) é começar pelo proprio nome. Primeiramente, precisamos entender o que é um modelo.
+A melhor forma de entender o que são LLMs — Large Language Models (Grandes Modelos de Linguagem) — é começar pelo próprio nome. Primeiramente, precisamos entender o que é um modelo.
 
-Um **modelo** nada mais é doque um programa de computador que foi treinado com grandes volumes de dados para reconhecer padrões, tomar decisões ou gerar novos conteúdos de forma autônoma [5]. Existem diversos tipos de modelos de IA e todos se enquadram no que chamamos de Machine Learning (Aprendizado de maquina), Cada modelo é projetado para resolver problemas específicos e utilizam diferentes técnicas e areas de estudo, dentre essas o estudo da **Linguagem**.
+Um **modelo** nada mais é do que um programa de computador que foi treinado com grandes volumes de dados para reconhecer padrões, tomar decisões ou gerar novos conteúdos de forma autônoma [5]. Existem diversos tipos de modelos de IA, e os que aprendem a partir de dados, como os que vamos ver aqui, fazem parte do que chamamos de Machine Learning (Aprendizado de Máquina). Cada modelo é projetado para resolver problemas específicos e utiliza diferentes técnicas e áreas de estudo; dentre elas, o estudo da **Linguagem**.
 
-Os **modelos de linguagem** são sistemas computacionais estatísticos e probabilísticos projetados para "entender", processar e gerar linguagem humana, isso pode ser desde eneter a relação entre as palavras, analise de sentimentos a prever a proxima palavra de uma frase. Um bom exemplo, é o *autocomplete* do celular, com base na ultima palavra ele consegue prever qaul será a proxima. Isso é muito util para ajudar a escrvever no celular ou a criar trends na adolecencia de saber o que cada celular escreve, mas nao foi nada revolucionario, pois no maximo gerava frases sem sentido. 
+Os **modelos de linguagem** são sistemas computacionais estatísticos e probabilísticos projetados para "entender", processar e gerar linguagem humana. Isso vai desde entender a relação entre as palavras e analisar sentimentos até prever a próxima palavra de uma frase. Um bom exemplo é o *autocomplete* do celular: com base na última palavra, ele consegue prever qual será a próxima. Isso é muito útil para ajudar a escrever no celular (ou para criar trends na adolescência de descobrir o que o celular de cada um escreve), mas não foi nada revolucionário, pois, no máximo, gerava frases sem sentido.
 
-Foi ai que alguns engenherios do google tiveram a brilhante ideia, e se inves de passar as palavras anteriores eu passar todo o texto de uma vez pelo modelo ao mesmo tempo? e foi ai que nasceu os **Grandes Modedelos de Linguagem** [6]. 
+Os modelos mais avançados da época até conseguiam ler frases inteiras, mas liam uma palavra de cada vez, em sequência, e iam "esquecendo" o começo do texto conforme avançavam. Foi aí que, em 2017, um grupo de pesquisadores do Google teve uma ideia brilhante: e se, em vez de ler palavra por palavra, o modelo olhasse para o texto inteiro de uma vez, com cada palavra prestando atenção em todas as outras? Assim nasceu o **Transformer** [6]. Como ele processa tudo em paralelo, ficou possível treinar modelos muito maiores, com muito mais texto, e poucos anos depois isso deu origem aos **Grandes Modelos de Linguagem**.
 
-{/* TODO: Criar jogo do proximo token usando ngram*/}
+{/* TODO: Criar jogo do próximo token usando n-gram */}
 
-O "Grande" Refere-se à escala. Esses modelos deixaram de treinar em amostras pequenas e passaram a ser treinados com essencialmente toda a internet pública disponível, possuindo bilhões ou trilhões de conexões matemáticas (parâmetros). E através de um mecanismo chamado de "Atenção Plena" (Self-Attention). O modelo consegue perceber que a palavra "banco" na página 10 está matematicamente ligada à palavra "dinheiro" na página 1, e não a um banco de sentar [6].
+O "Grande" refere-se à escala. Esses modelos deixaram de treinar com amostras pequenas e passaram a ser treinados com uma parte enorme do texto público da internet (sites, livros, artigos, código), já filtrado para tirar lixo e repetição, e chegaram a ter bilhões ou até trilhões de conexões matemáticas (parâmetros). E é graças àquela ideia da atenção, chamada de **autoatenção** (*self-attention*), que o modelo consegue perceber que a palavra "banco" na página 10 está ligada à palavra "dinheiro" na página 1, e não a um banco de sentar [6].
 
 :::info
-O proprio nome `ChatGPT` da uma dica da sua arquitetura. `GPT` vem de uma rede neural de atenção (**T**ransformer) que foi exposta a quase todo o texto da internet (**P**re-trained) para adquirir a capacidade de criar respostas originais sob demanda (**G**enerative). E o `Chat` vem de você conversar com essa tecnologia. Genial!
+O próprio nome `ChatGPT` dá uma dica da sua arquitetura. `GPT` vem de uma rede neural de atenção (**T**ransformer) que foi pré-treinada com uma montanha de texto da internet (**P**re-trained) para adquirir a capacidade de criar respostas originais sob demanda (**G**enerative). Mas, depois desse pré-treino, o modelo só sabe continuar textos: se você perguntar algo, ele pode simplesmente responder com mais perguntas. O `Chat` vem de uma segunda etapa de treino, em que pessoas mostraram ao modelo exemplos de boas conversas e deram notas para as respostas dele, até ele aprender a se comportar como um assistente. Genial!
 :::
 
-E assim nasceram as "IAs" que tantos escutamos falar hoje em dia, Gemini, Claude e ChatGPT, todas seguem esse mesmo mecanismo. E assim fica facil para quem viu essa tencologia nascer entender como chegamos nos agentes de IA atuais que conseguem fazer prativamente tudo de forma autonoma.
+E assim nasceram as "IAs" de que tanto ouvimos falar hoje em dia: Gemini, Claude e ChatGPT. Todas seguem esse mesmo mecanismo.
+
+Mas repare que, até aqui, temos só o motor: um modelo que recebe texto e devolve texto. Ele não abre arquivos, não pesquisa na internet e não executa nada sozinho. Os agentes de hoje não surgiram de uma vez; foram ganhando peças aos poucos, e cada peça resolveu uma limitação da anterior. Quem acompanhou essa evolução viu cada uma dessas peças chegar e, por isso, entende com naturalidade como saímos de um chat que só conversava para um assistente que lê, edita e testa código por conta própria. É essa evolução que vamos acompanhar nas próximas seções, começando pela peça que deu "mãos" ao modelo: o *tool calling*.
+
+## Tool Calling
+
+
 
 
 ## Referências
