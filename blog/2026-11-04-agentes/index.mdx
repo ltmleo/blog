@@ -34,6 +34,24 @@ Agente = Modelo + Harness
 
 ## LLMs
 
+A melhor forma de entener o que sao LLMs - Language Large Models (Grande Modelo de Linguagem) é começar pelo proprio nome. Primeiramente, precisamos entender o que é um modelo.
+
+Um **modelo** nada mais é doque um programa de computador que foi treinado com grandes volumes de dados para reconhecer padrões, tomar decisões ou gerar novos conteúdos de forma autônoma [5]. Existem diversos tipos de modelos de IA e todos se enquadram no que chamamos de Machine Learning (Aprendizado de maquina), Cada modelo é projetado para resolver problemas específicos e utilizam diferentes técnicas e areas de estudo, dentre essas o estudo da **Linguagem**.
+
+Os **modelos de linguagem** são sistemas computacionais estatísticos e probabilísticos projetados para "entender", processar e gerar linguagem humana, isso pode ser desde eneter a relação entre as palavras, analise de sentimentos a prever a proxima palavra de uma frase. Um bom exemplo, é o *autocomplete* do celular, com base na ultima palavra ele consegue prever qaul será a proxima. Isso é muito util para ajudar a escrvever no celular ou a criar trends na adolecencia de saber o que cada celular escreve, mas nao foi nada revolucionario, pois no maximo gerava frases sem sentido. 
+
+Foi ai que alguns engenherios do google tiveram a brilhante ideia, e se inves de passar as palavras anteriores eu passar todo o texto de uma vez pelo modelo ao mesmo tempo? e foi ai que nasceu os **Grandes Modedelos de Linguagem** [6]. 
+
+{/* TODO: Criar jogo do proximo token usando ngram*/}
+
+O "Grande" Refere-se à escala. Esses modelos deixaram de treinar em amostras pequenas e passaram a ser treinados com essencialmente toda a internet pública disponível, possuindo bilhões ou trilhões de conexões matemáticas (parâmetros). E através de um mecanismo chamado de "Atenção Plena" (Self-Attention). O modelo consegue perceber que a palavra "banco" na página 10 está matematicamente ligada à palavra "dinheiro" na página 1, e não a um banco de sentar [6].
+
+:::info
+O proprio nome `ChatGPT` da uma dica da sua arquitetura. `GPT` vem de uma rede neural de atenção (**T**ransformer) que foi exposta a quase todo o texto da internet (**P**re-trained) para adquirir a capacidade de criar respostas originais sob demanda (**G**enerative). E o `Chat` vem de você conversar com essa tecnologia. Genial!
+:::
+
+E assim nasceram as "IAs" que tantos escutamos falar hoje em dia, Gemini, Claude e ChatGPT, todas seguem esse mesmo mecanismo. E assim fica facil para quem viu essa tencologia nascer entender como chegamos nos agentes de IA atuais que conseguem fazer prativamente tudo de forma autonoma.
+
 
 ## Referências
 
@@ -41,3 +59,5 @@ Agente = Modelo + Harness
 2. Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practice. The Knowledge Engineering Review, 10(2), 115-152.
 3. https://www.shawnewallace.com/2026-08-12-lets-talk-about-agents/
 4. https://www.langchain.com/blog/the-anatomy-of-an-agent-harness
+5. https://www.ibm.com/br-pt/think/topics/ai-model
+6. Vaswani, Ashish et al. “Attention is All you Need.” Neural Information Processing Systems (2017).
