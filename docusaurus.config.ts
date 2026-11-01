@@ -18,6 +18,14 @@ const config: Config = {
   organizationName: 'ltmleo', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
 
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap',
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   themes: ['@docusaurus/theme-mermaid'],
@@ -105,8 +113,18 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/preview.png',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     navbar: {
-      title: 'Home',
+      title: 'ltmleo',
+      hideOnScroll: false,
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -137,8 +155,9 @@ const config: Config = {
         },
         {
           href: 'https://github.com/ltmleo/blog',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -193,11 +212,11 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ltmleo personal blog. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Leonardo Montero · ltmleo`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
     },
     algolia: {
       // The application ID provided by Algolia
