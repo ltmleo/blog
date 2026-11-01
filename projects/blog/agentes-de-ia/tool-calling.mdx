@@ -1,0 +1,44 @@
+---
+tags: [IA, Agentes, LLM, React]
+---
+import ToolCalling from '@site/blog/2026-11-04-agentes/components/ToolCalling';
+
+# Tool calling
+
+Animação usada no post [Agentes de IA](/blog/2026/11/04/agentes) para mostrar como um modelo usa ferramentas. O modelo nunca executa nada: ele só **pede** a ferramenta, em uma mensagem estruturada, e quem executa é o **harness**.
+
+<ToolCalling />
+
+## Os participantes
+
+1. **Você**: faz o pedido. Só vê a pergunta e a resposta final.
+2. **Harness**: monta o prompt (system prompt, histórico e lista de ferramentas), chama o modelo, executa as ferramentas que ele pede e devolve os resultados.
+3. **Modelo**: lê tudo e decide entre responder ou pedir uma ferramenta. O pedido é um JSON com o nome da ferramenta e os argumentos.
+4. **Ferramenta**: uma função comum (uma API, uma calculadora, o terminal) que não sabe nada sobre IA.
+
+## O ciclo
+
+1. O harness envia o prompt com a descrição das ferramentas disponíveis.
+2. O modelo responde com uma **chamada de ferramenta** em vez de texto.
+3. O harness executa a ferramenta e acrescenta o resultado à conversa.
+4. O harness chama o modelo de novo, com a conversa inteira (o modelo não tem memória).
+5. Os passos 2 a 4 se repetem até o modelo responder com texto, sem pedir ferramentas.
+
+## Exemplos
+
+| Exemplo            | Ferramentas                       | Rodadas | O que mostra |
+| ------------------ | --------------------------------- | ------: | ------------ |
+| Previsão do tempo  | `previsao_do_tempo(cidade)`       | 1       | Buscar uma informação que o modelo não tem |
+| Conta difícil      | `calculadora(expressao)`          | 1       | Delegar o que o modelo faz mal |
+| Agente de código   | `rodar_testes()`, `editar_arquivo(caminho, de, para)` | 3 | O loop agêntico: agir, observar e decidir o próximo passo |
+
+As mensagens são simplificadas. Nas APIs reais, as ferramentas são descritas com JSON Schema, e as chamadas e os resultados têm campos próprios (como `tool_use` e `tool_result` na API da Anthropic, ou `tool_calls` na da OpenAI), mas a ideia é a mesma.
+
+## Código
+
+O componente fica junto do post, em `blog/2026-11-04-agentes/components/ToolCalling/`:
+
+- `index.tsx`: os exemplos (`SCENARIOS`), cada um com uma lista de passos (`from`, `to`, rótulo, mensagem e legenda), e o diagrama em SVG. A posição de cada participante fica em `ACTORS`.
+- `styles.module.css`: estilos com as variáveis do tema (`--ifm-*`), para funcionar no modo claro e escuro. A mensagem viaja de um participante a outro com uma animação CSS (`travel`), desligada com `prefers-reduced-motion`.
+
+Para adicionar um exemplo, inclua um item em `SCENARIOS` com nome, ferramenta e passos. Cada rodada de ferramenta tem quatro passos: modelo → harness (chamada), harness → ferramenta, ferramenta → harness e harness → modelo (resultado).

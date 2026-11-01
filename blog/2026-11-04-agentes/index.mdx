@@ -1,5 +1,6 @@
 import AgentLoop from './components/AgentLoop';
 import NextTokenGame from './components/NextTokenGame';
+import ToolCalling from './components/ToolCalling';
 
 # Agentes de IA
 
@@ -116,7 +117,7 @@ Essas funções podem ser qualquer coisa, como consultar a previsão do tempo, l
 
 Na prática, o harness envia o seu prompt para o modelo junto com a lista de funções disponíveis, explicando para que elas servem e quais dados elas exigem. A IA avalia o prompt, vê quais ferramentas se aplicam ao problema em questão e responde ao harness com uma mensagem estruturada (o nome da função e os argumentos esperados, em formato JSON) pedindo para executá-la. A função é executada e o resultado é repassado ao modelo, que pode pedir novas ferramentas quantas vezes precisar, até ter todos os dados de que precisa para elaborar a resposta corretamente, conforme mostra a animação abaixo.
 
-<!-- Inserir animacao aqui explicando como o modelo executa funcoes -->
+<ToolCalling />
 
 A genialidade do tool calling foi dar sensores e atuadores para o modelo. Somado a esse ciclo de agir, observar o resultado e decidir o próximo passo, repetido até o objetivo ser alcançado, ele permitiu o comportamento agêntico: a IA deixou de ser apenas um assistente que responde perguntas para se tornar um agente capaz de entender e moldar o meio em que está inserida.
 
