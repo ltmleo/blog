@@ -1,3 +1,4 @@
+import type {CSSProperties} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -34,32 +35,33 @@ const sections: Section[] = [
   },
 ];
 
+const delay = (ms: number) => ({'--reveal-delay': `${ms}ms`}) as CSSProperties;
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={styles.hero}>
       <div className={styles.heroGlow} aria-hidden="true" />
-      <div className={styles.heroGrid} aria-hidden="true" />
       <div className="container">
         <div className={styles.heroInner}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/ltmleo.png"
-            alt="Leonardo Montero"
-            width={96}
-            height={96}
-          />
-          <span className={styles.badge}>Leonardo Montero · Personal blog</span>
-          <Heading as="h1" className={styles.title}>
-            <span className={styles.gradientText}>{siteConfig.title}</span>
+          <span className={styles.badge} data-reveal style={delay(0)}>
+            {siteConfig.title} · Leonardo Montero
+          </span>
+          <Heading as="h1" className={styles.title} data-reveal style={delay(80)}>
+            Um caderno aberto de{' '}
+            <span className={styles.gradientText}>estudos, projetos e ideias</span>
           </Heading>
-          <p className={styles.subtitle}>{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link className={`button button--primary button--lg ${styles.ctaPrimary}`} to="/blog/blog">
-              Leia meu blog
+          <p className={styles.subtitle} data-reveal style={delay(160)}>
+            Aqui registro o que estou aprendendo — Data Science, IA, Golang, cloud e livros —
+            e compartilho projetos e reflexões da minha jornada. Tudo aberto, e qualquer
+            pessoa pode contribuir.
+          </p>
+          <div className={styles.buttons} data-reveal style={delay(240)}>
+            <Link className={`button button--lg ${styles.ctaPrimary}`} to="/learning">
+              Explorar notas
             </Link>
-            <Link className={`button button--lg ${styles.ctaSecondary}`} to="/learning">
-              Explorar notas →
+            <Link className={`button button--lg ${styles.ctaSecondary}`} to="/blog/blog">
+              Ler o blog →
             </Link>
           </div>
         </div>
@@ -72,9 +74,20 @@ function SectionCards() {
   return (
     <section className={styles.sections}>
       <div className="container">
+        <div className={styles.sectionHeader} data-reveal>
+          <span className={styles.eyebrow}>Explorar</span>
+          <Heading as="h2" className={styles.sectionHeading}>
+            Por onde começar
+          </Heading>
+        </div>
         <div className={styles.sectionGrid}>
-          {sections.map(({title, description, to, icon}) => (
-            <Link key={title} to={to} className={styles.sectionCard}>
+          {sections.map(({title, description, to, icon}, i) => (
+            <Link
+              key={title}
+              to={to}
+              className={styles.sectionCard}
+              data-reveal
+              style={delay(i * 100)}>
               <span className={styles.sectionIcon} aria-hidden="true">
                 {icon}
               </span>
@@ -98,8 +111,8 @@ export default function Home() {
     <Layout title="ltmleo" description="Blog de LTMLEO">
       <HomepageHeader />
       <main>
-        <SectionCards />
         <HomepageFeatures />
+        <SectionCards />
       </main>
     </Layout>
   );

@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 7rem 0 5rem;
+  padding: 7rem 0 4rem;
   text-align: center;
   isolation: isolate;
 }
@@ -13,61 +13,38 @@
   height: 140%;
   z-index: -1;
   background:
-    radial-gradient(40% 50% at 30% 30%, rgba(29, 111, 242, 0.22), transparent 70%),
-    radial-gradient(35% 45% at 70% 25%, rgba(124, 58, 237, 0.18), transparent 70%);
+    radial-gradient(40% 50% at 30% 30%, rgba(29, 111, 242, 0.18), transparent 70%),
+    radial-gradient(35% 45% at 70% 25%, rgba(124, 58, 237, 0.14), transparent 70%);
   filter: blur(10px);
 }
 
-.heroGrid {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(var(--surface-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--surface-border) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 30%, transparent 75%);
-}
-
 .heroInner {
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  border: 3px solid var(--ifm-background-color);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ifm-color-primary) 50%, transparent),
-    var(--surface-shadow);
-}
-
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--ifm-color-primary);
   background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
   border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .title {
-  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-size: clamp(2.4rem, 6.5vw, 4.25rem);
   font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 1;
-  margin-bottom: 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
 }
 
 .gradientText {
@@ -78,11 +55,11 @@
 }
 
 .subtitle {
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--ifm-color-emphasis-700);
-  max-width: 560px;
+  max-width: 640px;
   margin: 0 auto 2.25rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .buttons {
@@ -105,7 +82,8 @@
   box-shadow: 0 12px 32px color-mix(in srgb, var(--ifm-color-primary) 45%, transparent);
 }
 
-[data-theme='dark'] .ctaPrimary {
+[data-theme='dark'] .ctaPrimary,
+[data-theme='dark'] .ctaPrimary:hover {
   color: #0b0f17;
 }
 
@@ -122,7 +100,28 @@
 
 /* ---------- Section cards ---------- */
 .sections {
-  padding: 1rem 0 2rem;
+  padding: 2rem 0 6rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeading {
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  letter-spacing: -0.03em;
+  margin: 0;
 }
 
 .sectionGrid {
@@ -189,7 +188,11 @@
 
 @media screen and (max-width: 996px) {
   .hero {
-    padding: 4.5rem 0 3.5rem;
+    padding: 4.5rem 0 2.5rem;
+  }
+
+  .sections {
+    padding: 1rem 0 4rem;
   }
 
   .sectionGrid {

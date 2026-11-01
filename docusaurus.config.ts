@@ -18,7 +18,10 @@ const config: Config = {
   organizationName: 'ltmleo', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
 
+  clientModules: ['./src/clientModules/reveal.ts'],
   headTags: [
+    // Enables scroll-reveal hiding only when JS runs (no-JS keeps content visible).
+    {tagName: 'script', attributes: {}, innerHTML: "document.documentElement.setAttribute('data-reveal-ready','')"},
     {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
     {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
   ],

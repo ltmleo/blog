@@ -1,3 +1,4 @@
+import type {CSSProperties} from 'react';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
@@ -30,9 +31,12 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, index}: FeatureItem & {index: number}) {
   return (
-    <div className={styles.feature}>
+    <div
+      className={styles.feature}
+      data-reveal
+      style={{'--reveal-delay': `${index * 120}ms`} as CSSProperties}>
       <div className={styles.featureArt}>
         <Svg className={styles.featureSvg} role="img" aria-label={title} />
       </div>
@@ -48,15 +52,15 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className={styles.header}>
+        <div className={styles.header} data-reveal>
           <span className={styles.eyebrow}>Sobre</span>
           <Heading as="h2" className={styles.heading}>
-            Um caderno de notas aberto
+            O que você encontra aqui
           </Heading>
         </div>
         <div className={styles.grid}>
-          {FeatureList.map((props) => (
-            <Feature key={props.title} {...props} />
+          {FeatureList.map((props, i) => (
+            <Feature key={props.title} index={i} {...props} />
           ))}
         </div>
       </div>
