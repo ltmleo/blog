@@ -61,17 +61,64 @@ E assim nasceram as "IAs" de que tanto ouvimos falar hoje em dia: Gemini, Claude
 O modelo foi treinado para gerar o texto mais *provável*, e não necessariamente o *verdadeiro*. Por isso, às vezes ele inventa uma resposta que soa convincente, mas está errada. Isso se chama alucinação. E a aleatoriedade faz parte da natureza dessa tecnologia: o modelo calcula a probabilidade do próximo token, um de cada vez, e cada token escolhido passa a fazer parte do texto usado para prever o seguinte. Como na famosa frase de Edward Lorenz, um dos pais da Teoria do Caos: "O bater de asas de uma borboleta no Brasil pode provocar um tornado no Texas?". Traduzindo para o nosso contexto: um token mal escolhido no começo de uma frase pode levar a um raciocínio totalmente equivocado.
 :::
 
-Mas repare que, até aqui, temos só o motor: um modelo que recebe texto e devolve texto. Ele não abre arquivos, não pesquisa na internet e não executa nada sozinho. Os agentes de hoje não surgiram de uma vez; foram ganhando peças aos poucos, e cada peça resolveu uma limitação da anterior. Quem acompanhou essa evolução viu cada uma dessas peças chegar e, por isso, entende com naturalidade como saímos de um chat que só conversava para um assistente que lê, edita e testa código por conta própria. É essa evolução que vamos acompanhar nas próximas seções, começando pela peça que deu "mãos" ao modelo: o *tool calling*.
+Mas repare que, até aqui, temos só o motor: um modelo que recebe texto e devolve texto. Ele não abre arquivos, não pesquisa na internet e não executa nada sozinho. Os agentes de hoje não surgiram de uma vez; foram ganhando peças aos poucos, e cada peça resolveu uma limitação da anterior. Quem acompanhou essa evolução viu cada uma dessas peças chegar e, por isso, entende com naturalidade como saímos de um chat que só conversava para um assistente que lê, edita e testa código por conta própria. É essa evolução que vamos acompanhar nas próximas seções, começando pela primeira peça, a que transformou o motor em algo com que dá para conversar: o *harness*.
+
+## Harness
+
+Lembra da analogia do carro? Se o modelo é o motor, o harness é tudo o que fica em volta dele: o programa que recebe a sua mensagem, monta o texto que vai para o modelo, chama o modelo (que roda nos servidores da empresa que o criou) e decide o que fazer com a resposta [4]. O site do ChatGPT, o chatbot do McDonalds e o Claude Code são exemplos de harness. Na prática, é ele que transforma um "completador de textos" em algo com que você consegue conversar.
+
+> Mas se eu só digito minha pergunta, que texto é esse que o harness monta?
+
+### System prompt
+
+Antes da sua mensagem, o harness coloca um conjunto de instruções que você normalmente não vê, chamado de **system prompt** (prompt de sistema). É ali que ficam a "personalidade" do assistente, as regras de comportamento e informações úteis. Na prática, o modelo recebe algo assim:
+
+```
+[sistema]  Você é o Claude, um assistente da Anthropic. Hoje é 01/11/2026.
+           Seja educado e responda em português.
+[usuário]  Qual é a capital da França?
+```
+
+:::tip
+Na maioria das aplicacoes você consegue controlar isso. é interessante customizar para ter resultados mais adequados ao que precisa. Mas é aqui também que algumas técnicas de prompt inejection tentam atacar, pretendo fazer um post no futuro sobre isso.
+:::
+
+Lembra que o modelo só continua textos? Com essas instruções no começo, o "texto mais provável" para continuar passa a ser a resposta de um assistente educado que sabe que dia é hoje. É o mesmo modelo, com outro comportamento, só mudando o que vem antes da sua pergunta.
+
+> Mas se ele só "continua" o que eu falei com instruções, como ele lembra o que eu falei três mensagens atrás? Pior, como ele lembra coisas que conversamos 1 ano atras?
+
+### Memória
+
+Aqui vai a parte que mais surpreende: **o modelo não tem memória nenhuma**. Cada chamada ao modelo começa do zero; ele não guarda nada entre uma resposta e outra. Quem dá a impressão de memória é o harness: a cada nova mensagem, ele reenvia a conversa inteira desde o início (o system prompt, as suas perguntas e as respostas anteriores), e o modelo lê tudo de novo antes de responder.
+
+```
+[sistema]     Você é o Claude...
+[usuário]     Meu nome é Ana.
+[assistente]  Prazer, Ana!
+[usuário]     Qual é o meu nome?
+```
+
+Todo esse texto que o modelo consegue ler de uma vez se chama **janela de contexto**, e ela tem um tamanho limitado, medido em tokens. Por isso, em conversas muito longas, o harness precisa resumir ou descartar as partes mais antigas, e o assistente parece "esquecer" o que foi dito no começo.
+
+E a "memória", que lembra coisas que conversam há um ano atrás, também não fica dentro do modelo. O harness salva essas informações como texto e, a cada nova conversa, cola esse texto no contexto, junto com o system prompt. Ou seja: para uma LLM, memória de longo prazo é só mais texto colocado no lugar certo.
+
+:::info
+Atualmente existem diversas técnicas para lidar com isso e é um verdadeiro desafio separar o joio do trigo, o que é informacao do que é apenas ruido, e quando acessar essas informacoes.
+:::
+
+Mas repare na limitação: o harness só consegue colocar no contexto o que ele já tem em mãos, como as instruções, a data e o histórico da conversa. Se você perguntar sobre a notícia de hoje ou pedir para abrir um arquivo do seu computador, o modelo continua de mãos atadas. Falta a peça que deu "mãos" ao modelo: o *tool calling*.
 
 ## Tool Calling
 
-Quando o ChatGPT surgiu, se você fazia uma pergunta sobre algo atual, ele simplesmente não sabia a resposta. Isso se dá por conta da data de corte do treinamento: um modelo sabe apenas fatos que aconteceram até a data em que seus dados de treino foram coletados. Além disso, mesmo quando perguntávamos sobre contas simples de matemática, o modelo errava com frequência, pois ele não faz contas: apenas prevê o próximo token, e os números são quebrados em pedaços que nem sempre fazem sentido matemático.
+Não sei se você se lembra, mas quando o ChatGPT surgiu, se você fazia uma pergunta sobre algo atual, ele simplesmente não sabia a resposta. Isso se dá por conta da data de corte do treinamento: um modelo sabe apenas fatos que aconteceram até a data em que seus dados de treino foram coletados. Além disso, mesmo quando perguntávamos sobre contas simples de matemática, o modelo errava com frequência, pois ele não faz contas: apenas prevê o próximo token, e os números são quebrados em pedaços que nem sempre fazem sentido matemático.
 
-> Mas como ele sabe hoje exatamente o dia, o horário e até mesmo como está o tempo na minha cidade no interior de SP?
+> Mas como ele sabe como está o tempo na minha cidade no interior de SP, noticias que acabaram de sair, e pior, fazer calculos matematicos complexos?
 
-O dia e o horário são a parte mais simples: o harness escreve a data atual nas instruções (o *system prompt*) que envia ao modelo a cada conversa. Já para o tempo na sua cidade, e para qualquer coisa que o modelo não saiba ou não consiga fazer sozinho, foi criado o conceito de "tool calling" (chamada de ferramentas) [8], no qual os modelos são treinados para reconhecer quando uma das ferramentas disponíveis serve para completar uma solicitação, seja para buscar uma informação, seja para executar uma ação. O modelo em si não executa a função diretamente; em vez disso, ele indica a ação necessária, e o sistema (através do harness ou orquestrador) executa essas funções — como consultar a previsão do tempo, ler e escrever em arquivos, pesquisar na internet, fazer cálculos ou até realizar tarefas mais complexas, como gerar imagens e vídeos ou consultar um banco de dados [7].
+Para qualquer coisa que o modelo não saiba ou não consiga fazer sozinho, foi criado o conceito de "tool calling" (chamada de ferramentas) [8], no qual os modelos são treinados para reconhecer quando uma das ferramentas disponíveis serve para completar uma solicitação, seja para buscar uma informação, seja para executar uma ação. O modelo em si não executa a função diretamente, em vez disso, ele indica a ação necessária, e o sistema (através do harness ou orquestrador) executa essas funções.
 
-Na prática, o harness (programa que orquestra a conversa com o modelo) envia o seu prompt para o modelo junto com a lista de funções disponíveis, explicando para que elas servem e quais dados elas exigem. A IA avalia o prompt, vê quais ferramentas se aplicam ao problema em questão e responde ao harness com uma mensagem estruturada (o nome da função e os argumentos esperados, em formato JSON) pedindo para executá-la. A função é executada e o resultado é repassado ao modelo, que pode pedir novas ferramentas quantas vezes precisar, até ter todos os dados de que precisa para elaborar a resposta corretamente, conforme mostra a animação abaixo.
+Esas funçoes podem ser qualquer coisa, como consultar a previsão do tempo, ler e escrever em arquivos, pesquisar na internet, fazer cálculos ou até realizar tarefas mais complexas, como gerar imagens e vídeos ou consultar um banco de dados [7].
+
+Na prática, o harness envia o seu prompt para o modelo junto com a lista de funções disponíveis, explicando para que elas servem e quais dados elas exigem. A IA avalia o prompt, vê quais ferramentas se aplicam ao problema em questão e responde ao harness com uma mensagem estruturada (o nome da função e os argumentos esperados, em formato JSON) pedindo para executá-la. A função é executada e o resultado é repassado ao modelo, que pode pedir novas ferramentas quantas vezes precisar, até ter todos os dados de que precisa para elaborar a resposta corretamente, conforme mostra a animação abaixo.
 
 <!-- Inserir animacao aqui explicando como o modelo executa funcoes -->
 
@@ -79,9 +126,11 @@ A genialidade do tool calling foi dar sensores e atuadores para o modelo. Somado
 
 > Mas como um agente pode se conectar a ferramentas de edição de vídeos, bancos de dados e Google Drive? Cada tool precisa ser adicionada ao código do harness?
 
-Para que a integração com cada aplicação seja escrita uma única vez e funcione em qualquer harness, sem precisar criar uma integração diferente para cada combinação de harness e ferramenta, a Anthropic criou, em novembro de 2024, um protocolo chamado MCP [9].
+Para que a integração com cada aplicação seja escrita uma única vez e funcione em qualquer harness, sem precisar criar uma integração diferente para cada combinação de harness e ferramenta, a Anthropic criou, um protocolo chamado MCP [9].
 
-## MCP
+## MCP - Model Context Protocol
+
+
 
 ## Referências
 
