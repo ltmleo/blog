@@ -440,6 +440,13 @@ html[data-reveal-ready] [data-reveal].is-revealed {
   }
 }
 
+/* Never hide content when printing (elements below the fold were never observed). */
+@media print {
+  html[data-reveal-ready] [data-reveal]:not(.is-revealed) {
+    opacity: 1;
+  }
+}
+
 /* ---------- Motion preferences ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
