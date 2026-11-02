@@ -1,64 +1,66 @@
-import clsx from 'clsx';
+import type {CSSProperties} from 'react';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
+  description: React.ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Registros pessoais',
     Svg: require('@site/static/img/darthVader.svg').default,
-    description: (
-      <>
-      Aqui faço registros pessoais, para consultas futuras.
-      </>
-    ),
+    description: <>Aqui faço registros pessoais, para consultas futuras.</>,
   },
   {
     title: 'Compartilhar conhecimento',
     Svg: require('@site/static/img/rocket.svg').default,
     description: (
       <>
-        A ideia também é aproveitar para compartilhar conhecimento e experiências que estou adquirindo ao longo da minha jornada.
+        A ideia também é aproveitar para compartilhar conhecimento e experiências que estou
+        adquirindo ao longo da minha jornada.
       </>
     ),
   },
   {
     title: 'Todos podem contribuir',
     Svg: require('@site/static/img/rick.svg').default,
-    description: (
-      <>
-        Um pouco de tudo, onde todos podem contribuir.
-      </>
-    ),
+    description: <>Um pouco de tudo, onde todos podem contribuir.</>,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, index}: FeatureItem & {index: number}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div
+      className={styles.feature}
+      data-reveal
+      style={{'--reveal-delay': `${index * 120}ms`} as CSSProperties}>
+      <div className={styles.featureArt}>
+        <Svg className={styles.featureSvg} role="img" aria-label={title} />
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Heading as="h3" className={styles.featureTitle}>
+        {title}
+      </Heading>
+      <p className={styles.featureDescription}>{description}</p>
     </div>
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+        <div className={styles.header} data-reveal>
+          <span className={styles.eyebrow}>Sobre</span>
+          <Heading as="h2" className={styles.heading}>
+            O que você encontra aqui
+          </Heading>
+        </div>
+        <div className={styles.grid}>
+          {FeatureList.map((props, i) => (
+            <Feature key={props.title} index={i} {...props} />
           ))}
         </div>
       </div>
