@@ -4,7 +4,7 @@ tags: [IA, Agentes, LLM]
 ---
 # Agentes de IA
 
-Testes, experimentos e referências usados no post [Agentes de IA](/blog/2026/11/04/agentes).
+Testes, experimentos e referências usados no post [Agentes de IA](/blog/blog/2026/11/04/agentes).
 
 ## Experimentos
 
