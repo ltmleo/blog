@@ -1,4 +1,7 @@
 ---
+sidebar_custom_props:
+  icon: ✍️
+  description: Como este blog foi construído com Docusaurus, e como contribuir.
 sidebar_position: 1
 ---
 # Blog

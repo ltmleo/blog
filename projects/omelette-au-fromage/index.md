@@ -1,3 +1,9 @@
+---
+sidebar_custom_props:
+  icon: 🧀
+  description: Podcast para aprender frases em outros idiomas por repetição.
+---
+
 # Podcast - Omelette Au Fromage
 
 :::info

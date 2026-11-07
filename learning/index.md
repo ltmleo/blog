@@ -1,33 +1,27 @@
 ---
+title: Learning
 sidebar_position: 1
+hide_title: true
+hide_table_of_contents: true
+description: Notas de estudo sobre Data Science, IA, Golang, Oracle Cloud e livros.
 tags: [learning, dsa, oci, golang, books]
 ---
 
-# Learning
-Aqui compartilho algumas coisas que estou aprendendo.
+import PageHero from '@site/src/components/PageHero';
+import DocCards from '@site/src/components/DocCards';
 
-Talvez não faça tanto sentido, mas a ideia é um conjunto de notas para lembrar alguns conceitos, assim como um caderno de anotações.
+<PageHero eyebrow="Caderno de estudos" title="Learning" illustration="rocket">
 
-A ideia é manter um registro de tudo que estou estudando e compartilhar com quem tiver interesse, podem ajudar outras pessoas que estão estudando o mesmo assunto ou inciando na área.
+Notas do que estou estudando, como um caderno de anotações aberto: resumos, conceitos e
+insights para consultar depois, e que talvez ajudem quem está estudando o mesmo assunto.
 
-Além disso, quem tiver mais informações sobre o assunto, ou encontrar algum erro, pode contribuir com o conteúdo, é só clicar em "Edit this page" no final de página e fazer um pull request.
+</PageHero>
 
-## Data Science
+## Trilhas
 
-Aqui compartilho algumas notas de aula do MBA em [Data Science](/learning/data-science/) que estou fazendo na USP.
+<DocCards />
 
-## OCI
-
-Aqui compartilho algumas notas do estudo para a certificação [OCI](/learning/oci/).
-
-## Golang
-
-Aqui você encontrará uma série de notas sobre a linguagem de programação [Go](/learning/golang/).
-
-## Livros
-
-Aqui compartilho algumas notas de leitura de livros que li ou estou lendo.
-
-
-![Learning](https://www.apprendoo.com/wp/wp-content/uploads/2023/03/continuous-corporate-learning.gif)
-
+:::tip[Contribua]
+Encontrou um erro ou quer complementar alguma nota? Clique em **Edit this page** no fim da
+página e abra um pull request.
+:::

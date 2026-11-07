@@ -1,9 +1,23 @@
-# Livros
+---
+title: Livros
+hide_title: true
+hide_table_of_contents: true
+description: Notas de leitura de livros que li ou estou lendo.
+sidebar_custom_props:
+  icon: 📚
+  description: Notas de leitura de livros que li ou estou lendo.
+---
 
-Aqui compartilho algumas notas de leitura de livros que li ou estou lendo.
+import PageHero from '@site/src/components/PageHero';
+import DocCards from '@site/src/components/DocCards';
 
-![Livros](https://mais.opovo.com.br/_midias/gif/2021/06/23/040d2cd2037cc705b17365b43e2002a9-16188283.gif)
+<PageHero eyebrow="Notas de leitura" title="Livros" icon="📚">
 
-import DocCardList from '@theme/DocCardList';
+Resumos e reflexões de livros que li ou estou lendo, de sistemas complexos a história da
+humanidade.
 
-<DocCardList />
+</PageHero>
+
+## Estante
+
+<DocCards icon="📖" />

@@ -1,10 +1,26 @@
 ---
+title: Projects
 sidebar_position: 1
+hide_title: true
+hide_table_of_contents: true
+description: Projetos pessoais, experimentos e ferramentas open source.
 ---
 
-# Projects
-Aqui compartilho alguns projetos pessoais, fique a vontade para explorar e contribuir.
+import PageHero from '@site/src/components/PageHero';
+import DocCards from '@site/src/components/DocCards';
 
-Se quiser adicionar algo ou encontrar algum erro, você pode contribuir com o conteúdo, é só clicar em "Edit this page" no final de página e fazer um pull request.
+<PageHero eyebrow="Laboratório" title="Projects" illustration="rick">
 
-![Projects](https://alsami.ae/wp-content/uploads/2023/05/70a6748eb8ae0d9a3220c37b6415fa55.gif)
+Projetos pessoais, experimentos e ferramentas que fui construindo ao longo do caminho.
+Fique à vontade para explorar, usar e contribuir.
+
+</PageHero>
+
+## Projetos
+
+<DocCards />
+
+:::tip[Contribua]
+Quer adicionar algo ou encontrou um erro? Clique em **Edit this page** no fim da página e
+abra um pull request.
+:::

@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import LinkCard from '@site/src/components/LinkCard';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -82,23 +83,14 @@ function SectionCards() {
         </div>
         <div className={styles.sectionGrid}>
           {sections.map(({title, description, to, icon}, i) => (
-            <Link
+            <LinkCard
               key={title}
               to={to}
-              className={styles.sectionCard}
-              data-reveal
-              style={delay(i * 100)}>
-              <span className={styles.sectionIcon} aria-hidden="true">
-                {icon}
-              </span>
-              <Heading as="h3" className={styles.sectionTitle}>
-                {title}
-              </Heading>
-              <p className={styles.sectionDescription}>{description}</p>
-              <span className={styles.sectionArrow} aria-hidden="true">
-                →
-              </span>
-            </Link>
+              title={title}
+              icon={icon}
+              description={description}
+              revealDelayMs={i * 100}
+            />
           ))}
         </div>
       </div>
