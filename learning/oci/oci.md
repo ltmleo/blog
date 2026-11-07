@@ -1,3 +1,9 @@
+---
+sidebar_custom_props:
+  icon: ☁️
+  description: Estudos para as certificações Oracle Cloud Foundations e AI Foundations.
+---
+
 # Oracle Cloud Introduction
 
 <div style={{display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap'}}>

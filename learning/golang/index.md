@@ -1,5 +1,23 @@
-# Golang
+---
+title: Golang
+hide_title: true
+hide_table_of_contents: true
+description: Notas sobre a linguagem de programação Go.
+sidebar_custom_props:
+  icon: 🐹
+  description: Notas sobre a linguagem Go, de fundamentos a projetos práticos.
+---
 
-Aqui você encontrará uma série de notas sobre a linguagem de programação Go.
+import PageHero from '@site/src/components/PageHero';
+import DocCards from '@site/src/components/DocCards';
 
-![Gopher](https://miro.medium.com/v2/resize:fit:500/1*lSUb1T4YW1td0UskwsGZ1w.gif)
+<PageHero eyebrow="Linguagem" title="Golang" icon="🐹">
+
+Uma série de notas sobre a linguagem de programação Go: fundamentos, organização de código
+e projetos práticos.
+
+</PageHero>
+
+## Notas
+
+<DocCards icon="🐹" />

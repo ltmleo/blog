@@ -130,62 +130,6 @@
   gap: 1.25rem;
 }
 
-.sectionCard {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1.75rem;
-  border-radius: 16px;
-  border: 1px solid var(--surface-border);
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.sectionCard:hover {
-  text-decoration: none;
-  color: var(--ifm-font-color-base);
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
-  box-shadow: var(--surface-shadow-hover);
-}
-
-.sectionIcon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  font-size: 1.3rem;
-  background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
-  margin-bottom: 1rem;
-}
-
-.sectionTitle {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
-}
-
-.sectionDescription {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--ifm-color-emphasis-700);
-  line-height: 1.6;
-}
-
-.sectionArrow {
-  position: absolute;
-  top: 1.75rem;
-  right: 1.75rem;
-  color: var(--ifm-color-emphasis-500);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.sectionCard:hover .sectionArrow {
-  color: var(--ifm-color-primary);
-  transform: translateX(4px);
-}
-
 @media screen and (max-width: 996px) {
   .hero {
     padding: 4.5rem 0 2.5rem;

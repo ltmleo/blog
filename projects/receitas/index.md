@@ -1,3 +1,9 @@
+---
+sidebar_custom_props:
+  icon: 🍲
+  description: Site de receitas de família, criado com auxílio de IA.
+---
+
 # Receitas
 
 :::info

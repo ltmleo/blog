@@ -95,7 +95,8 @@ h1, h2, h3, h4 {
   padding-top: 0.5rem;
 }
 
-.markdown a {
+/* Inline prose links only; component links (cards, anchors) carry a class. */
+.markdown a:not([class]) {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--ifm-color-primary) 35%, transparent);
   text-underline-offset: 3px;
@@ -103,7 +104,7 @@ h1, h2, h3, h4 {
   transition: text-decoration-color 0.15s ease;
 }
 
-.markdown a:hover {
+.markdown a:not([class]):hover {
   text-decoration-color: var(--ifm-color-primary);
 }
 
